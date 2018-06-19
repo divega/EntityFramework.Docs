@@ -1,5 +1,5 @@
 ---
-title: "EF6 Runtime Beta/RC License"
+title: "Entity Framework 6 Runtime Beta/RC License"
 ms.custom: ""
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: db123990-8290-41c8-a41f-494d3f2994f7
 caps.latest.revision: 3
 ---
-# EF6 Runtime Beta/RC License
+# Entity Framework 6 Runtime Beta/RC License (ENU)
 **MICROSOFT PRE-RELEASE SOFTWARE LICENSE TERMS**
 
 **MICROSOFT ENTITY FRAMEWORK**

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5bc55bf3-2404-4811-8d13-d2eed822cdc4
 caps.latest.revision: 3
 ---
-# Entity Framework 6 Runtime License
+# Entity Framework 6 Runtime License (ENU)
 **MICROSOFT SOFTWARE LICENSE TERMS**
 
 **MICROSOFT ENTITY FRAMEWORK**

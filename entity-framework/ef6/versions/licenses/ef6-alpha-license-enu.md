@@ -1,5 +1,5 @@
 ---
-title: "EF6 Runtime Alpha License"
+title: "Entity Framework 6 Runtime Alpha License"
 ms.custom: ""
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: bca98fb3-ebb2-4df3-afc8-6fd8f7341c9d
 caps.latest.revision: 3
 ---
-# EF6 Runtime Alpha License
+# Entity Framework 6 Runtime Alpha License (ENU)
 **MICROSOFT PRE-RELEASE SOFTWARE LICENSE TERMS**
 
 **MICROSOFT Entity Framework**
