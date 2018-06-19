@@ -28,13 +28,13 @@ The roadmap of post-EF 6.2 releases is still undefined. More information will be
 
 ### EF 6.2 Tools
 
-We plan to release an updated version of the EF6 Tools in a future updated to Visual Studio 2017. It will include improvements on some common pain areas:
+We release an updated version of the EF6 Tools in Visual Studio 2017 15.7. It includes improvements on some common pain areas:
 
 - An overhaul to the accessibility of the user interface
 - Workaround for SQL Server performance regression on reverse engineering [#4](https://github.com/aspnet/entityframework6/issues/4)
 - Update model from database support for larger models on SQL Server [#185](https://github.com/aspnet/EntityFramework6/issues/185)
 
-In the meanwhile, it is possible to use the EF 6.2 runtime (as well as any past version of EF) with existing versions of the EF6 Tools.
+With older versions of Visual Studio, it is possible to use the EF 6.2 runtime (as well as any past version of EF) with existing versions of the EF6 Tools.
 
 ## Recent releases
 

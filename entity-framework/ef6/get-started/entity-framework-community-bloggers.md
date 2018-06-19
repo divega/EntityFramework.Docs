@@ -12,13 +12,13 @@ caps.latest.revision: 4
 ---
 # Entity Framework Blogs
 
-Besides the product documentation, these blogs can be a source of useful information on Entity Framework. 
+Besides the product documentation, these blogs can be a source of useful information on Entity Framework:
 
 ## EF Team blogs
 
 - [.NET Blog - Tag: Entity Framework](https://blogs.msdn.microsoft.com/dotnet/tag/entity-framework/)
-- [ADO.NET Blog (no longer used)](https://blogs.msdn.microsoft.com/adonet/)
-- [EF Design Blog (no longer used)](https://blogs.msdn.microsoft.com/efdesign/)
+- [ADO.NET Blog (no longer in use)](https://blogs.msdn.microsoft.com/adonet/)
+- [EF Design Blog (no longer in use)](https://blogs.msdn.microsoft.com/efdesign/)
 
 ## Current and former EF team bloggers
 
