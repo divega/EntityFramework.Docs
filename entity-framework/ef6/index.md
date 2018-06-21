@@ -46,4 +46,4 @@ The first version of Entity Framework was released in 2008, as part of .NET Fram
 
 This documentation provides information on Entity Framework 6 (EF6), the latest major version of EF. Although much of it should also apply to past versions, namespaces are different and capabilities may have evolved.
 
-For more information, see [Entity Framework Version History](~/ef6/versions/entity-framework-version-history.md).
+For more information, see [Entity Framework Version History](~/ef6/versions/version-history.md).

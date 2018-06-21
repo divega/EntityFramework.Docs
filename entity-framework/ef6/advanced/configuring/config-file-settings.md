@@ -36,7 +36,7 @@ The **entityFramework** section was automatically added to the configuration fil
 
 ## Connection Strings  
 
-[This page](~/ef6/modeling/entity-framework-connections-and-models.md) provides more details on how Entity Framework determines the database to be used, including connection strings in the configuration file.  
+[This page](~/ef6/modeling/connections-and-models.md) provides more details on how Entity Framework determines the database to be used, including connection strings in the configuration file.  
 
 Connection strings go in the standard **connectionStrings** element and do not require the **entityFramework** section.  
 

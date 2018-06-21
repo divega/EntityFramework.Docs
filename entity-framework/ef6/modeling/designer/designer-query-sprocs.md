@@ -27,7 +27,7 @@ To complete this walkthrough, you will need:
 - A recent version of Visual Studio.
 - The School sample Database
 
-See the section on [Walkthrough Prerequisites](../../../ef6/get-started/entity-framework-school-database.md) for more details.
+See the section on [Walkthrough Prerequisites](../../../ef6/get-started/school-database.md) for more details.
 
 ## Set up the Project
 

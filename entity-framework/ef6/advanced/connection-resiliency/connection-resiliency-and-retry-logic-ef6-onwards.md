@@ -33,7 +33,7 @@ Connection retry is taken care of by an implementation of the IDbExecutionStrate
 
 ## Enabling an Execution Strategy  
 
-The easiest way to tell EF to use an execution strategy is with the SetExecutionStrategy method of the [DbConfiguration](~/ef6/advanced/configuration/entity-framework-code-based-configuration-ef6-onwards.md) class:  
+The easiest way to tell EF to use an execution strategy is with the SetExecutionStrategy method of the [DbConfiguration](~/ef6/advanced/configuration/code-based-configuration-ef6-onwards.md) class:  
 
 ``` csharp
 public class MyConfiguration : DbConfiguration

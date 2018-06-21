@@ -31,7 +31,7 @@ TVFs are very similar to stored procedures with one key difference: the result o
 
 To complete this walkthrough, you need to:
 
-- Install the [School database](../../ef6/get-started/entity-framework-school-database.md#school-sample-database).
+- Install the [School database](../../ef6/get-started/school-database.md#school-sample-database).
 
 - Have a recent version of Visual Studio
 
