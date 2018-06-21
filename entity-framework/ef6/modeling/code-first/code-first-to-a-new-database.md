@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Code First to a New Database
 This video and step-by-step walkthrough provide an introduction to Code First development targeting a new database. This scenario includes targeting a database that doesn’t exist and Code First will create, or an empty database that Code First will add new tables too. Code First allows you to define your model using C\# or VB.Net classes. Additional configuration can optionally be performed using attributes on your classes and properties or by using a fluent API.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/entity-framework-code-first-to-a-new-database-video.md)
+[See the video that accompanies this step-by-step walkthrough.](../ef6/code-first-to-a-new-database-video.md)
 ## Pre-Requisites
 
 You will need to have at least Visual Studio 2010 or Visual Studio 2012 installed to complete this walkthrough.

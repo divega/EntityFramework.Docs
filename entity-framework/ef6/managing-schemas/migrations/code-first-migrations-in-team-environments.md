@@ -13,7 +13,7 @@ ms.assetid: 4c2d9a95-de6f-4e97-9738-c1f8043eff69
 caps.latest.revision: 3
 ---
 # Code First Migrations in Team Environments
-This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](../ef6/entity-framework-code-first-migrations.md) before continuing.
+This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](../ef6/code-first-migrations.md) before continuing.
 
  
 

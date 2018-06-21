@@ -36,7 +36,7 @@ However some users require greater control over their transactions – this is c
 Prior to EF6 Entity Framework insisted on opening the database connection itself (it threw an exception if it was passed a connection that was already open). Since a transaction can only be started on an open connection, this meant that the only way a user could wrap several operations into one transaction was either to use a [TransactionScope](https://msdn.microsoft.com/library/system.transactions.transactionscope.aspx) or use the **ObjectContext.Connection** property and start calling **Open()** and **BeginTransaction()** directly on the returned **EntityConnection** object. In addition, API calls which contacted the database would fail if you had started a transaction on the underlying database connection on your own.  
 
 > [!NOTE]
-> The limitation of only accepting closed connections was removed in Entity Framework 6. For details, see [Connection Management (EF6 Onwards)](../ef6/entity-framework-connection-management.md).  
+> The limitation of only accepting closed connections was removed in Entity Framework 6. For details, see [Connection Management (EF6 Onwards)](../ef6/connection-management.md).  
 
 Starting with EF6 the framework now provides:  
 
@@ -196,11 +196,11 @@ This section details how the above transactions interact with:
 
 ### Connection Resiliency  
 
-The new Connection Resiliency feature does not work with user-initiated transactions. For details, see [Limitations with Retrying Execution Strategies](../ef6/entity-framework-limitations-with-retrying-execution-strategies-ef6-onwards.md).  
+The new Connection Resiliency feature does not work with user-initiated transactions. For details, see [Limitations with Retrying Execution Strategies](../ef6/limitations-with-retrying-execution-strategies-ef6-onwards.md).  
 
 ### Asynchronous Programming  
 
-The approach outlined in the previous sections needs no further options or settings to work with the [asynchronous query and save methods](../ef6/entity-framework-async-query-and-save-ef6-onwards.md). But be aware that, depending on what you do within the asynchronous methods, this may result in long-running transactions – which can in turn cause deadlocks or blocking which is bad for the performance of the overall application.  
+The approach outlined in the previous sections needs no further options or settings to work with the [asynchronous query and save methods](../ef6/async-query-and-save-ef6-onwards.md). But be aware that, depending on what you do within the asynchronous methods, this may result in long-running transactions – which can in turn cause deadlocks or blocking which is bad for the performance of the overall application.  
 
 ### TransactionScope Transactions  
 

@@ -15,10 +15,10 @@ Entity Framework allows you to create a model by writing code or using boxes and
 
 Find out about the EF Designer and Code First and which one is best for you:
 
-|                                           | I just want to write code...                                                                                                                        | I want to use a designer...                                                                                                              |
-|:------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------|
-| **I am creating a new database**          | [Use **Code First** to define your model in code and then generate a database.](../ef6/entity-framework-code-first-to-a-new-database.md)            | [Use **Model First** to define your model using boxes and lines and then generate a database.](../ef6/entity-framework-model-first.md)   |
-| **I need to access an existing database** | [Use **Code First** to create a code based model that maps to an existing database.](../ef6/entity-framework-code-first-to-an-existing-database.md) | [Use **Database First** to create a boxes and lines model that maps to an existing database.](../ef6/entity-framework-database-first.md) |
+|                                           | I just want to write code...                                                                                                       | I want to use a designer...                                                                                             |
+|:------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
+| **I am creating a new database**          | [Use **Code First** to define your model in code and then generate a database.](../ef6/code-first-to-a-new-database.md)            | [Use **Model First** to define your model using boxes and lines and then generate a database.](../ef6/model-first.md)   |
+| **I need to access an existing database** | [Use **Code First** to create a code based model that maps to an existing database.](../ef6/code-first-to-an-existing-database.md) | [Use **Database First** to create a boxes and lines model that maps to an existing database.](../ef6/database-first.md) |
 
 ## Watch the video
 

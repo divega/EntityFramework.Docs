@@ -15,14 +15,14 @@ caps.latest.revision: 3
 # Custom Code First Conventions (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
-When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](../ef6/entity-framework-code-first-conventions.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.
+When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](../ef6/code-first-conventions.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.
 
 Sometimes these default conventions are not ideal for your model, and you have to work around them by configuring many individual entities using Data Annotations or the Fluent API. Custom Code First Conventions let you define your own conventions that provide configuration defaults for your model. In this walkthrough, we will explore the different types of custom conventions and how to create each of them.
 
 
 ## Model-Based Conventions
 
-This page covers the DbModelBuilder API for custom conventions. This API should be sufficient for authoring most custom conventions. However, there is also the ability to author model-based conventions - conventions that manipulate the final model once it is created - to handle advanced scenarios. For more information, see [Model-Based Conventions (EF6 onwards)](../ef6/entity-framework-model-based-conventions-ef6-onwards.md).
+This page covers the DbModelBuilder API for custom conventions. This API should be sufficient for authoring most custom conventions. However, there is also the ability to author model-based conventions - conventions that manipulate the final model once it is created - to handle advanced scenarios. For more information, see [Model-Based Conventions (EF6 onwards)](../ef6/model-based-conventions-ef6-onwards.md).
 
  
 

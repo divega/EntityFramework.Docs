@@ -71,4 +71,4 @@ The execution strategies will only retry a limited number of exceptions that are
 
 ## Limitations  
 
-There are some known limitations when using ExecutionStrategies. If you want to use user initiated transactions or streaming instead of buffered queries then you should read more [here](entity-framework-limitations-with-retrying-execution-strategies-ef6-onwards.md).  
+There are some known limitations when using ExecutionStrategies. If you want to use user initiated transactions or streaming instead of buffered queries then you should read more [here](limitations-with-retrying-execution-strategies-ef6-onwards.md).  

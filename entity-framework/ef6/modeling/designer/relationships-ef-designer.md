@@ -14,7 +14,7 @@ caps.latest.revision: 3
 ---
 # Relationships - EF Designer
 > [!NOTE]
-> This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](../ef6/entity-framework-relationships-and-navigation-properties.md).
+> This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](../ef6/relationships-and-navigation-properties.md).
 
 Associations define relationships between entity types in a model. This topic shows how to map associations with the Entity Framework Designer (EF Designer). The following image shows the main windows that are used when working with the EF Designer.
 
@@ -32,7 +32,7 @@ At run time, entity type instances at one end of an association can be accessed 
 > [!NOTE]
 > In many-to-many (\*:\*) you cannot add foreign keys to the entities. In a \*:\* relationship, the association information is managed with an independent object.
 
-For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](../ef6/entity-framework-csdl-specification.md).
+For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](../ef6/csdl-specification.md).
 
  
 

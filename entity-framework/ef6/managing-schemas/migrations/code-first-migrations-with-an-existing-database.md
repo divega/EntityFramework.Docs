@@ -17,7 +17,7 @@ caps.latest.revision: 3
 
 This topic covers using Code First Migrations with an existing database, one that wasn’t created by Entity Framework.
 
-It’s assumed that you already have an understanding of Code First Migrations. If not, you should read the [Code First Migrations](../ef6/entity-framework-code-first-migrations.md) topic before continuing.
+It’s assumed that you already have an understanding of Code First Migrations. If not, you should read the [Code First Migrations](../ef6/code-first-migrations.md) topic before continuing.
 
 
 ## Screencasts
@@ -34,7 +34,7 @@ Building on the concepts from the previous video, [this screencast](http://chann
 
 ## Step 1: Create a model
 
-Your first step will be to create a Code First model that targets your existing database. The [Code First to an Existing Database](../ef6/entity-framework-code-first-to-an-existing-database.md) topic provides detailed guidance on how to do this.
+Your first step will be to create a Code First model that targets your existing database. The [Code First to an Existing Database](../ef6/code-first-to-an-existing-database.md) topic provides detailed guidance on how to do this.
 
 >**Note**: It is important to follow the rest of the steps in this topic before making any changes to your model that would require changes to the database schema. The following steps require the model to be in-sync with the database schema.
 
@@ -44,7 +44,7 @@ Your first step will be to create a Code First model that targets your existing 
 
 The next step is to enable migrations. You can do this by running the **Enable-Migrations** command in Package Manager Console.
 
-This command will create a folder in your solution called Migrations, and put a single class inside it called Configuration. The Configuration class is where you configure migrations for your application, you can find out more about it in the [Code First Migrations](../ef6/entity-framework-code-first-migrations.md) topic.
+This command will create a folder in your solution called Migrations, and put a single class inside it called Configuration. The Configuration class is where you configure migrations for your application, you can find out more about it in the [Code First Migrations](../ef6/code-first-migrations.md) topic.
 
  
 
@@ -57,7 +57,7 @@ Once migrations have been created and applied to the local database you may also
 
 ### Option One: Use existing schema as a starting point
 
-Code First Migrations uses a snapshot of the model stored in the most recent migration to detect changes to the model (you can find detailed information about this in [Code First Migrations in Team Environments](../ef6/entity-framework-code-first-migrations-in-team-environments.md)). Since we are going to assume that databases already have the schema of the current model, we will generate an empty (no-op) migration that has the current model as a snapshot.
+Code First Migrations uses a snapshot of the model stored in the most recent migration to detect changes to the model (you can find detailed information about this in [Code First Migrations in Team Environments](../ef6/code-first-migrations-in-team-environments.md)). Since we are going to assume that databases already have the schema of the current model, we will generate an empty (no-op) migration that has the current model as a snapshot.
 
 1.  Run the **Add-Migration InitialCreate –IgnoreChanges** command in Package Manager Console. This creates an empty migration with the current model as a snapshot.
 2.  Run the **Update-Database** command in Package Manager Console. This will apply the InitialCreate migration to the database. Since the actual migration doesn’t contain any changes, it will simply add a row to the \_\_MigrationsHistory table indicating that this migration has already been applied.

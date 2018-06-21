@@ -15,7 +15,7 @@ Entity Framework allows a number of settings to be specified from the configurat
 
 ## A Code-Based Alternative  
 
-All of these settings can also be applied using code. Starting in EF6 we introduced [code-based configuration](entity-framework-code-based-configuration-ef6-onwards.md), which provides a central way of applying configuration from code. Prior to EF6, configuration can still be applied from code but you need to use various APIs to configure different areas. The configuration file option allows these settings to be easily changed during deployment without updating your code.
+All of these settings can also be applied using code. Starting in EF6 we introduced [code-based configuration](code-based-configuration-ef6-onwards.md), which provides a central way of applying configuration from code. Prior to EF6, configuration can still be applied from code but you need to use various APIs to configure different areas. The configuration file option allows these settings to be easily changed during deployment without updating your code.
 
 ## The Entity Framework Configuration Section  
 
@@ -72,7 +72,7 @@ EF Designer based models use special EF connection strings. For example:
 
 ## Code-Based Configuration Type (EF6 Onwards)  
 
-Starting with EF6, you can specify the DbConfiguration for EF to use for [code-based configuration](entity-framework-code-based-configuration-ef6-onwards.md) in your application. In most cases you don't need to specify this setting as EF will automatically discover your DbConfiguration. For details of when you may need to specify DbConfiguration in your config file see the **Moving DbConfiguration** section of [Code-Based Configuration](entity-framework-code-based-configuration-ef6-onwards.md).  
+Starting with EF6, you can specify the DbConfiguration for EF to use for [code-based configuration](code-based-configuration-ef6-onwards.md) in your application. In most cases you don't need to specify this setting as EF will automatically discover your DbConfiguration. For details of when you may need to specify DbConfiguration in your config file see the **Moving DbConfiguration** section of [Code-Based Configuration](code-based-configuration-ef6-onwards.md).  
 
 To set a DbConfiguration type, you specify the assembly qualified type name in the **codeConfigurationType** element.  
 

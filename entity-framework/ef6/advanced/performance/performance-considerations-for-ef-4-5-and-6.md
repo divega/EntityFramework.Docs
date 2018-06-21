@@ -94,7 +94,7 @@ For small, simple models the cost may be small enough to not bother using pre-ge
 
 You can also consider using the Entity Framework Power Tools to generate views of EDMX and Code First models by right-clicking the model class file and using the Entity Framework menu to select “Generate Views”. The Entity Framework Power Tools work only on DbContext-derived contexts and can be found at \<http://visualstudiogallery.msdn.microsoft.com/72a60b14-1581-4b9b-89f2-846072eff19d>.
 
-For more information on how to use pre-generated views on Entity Framework 6 visit [Pre-Generated Mapping Views](../ef6/entity-framework-pre-generated-mapping-views.md).
+For more information on how to use pre-generated views on Entity Framework 6 visit [Pre-Generated Mapping Views](../ef6/pre-generated-mapping-views.md).
 
 #### 2.3.2 How to use Pre-generated views with a model created by EDMGen
 
@@ -135,7 +135,7 @@ Using Entity Framework 5, view generation for the model with Foreign Keys took 6
 
 Using Entity Framework 6, view generation for the model with Foreign Keys took 28 seconds in the same lab machine. View generation for the model that uses Independent Associations took 58 seconds. The improvements done to Entity Framework 6 on its view generation code mean that many projects won’t need pre-generated views to obtain faster startup times.
 
-It’s important to remark that pre-generating views in Entity Framework 4 and 5 can be done with EDMGen or the Entity Framework Power Tools. For Entity Framework 6 view generation can be done via the Entity Framework Power Tools or programmatically as described in [Pre-Generated Mapping Views](../ef6/entity-framework-pre-generated-mapping-views.md).
+It’s important to remark that pre-generating views in Entity Framework 4 and 5 can be done with EDMGen or the Entity Framework Power Tools. For Entity Framework 6 view generation can be done via the Entity Framework Power Tools or programmatically as described in [Pre-Generated Mapping Views](../ef6/pre-generated-mapping-views.md).
 
 ##### 2.4.1.1 How to use Foreign Keys instead of Independent Associations
 
@@ -147,7 +147,7 @@ If you have a large Code First model, using Independent Associations will have t
 |:----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Entity Designer | After adding an association between two entities, make sure you have a referential constraint. Referential constraints tell Entity Frameworkto use Foreign Keys instead of Independent Associations. For additional details visit \<http://blogs.msdn.com/b/efdesign/archive/2009/03/16/foreign-keys-in-the-entity-framework.aspx>. |
 | EDMGen          | When using EDMGen to generate your files from the database, your Foreign Keys will be respected and added to the model as such. For more information on the different options exposed by EDMGen visit [http://msdn.microsoft.com/library/bb387165.aspx](https://msdn.microsoft.com/library/bb387165.aspx).                          |
-| Code First      | See the "Relationship Convention" section of the [Code First Conventions](../ef6/entity-framework-code-first-conventions.md) topic for information on how to include foreign key properties on dependent objects when using Code First.                                                                                             |
+| Code First      | See the "Relationship Convention" section of the [Code First Conventions](../ef6/code-first-conventions.md) topic for information on how to include foreign key properties on dependent objects when using Code First.                                                                                             |
 
 #### 2.4.2 Moving your model to a separate assembly
 
@@ -839,7 +839,7 @@ Simple microbenchmarks where the context creation was not timed were put to the 
 
 ![EF6Micro5000Warm](../ef6/media/ef6micro5000warm.png)
 
-Microbenchmarks are very sensitive to small changes in the code. In this case, the difference between the costs of Entity Framework 5 and Entity Framework 6 are due to the addition of [interception](https://entityframework.codeplex.com/wikipage?title=Interception) and [transactional improvements](../ef6/entity-framework-working-with-transactions-ef6-onwards.md). These microbenchmarks numbers, however, are an amplified vision into a very small fragment of what Entity Framework does. Real-world scenarios of warm queries should not see a performance regression when upgrading from Entity Framework 5 to Entity Framework 6.
+Microbenchmarks are very sensitive to small changes in the code. In this case, the difference between the costs of Entity Framework 5 and Entity Framework 6 are due to the addition of [interception](https://entityframework.codeplex.com/wikipage?title=Interception) and [transactional improvements](../ef6/working-with-transactions-ef6-onwards.md). These microbenchmarks numbers, however, are an amplified vision into a very small fragment of what Entity Framework does. Real-world scenarios of warm queries should not see a performance regression when upgrading from Entity Framework 5 to Entity Framework 6.
 
 To compare the real-world performance of the different query options, we created 5 separate test variations where we use a different query option to select all products whose category name is "Beverages". Each iteration includes the cost of creating the context, and the cost of materializing all returned entities. 10 iterations are run untimed before taking the sum of 1000 timed iterations. The results shown are the median run taken from 5 runs of each test. For more information, see Appendix B which includes the code for the test.
 
@@ -1244,11 +1244,11 @@ In the example query above, the performance difference was less than 2% in a mic
 
 Entity Framework 6 introduced support of async operations when running on .NET 4.5 or later. For the most part, applications that have IO related contention will benefit the most from using asynchronous query and save operations. If your application does not suffer from IO contention, the use of async will, in the best cases, run synchronously and return the result in the same amount of time as a synchronous call, or in the worst case, simply defer execution to an asynchronous task and add extra time to the completion of your scenario.
 
-For information on how asynchronous programming work that will help you deciding if async will improve the performance of your application visit [http://msdn.microsoft.com/library/hh191443.aspx](https://msdn.microsoft.com/library/hh191443.aspx). For more information on the use of async operations on Entity Framework, see [Async Query and Save](../ef6/entity-framework-async-query-and-save-ef6-onwards.md).
+For information on how asynchronous programming work that will help you deciding if async will improve the performance of your application visit [http://msdn.microsoft.com/library/hh191443.aspx](https://msdn.microsoft.com/library/hh191443.aspx). For more information on the use of async operations on Entity Framework, see [Async Query and Save](../ef6/async-query-and-save-ef6-onwards.md).
 
 ### 9.6      NGEN
 
-Entity Framework 6 does not come in the default installation of .NET framework. As such, the Entity Framework assemblies are not NGEN’d by default which means that all the Entity Framework code is subject to the same JIT’ing costs as any other MSIL assembly. This might degrade the F5 experience while developing and also the cold startup of your application in the production environments. In order to reduce the CPU and memory costs of JIT’ing it is advisable to NGEN the Entity Framework images as appropriate. For more information on how to improve the startup performance of Entity Framework 6 with NGEN, see [Improving Startup Performance with NGen (EF6 Onwards)](../ef6/entity-framework-improving-startup-performance-with-ngen-ef6-onwards.md).
+Entity Framework 6 does not come in the default installation of .NET framework. As such, the Entity Framework assemblies are not NGEN’d by default which means that all the Entity Framework code is subject to the same JIT’ing costs as any other MSIL assembly. This might degrade the F5 experience while developing and also the cold startup of your application in the production environments. In order to reduce the CPU and memory costs of JIT’ing it is advisable to NGEN the Entity Framework images as appropriate. For more information on how to improve the startup performance of Entity Framework 6 with NGEN, see [Improving Startup Performance with NGen (EF6 Onwards)](../ef6/improving-startup-performance-with-ngen-ef6-onwards.md).
 
 ### 9.7      Code First versus EDMX
 

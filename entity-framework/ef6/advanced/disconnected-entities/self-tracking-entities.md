@@ -24,11 +24,11 @@ This template item generates two .tt (text template) files:
 
 ## STEs No Longer Recommended  
 
-We no longer recommend using the STE template, it continues to be available to support existing applications. Visit the [N-Tier](../ef6/entity-framework-n-tier.md) page for other options we recommend for N-Tier scenarios.  
+We no longer recommend using the STE template, it continues to be available to support existing applications. Visit the [N-Tier](../ef6/n-tier.md) page for other options we recommend for N-Tier scenarios.  
 
 ## Get Started  
 
-To get started, visit the [Self-Tracking Entities Walkthrough](../ef6/entity-framework-self-tracking-entities-walkthrough.md) page.  
+To get started, visit the [Self-Tracking Entities Walkthrough](../ef6/self-tracking-entities-walkthrough.md) page.  
 
 ## Considerations When Working with Self-Tracking Entities  
 

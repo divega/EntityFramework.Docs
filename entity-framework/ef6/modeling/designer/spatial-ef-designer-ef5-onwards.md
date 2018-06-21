@@ -17,15 +17,15 @@ caps.latest.revision: 3
 
 The video and step-by-step walkthrough shows how to map spatial types with the Entity Framework Designer. It also demonstrates how to use a LINQ query to find a distance between two locations.
 
-This walkthrough will use Model First to create a new database, but the EF Designer can also be used with the [Database First](../ef6/entity-framework-database-first.md) workflow to map to an existing database.
+This walkthrough will use Model First to create a new database, but the EF Designer can also be used with the [Database First](../ef6/database-first.md) workflow to map to an existing database.
 
 Spatial type support was introduced in Entity Framework 5. Note that to use the new features like spatial type, enums, and Table-valued functions, you must target .NET Framework 4.5. Visual Studio 2012 targets .NET 4.5 by default.
 
-To use spatial data types you must also use an Entity Framework provider that has spatial support. See [provider support for spatial types](../ef6/entity-framework-provider-support-for-spatial-types.md) for more information.
+To use spatial data types you must also use an Entity Framework provider that has spatial support. See [provider support for spatial types](../ef6/provider-support-for-spatial-types.md) for more information.
 
 There are two main spatial data types: geography and geometry. The geography data type stores ellipsoidal data (for example, GPS latitude and longitude coordinates). The geometry data type represents Euclidean (flat) coordinate system.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/entity-framework-spatial-ef-designer-ef5-onwards-video.md)
+[See the video that accompanies this step-by-step walkthrough.](../ef6/spatial-ef-designer-ef5-onwards-video.md)
  
 
 ## Pre-Requisites

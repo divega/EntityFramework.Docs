@@ -100,12 +100,12 @@ If you are using Visual Studio 2010 this template is already installed. If you c
 
 ### STE Generator (Self-Tracking Entities)
 
-This template will generate Self-Tracking Entity classes and a context that derives from ObjectContext. In an EF application, a context is responsible for tracking changes in the entities. However, in N-Tier scenarios, the context might not be available on the tier that modifies the entities. Self-tracking entities help you track changes in any tier. For more information, see [Self-Tracking Entities](../ef6/entity-framework-self-tracking-entities.md).
+This template will generate Self-Tracking Entity classes and a context that derives from ObjectContext. In an EF application, a context is responsible for tracking changes in the entities. However, in N-Tier scenarios, the context might not be available on the tier that modifies the entities. Self-tracking entities help you track changes in any tier. For more information, see [Self-Tracking Entities](../ef6/self-tracking-entities.md).
 
 > [!NOTE]
 > STE Template Not Recommended
 
-We no longer recommend using the STE template in new applications, it continues to be available to support existing applications. Visit the [N-Tier page](../ef6/entity-framework-n-tier.md) for other options we recommend for N-Tier scenarios.
+We no longer recommend using the STE template in new applications, it continues to be available to support existing applications. Visit the [N-Tier page](../ef6/n-tier.md) for other options we recommend for N-Tier scenarios.
 
 > [!NOTE]
 > There is no EF 6.x version of the STE template.

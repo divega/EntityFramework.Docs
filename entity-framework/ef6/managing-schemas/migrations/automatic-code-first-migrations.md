@@ -13,7 +13,7 @@ ms.assetid: 0eb86787-2161-4cb4-9cb8-67c5d6e95650
 caps.latest.revision: 3
 ---
 # Automatic Code First Migrations
-This topic assumes you have a basic knowledge of [Code First Migrations](../ef6/entity-framework-code-first-migrations.md) in Entity Framework.
+This topic assumes you have a basic knowledge of [Code First Migrations](../ef6/code-first-migrations.md) in Entity Framework.
 
 Automatic Migrations allows you to use Code First Migrations without having a code file in your project for each change you make. Not all changes can be applied automatically - for example column renames require the use of a code-based migration.
 

@@ -17,15 +17,15 @@ caps.latest.revision: 3
 
 The video and step-by-step walkthrough shows how to map spatial types with Entity Framework Code First. It also demonstrates how to use a LINQ query to find a distance between two locations.
 
-This walkthrough will use Code First to create a new database, but you can also use [Code First to an existing database](../ef6/entity-framework-code-first-to-an-existing-database.md).
+This walkthrough will use Code First to create a new database, but you can also use [Code First to an existing database](../ef6/code-first-to-an-existing-database.md).
 
 Spatial type support was introduced in Entity Framework 5. Note that to use the new features like spatial type, enums, and Table-valued functions, you must target .NET Framework 4.5. Visual Studio 2012 targets .NET 4.5 by default.
 
-To use spatial data types you must also use an Entity Framework provider that has spatial support. See [provider support for spatial types](../ef6/entity-framework-provider-support-for-spatial-types.md) for more information.
+To use spatial data types you must also use an Entity Framework provider that has spatial support. See [provider support for spatial types](../ef6/provider-support-for-spatial-types.md) for more information.
 
 There are two main spatial data types: geography and geometry. The geography data type stores ellipsoidal data (for example, GPS latitude and longitude coordinates). The geometry data type represents Euclidean (flat) coordinate system.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/entity-framework-spatial-code-first-ef5-onwards-video.md)
+[See the video that accompanies this step-by-step walkthrough.](../ef6/spatial-code-first-ef5-onwards-video.md)
  
 
 ## Pre-Requisites
@@ -142,7 +142,7 @@ The closest University to you is: School of Fine Art.
 
 When you run the application the first time, the Entity Framework creates a database for you. Because we have Visual Studio 2012 installed, the database will be created on the LocalDB instance. By default, the Entity Framework names the database after the fully qualified name of the derived context (in this example that is **SpatialCodeFirst.UniversityContext**). The subsequent times the existing database will be used.  
 
-Note, that if you make any changes to your model after the database has been created, you should use Code First Migrations to update the database schema. See [Code First to a New Database](../ef6/entity-framework-code-first-to-a-new-database.md) for an example of using Migrations.
+Note, that if you make any changes to your model after the database has been created, you should use Code First Migrations to update the database schema. See [Code First to a New Database](../ef6/code-first-to-a-new-database.md) for an example of using Migrations.
 
 To view the database and data, do the following:
 

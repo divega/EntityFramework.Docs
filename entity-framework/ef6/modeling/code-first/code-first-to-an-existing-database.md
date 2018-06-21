@@ -226,7 +226,7 @@ The Code First to Database wizard is designed to generate a starting point set o
 
 ## Using Code First Migrations with an Existing Database
 
-If you want to use Code First Migrations with your existing database, see [Code First Migrations with an existing database](../ef6/entity-framework-code-first-migrations-with-an-existing-database.md).
+If you want to use Code First Migrations with your existing database, see [Code First Migrations with an existing database](../ef6/code-first-migrations-with-an-existing-database.md).
 
  
 
