@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ed5518f0-a9a6-454e-9e98-a4fa7748c8d0
 caps.latest.revision: 3
 ---
-# Entity Framework Customizing the Migrations History Table (EF6 onwards)
+# Customizing the Migrations History Table (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
  

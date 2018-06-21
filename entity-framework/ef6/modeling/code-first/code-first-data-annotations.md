@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 80abefbd-23c9-4fce-9cd3-520e5df9856e
 caps.latest.revision: 3
 ---
-# Entity Framework Code First Data Annotations
+# Code First Data Annotations
 > **EF4.1 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 4.1. If you are using an earlier version, some or all of the information does not apply.
 
 The content on this page is adapted from and article originally written by Julie Lerman (\<http://thedatafarm.com>).

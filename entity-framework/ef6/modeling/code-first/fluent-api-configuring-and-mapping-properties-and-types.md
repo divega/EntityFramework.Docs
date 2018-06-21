@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 648ed274-c501-4630-88e0-d728ab5c4057
 caps.latest.revision: 3
 ---
-# Entity Framework Fluent API - Configuring and Mapping Properties and Types
+# Fluent API - Configuring and Mapping Properties and Types
 When working with Entity Framework Code First the default behavior is to map your POCO classes to tables using a set of conventions baked into EF. Sometimes, however, you cannot or do not want to follow those conventions and need to map entities to something other than what the conventions dictate.  
 
 There are two main ways you can configure EF to use something other than conventions, namely [annotations](../ef6/entity-framework-code-first-data-annotations.md) or EFs fluent API. The annotations only cover a subset of the fluent API functionality, so there are mapping scenarios that cannot be achieved using annotations. This article is designed to demonstrate how to use the fluent API to configure properties.  

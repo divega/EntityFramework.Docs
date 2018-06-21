@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: f8fcfb34-35de-4e82-b419-8f99fd2eb92a
 caps.latest.revision: 4
 ---
-# Entity Framework Blogs
+# Blogs
 
 Besides the product documentation, these blogs can be a source of useful information on Entity Framework:
 

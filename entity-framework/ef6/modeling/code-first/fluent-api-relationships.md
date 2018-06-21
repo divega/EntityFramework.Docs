@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: fd73b4f8-16d5-40f1-9640-885ceafe67a1
 caps.latest.revision: 3
 ---
-# Entity Framework Fluent API - Relationships
+# Fluent API - Relationships
 > [!NOTE]
 > This page provides information about setting up relationships in your Code First model using the fluent API. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](../ef6/entity-framework-relationships-and-navigation-properties.md).  
 

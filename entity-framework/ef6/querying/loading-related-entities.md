@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: c8417e18-a2ee-499c-9ce9-2a48cc5b468a
 caps.latest.revision: 3
 ---
-# Entity Framework Loading Related Entities
+# Loading Related Entities
 Entity Framework supports three ways to load related data - eager loading, lazy loading and explicit loading. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
 ## Eagerly Loading  

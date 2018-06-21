@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 2751cc3a-b099-4016-9faf-453dbf4af617
 caps.latest.revision: 3
 ---
-# Entity Framework Limitations with Retrying Execution Strategies (EF6 onwards)
+# Limitations with Retrying Execution Strategies (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
 There are a couple of limitations when using a retrying execution strategy:  

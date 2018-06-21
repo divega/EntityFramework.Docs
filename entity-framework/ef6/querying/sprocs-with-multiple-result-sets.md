@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 1b3797f9-cd3d-4752-a55e-47b84b399dc1
 caps.latest.revision: 3
 ---
-# Entity Framework Sprocs with Multiple Result Sets
+# Sprocs with Multiple Result Sets
 Sometimes when using stored procedures you will need to return more than one result set. This scenario is commonly used to reduce the number of database round trips required to compose a single screen. Prior to EF5, Entity Framework would allow the stored procedure to be called but would only return the first result set to the calling code.
 
 This article will show you two ways that you can use to access more than one result set from a stored procedure in Entity Framework. One that uses just code and works with both Code first and the EF Designer and one that only works with the EF Designer. The tooling and API support for this should improve in future versions of Entity Framework.

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: bc644573-c2b2-4ed7-8745-3c37c41058ad
 caps.latest.revision: 4
 ---
-# Entity Framework Code First Conventions
+# Code First Conventions
 Code First enables you to describe a model by using C# or Visual Basic .NET classes. The basic shape of the model is detected by using conventions. Conventions are sets of rules that are used to automatically configure a conceptual model based on class definitions when working with Code First. The conventions are defined in the System.Data.Entity.ModelConfiguration.Conventions namespace.  
 
 You can further configure your model by using data annotations or the fluent API. Precedence is given to configuration through the fluent API followed by data annotations and then conventions. For more information see [Data Annotations](../ef6/entity-framework-code-first-data-annotations.md), [Fluent API - Relationships](../ef6/entity-framework-fluent-api-relationships.md), [Fluent API - Types & Properties](../ef6/entity-framework-fluent-api-configuring-and-mapping-properties-and-types.md) and [Fluent API with VB.NET](../ef6/entity-framework-fluent-api-with-vb-net.md).  

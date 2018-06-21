@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 4528a509-ace7-4dfb-8065-1b833f5e03a0
 caps.latest.revision: 3
 ---
-# Entity Framework Defining DbSets
+# Defining DbSets
 When developing with the Code First workflow you define a derived DbContext that represents you session with the database and exposes a DbSet for each type in your model. This topic covers the various ways you can define the DbSet properties.  
 
 ## DbContext with DbSet properties  

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: cc6ffdb3-388d-4e79-a201-01ec2577c949
 caps.latest.revision: 3
 ---
-# Entity Framework Database First
+# Database First
 This video and step-by-step walkthrough provide an introduction to Database First development using Entity Framework. Database First allows you to reverse engineer a model from an existing database. The model is stored in an EDMX file (.edmx extension) and can be viewed and edited in the Entity Framework Designer. The classes that you interact with in your application are automatically generated from the EDMX file.
 
 [See the video that accompanies this step-by-step walkthrough.](../ef6/entity-framework-database-first-video.md)

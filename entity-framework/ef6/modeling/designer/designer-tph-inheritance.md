@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 72d26a8e-20ab-4500-bd13-394a08e73394
 caps.latest.revision: 3
 ---
-# Entity Framework Designer TPH Inheritance
+# Designer TPH Inheritance
 This step-by-step walkthrough shows how to implement table-per-hierarchy (TPH) inheritance in your conceptual model with the Entity Framework Designer (EF Designer). TPH inheritance uses one database table to maintain data for all of the entity types in an inheritance hierarchy.
 
 In this walkthrough we will map the Person table to three entity types: Person (the base type), Student (derives from Person), and Instructor (derives from Person). We'll create a conceptual model from the database (Database First) and then alter the model to implement the TPH inheritance using the EF Designer.

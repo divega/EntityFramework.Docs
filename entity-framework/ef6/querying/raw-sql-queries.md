@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 9e1ee76e-2499-408c-81e8-9b6c5d1945a0
 caps.latest.revision: 3
 ---
-# Entity Framework Raw SQL Queries
+# Raw SQL Queries
 Entity Framework allows you to query using LINQ with your entity classes. However, there may be times that you want to run queries using raw SQL directly against the database. This includes calling stored procedures, which can be helpful for Code First models that currently do not support mapping to stored procedures. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
 ## Writing SQL queries for entities  

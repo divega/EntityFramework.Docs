@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: b21207c9-1d95-4aa3-ae05-bc5fe300dab0
 caps.latest.revision: 3
 ---
-# Entity Framework Self-Tracking Entities Walkthrough
+# Self-Tracking Entities Walkthrough
 > [!IMPORTANT]
 > The self-tracking entities templates is not recommended for new applications. If your application requires working with disconnected graphs of entities, consider other alternatives such as [Trackable Entities](http://trackableentities.github.io/) or writing custom code using the low-level change tracking APIs.     
 

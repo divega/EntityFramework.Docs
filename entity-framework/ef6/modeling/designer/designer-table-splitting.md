@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 452f17c3-9f26-4de4-9894-8bc036e23b0f
 caps.latest.revision: 3
 ---
-# Entity Framework Designer Table Splitting
+# Designer Table Splitting
 This walkthrough shows how to map multiple entity types to a single table by modifying a model with the Entity Framework Designer (EF Designer).
 
 One reason you may want to use table splitting is delaying the loading of some properties when using lazy loading to load your objects. You can separate the properties that might contain very large amount of data into a seperate entity and only load it when required.

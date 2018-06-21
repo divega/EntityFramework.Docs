@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 8a21ae73-6d9b-4b50-838a-ec1fddffcf37
 caps.latest.revision: 3
 ---
-# Entity Framework Relationships and Navigation Properties
+# Relationships and Navigation Properties
 This topic gives an overview of how Entity Framework manages relationships between entities. It also gives some guidance on how to map and manipulate relationships.
 
 ## Relationships, Navigation Properties, and Foreign Keys

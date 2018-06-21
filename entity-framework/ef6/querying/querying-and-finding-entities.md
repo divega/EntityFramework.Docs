@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 65bb3db2-2226-44af-8864-caa575cf1b46
 caps.latest.revision: 3
 ---
-# Entity Framework Querying and Finding Entities
+# Querying and Finding Entities
 This topic covers the various ways you can query for data using Entity Framework, including LINQ and the Find method. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
 ## Finding entities using a query  

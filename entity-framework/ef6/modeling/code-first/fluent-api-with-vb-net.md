@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 763dc6a2-764a-4600-896c-f6f13abf56ec
 caps.latest.revision: 3
 ---
-# Entity Framework Fluent API with VB.NET
+# Fluent API with VB.NET
 Code First allows you to define your model using C\# or VB.NET classes. Additional configuration can optionally be performed using attributes on your classes and properties or by using a fluent API. This walkthrough shows how to perform fluent API configuration using VB.NET.
 
 This page assumes you have a basic understanding of Code First. Check out the following walkthroughs for more information on Code First:

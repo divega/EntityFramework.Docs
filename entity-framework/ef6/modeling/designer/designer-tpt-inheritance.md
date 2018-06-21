@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: efc78c31-b4ea-4ea3-a0cd-c69eb507020e
 caps.latest.revision: 3
 ---
-# Entity Framework Designer TPT Inheritance
+# Designer TPT Inheritance
 This step-by-step walkthrough shows how to implement table-per-type (TPT) inheritance in your model using the Entity Framework Designer (EF Designer). Table-per-type inheritance uses a separate table in the database to maintain data for non-inherited properties and key properties for each type in the inheritance hierarchy.
 
 In this walkthrough we will map the **Course** (base type), **OnlineCourse** (derives from Course), and **OnsiteCourse** (derives from **Course**) entities to tables with the same names. We'll create a model from the database and then alter the model to implement the TPT inheritance.

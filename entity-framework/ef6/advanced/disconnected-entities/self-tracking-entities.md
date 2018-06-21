@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 5e60f5be-7bbb-4bf8-835e-0ac808d6c84a
 caps.latest.revision: 3
 ---
-# Entity Framework Self-Tracking Entities
+# Self-Tracking Entities
 In an Entity Framework-based application, a context is responsible for tracking changes in your objects. You then use the SaveChanges method to persist the changes to the database. When working with N-Tier applications, the entity objects are usually disconnected from the context and you must decide how to track changes and report those changes back to the context. Self-Tracking Entities (STEs) can help you track changes in any tier and then replay these changes into a context to be saved.  
 
 Use STEs only if the context is not available on a tier where the changes to the object graph are made. If the context is available, there is no need to use STEs because the context will take care of tracking changes.  

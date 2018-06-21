@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: e90d48e6-bea5-47ef-b756-7b89cce4daf0
 caps.latest.revision: 3
 ---
-# Entity Framework Databinding with WPF
+# Databinding with WPF
 This step-by-step walkthrough shows how to bind POCO types to WPF controls in a “master-detail" form. The application uses the Entity Framework APIs to populate objects with data from the database, track changes, and persist data to the database.
 
 The model defines two types that participate in one-to-many relationship: **Category** (principal\\master) and **Product** (dependent\\detail). Then, the Visual Studio tools are used to bind the types defined in the model to the WPF controls. The WPF data-binding framework enables navigation between related objects: selecting rows in the master view causes the detail view to update with the corresponding child data.

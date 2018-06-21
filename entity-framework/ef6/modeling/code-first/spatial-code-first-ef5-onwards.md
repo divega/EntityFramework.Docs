@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: d617aed1-15f2-48a9-b187-186991c666e3
 caps.latest.revision: 3
 ---
-# Entity Framework Spatial - Code First (EF5 onwards)
+# Spatial - Code First (EF5 onwards)
 > **EF5 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 5. If you are using an earlier version, some or all of the information does not apply.
 
 The video and step-by-step walkthrough shows how to map spatial types with Entity Framework Code First. It also demonstrates how to use a LINQ query to find a distance between two locations.

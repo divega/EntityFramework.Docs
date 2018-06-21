@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: b5ee7eb1-88cc-456e-b53c-c67e24c3f8ca
 caps.latest.revision: 3
 ---
-# Entity Framework Logging and Intercepting Database Operations (EF6 Onwards)
+# Logging and Intercepting Database Operations (EF6 Onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
 Starting with Entity Framework 6, anytime Entity Framework sends a command to the database this command can be intercepted by application code. This is most commonly used for logging SQL, but can also be used to modify or abort the command.  

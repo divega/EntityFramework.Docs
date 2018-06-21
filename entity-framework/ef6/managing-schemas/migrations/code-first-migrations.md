@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 36591d8f-36e1-4835-8a51-90f34f633d1e
 caps.latest.revision: 3
 ---
-# Entity Framework Code First Migrations
+# Code First Migrations
 This walkthrough will provide an overview Code First Migrations in Entity Framework. You can either complete the entire walkthrough or skip to the topic you are interested in. The following topics are covered:
 
 ## Building an Initial Model & Database

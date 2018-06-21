@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 80fc5062-2f1c-4dbd-ab6e-b99496784b36
 caps.latest.revision: 3
 ---
-# Entity Framework Databinding with WinForms
+# Databinding with WinForms
 This step-by-step walkthrough shows how to bind POCO types to Window Forms (WinForms) controls in a “master-detail" form. The application uses Entity Framework to populate objects with data from the database, track changes, and persist data to the database.
 
 The model defines two types that participate in one-to-many relationship: Category (principal\\master) and Product (dependent\\detail). Then, the Visual Studio tools are used to bind the types defined in the model to the WinForms controls. The WinForms data-binding framework enables navigation between related objects: selecting rows in the master view causes the detail view to update with the corresponding child data.

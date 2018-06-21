@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 13ae7bc1-74b4-4ee4-8d73-c337be841467
 caps.latest.revision: 4
 ---
-# Entity Framework MSL Specification
+# MSL Specification
 Mapping specification language (MSL) is an XML-based language that describes the mapping between the conceptual model and storage model of an Entity Framework application.
 
 In an Entity Framework application, mapping metadata is loaded from an .msl file (written in MSL) at build time. Entity Framework uses mapping metadata at runtime to translate queries against the conceptual model to store-specific commands.

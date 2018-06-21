@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 3c76cdd5-17c5-4c54-a6a5-cf21b974636b
 caps.latest.revision: 3
 ---
-# Entity Framework Tools Keyboard Shortcuts
+# Tools Keyboard Shortcuts
 This page provides a list of keyboard shorcuts that are available in the various screens of the Entity Framework Tools for Visual Studio.
 
  

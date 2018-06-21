@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 402fe960-754b-470f-976b-e5de3e9986b5
 caps.latest.revision: 3
 ---
-# Entity Framework Relationships - EF Designer
+# Relationships - EF Designer
 > [!NOTE]
 > This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](../ef6/entity-framework-relationships-and-navigation-properties.md).
 

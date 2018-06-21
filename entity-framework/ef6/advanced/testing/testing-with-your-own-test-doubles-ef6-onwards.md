@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 16a8b7c0-2d23-47f4-9cc0-e2eb2e738ca3
 caps.latest.revision: 4
 ---
-# Entity Framework Testing with Your Own Test Doubles (EF6 onwards)
+# Testing with Your Own Test Doubles (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
 When writing tests for your application it is often desirable to avoid hitting the database.  Entity Framework allows you to achieve this by creating a context – with behavior defined by your tests – that makes use of in-memory data.  

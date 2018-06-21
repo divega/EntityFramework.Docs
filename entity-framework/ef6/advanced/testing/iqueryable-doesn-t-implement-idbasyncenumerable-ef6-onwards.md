@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: bcbe5277-7699-46c2-a780-a9e37ca88690
 caps.latest.revision: 3
 ---
-# Entity Framework IQueryable doesn&#39;t implement IDbAsyncEnumerable (EF6 onwards)
+# IQueryable doesn&#39;t implement IDbAsyncEnumerable (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
 Entity Framework 6 introduced a set of extension methods that can be used to asynchronously execute a query. Examples of these methods include ToListAsync, FirstAsync, ForEachAsync, etc.  

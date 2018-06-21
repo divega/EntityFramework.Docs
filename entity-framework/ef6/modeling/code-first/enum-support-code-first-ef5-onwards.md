@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 77a42501-27c9-4f4b-96df-26c128021467
 caps.latest.revision: 3
 ---
-# Entity Framework Enum Support - Code First (EF5 onwards)
+# Enum Support - Code First (EF5 onwards)
 > **EF5 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 5. If you are using an earlier version, some or all of the information does not apply.
 
 This video and step-by-step walkthrough shows how to use enum types with Entity Framework Code First. It also demonstrates how to use enums in a LINQ query.

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 77d6a095-c0d0-471e-80b9-8f9aea6108b2
 caps.latest.revision: 3
 ---
-# Entity Framework Validation
+# Data Validation
 > **EF4.1 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 4.1. If you are using an earlier version, some or all of the information does not apply
 
 The content on this page is adapted from and article originally written by Julie Lerman ([http://thedatafarm.com](http://thedatafarm.com)).

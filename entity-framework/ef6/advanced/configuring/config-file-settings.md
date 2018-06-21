@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 000044c6-1d32-4cf7-ae1f-ea21d86ebf8f
 caps.latest.revision: 3
 ---
-# Entity Framework Configuration File Settings
+# Configuration File Settings
 Entity Framework allows a number of settings to be specified from the configuration file. In general EF follows a ‘convention over configuration’ principle: all the settings discussed in this post have a default behavior, you only need to worry about changing the setting when the default no longer satisfies your requirements.  
 
 ## A Code-Based Alternative  

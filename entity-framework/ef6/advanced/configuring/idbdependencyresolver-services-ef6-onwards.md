@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 32d19ac6-9186-4ae1-8655-64ee49da55d0
 caps.latest.revision: 3
 ---
-# Entity Framework IDbDependencyResolver Services (EF6 onwards)
+# IDbDependencyResolver Services (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
 Starting with EF6, Entity Framework contains a general-purpose mechanism for obtaining implementations of services that it requires. That is, when EF uses an instance of some interfaces or base classes it will ask for a concrete implementation of the interface or base class to use. This is achieved through use of the IDbDependencyResolver interface:  

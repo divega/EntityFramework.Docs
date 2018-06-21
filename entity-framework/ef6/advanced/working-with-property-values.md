@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: e3278b4b-9378-4fdb-923d-f64d80aaae70
 caps.latest.revision: 3
 ---
-# Entity Framework Working with Property Values
+# Working with Property Values
 For the most part Entity Framework will take care of tracking the state, original values, and current values of the properties of your entity instances. However, there may be some cases - such as disconnected/N-Tier scenarios - where you want to view or manipulate the information EF has about the properties. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
 ## Working with property values  

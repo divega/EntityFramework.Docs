@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 3f05ffdd-49bc-499c-9732-4a368bf5d2d7
 caps.latest.revision: 3
 ---
-# Entity Framework 6 Glossary
+# Glossary
 | Term                          | Definition                                                                                                                                                                                                                                                                                      |
 |:------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Code First                    | Creating an Entity Framework model using code. The model can target and existing database or a new database.                                                                                                                                                                                    |

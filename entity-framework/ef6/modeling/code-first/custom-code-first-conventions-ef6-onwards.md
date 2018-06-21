@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: dd2bdbd9-ae9e-470a-aeb8-d0ba160499b7
 caps.latest.revision: 3
 ---
-# Entity Framework Custom Code First Conventions (EF6 onwards)
+# Custom Code First Conventions (EF6 onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
 When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](../ef6/entity-framework-code-first-conventions.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.

@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: ecaa5a27-b19e-4bf9-8142-a3fb00642270
 caps.latest.revision: 3
 ---
-# Entity Framework Connection Management
+# Connection Management
 This page describes the behavior of Entity Framework with regard to passing connections to the context and the functionality of the **Database.Connection.Open()** API.  
 
 ## Passing Connections to the Context  

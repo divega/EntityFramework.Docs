@@ -12,7 +12,7 @@ ms.topic: "article"
 ms.assetid: 0d0f1824-d781-4cb3-8fda-b7eaefced1cd
 caps.latest.revision: 3
 ---
-# Entity Framework Working with Transactions (EF6 Onwards)
+# Working with Transactions (EF6 Onwards)
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
 This document will describe using transactions in EF6 including the enhancements we have added since EF5 to make working with transactions easy.  
