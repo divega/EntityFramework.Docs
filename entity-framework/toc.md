@@ -262,9 +262,9 @@
 ##### [Self-Tracking Entities Walkthrough](ef6/entity-framework-self-tracking-entities-walkthrough.md)
 
 ### Versions
-#### [Past Versions of Entity Framework](ef6/past-versions-of-entity-framework-removed.md)
-#### [Upgrading to Entity Framework 6](ef6/upgrading-to-ef6.md)
-#### [Version History](ef6/version-history.md)
+#### [Past Versions of Entity Framework](ef6/removed/past-versions-of-entity-framework.md)
+#### [Upgrading to Entity Framework 6](ef6/versions/upgrading-to-ef6.md)
+#### [Version History](ef6/versions/version-history.md)
 #### Licenses
 ##### [EF5 (ENU)](ef6/versions/licenses/ef5-license-enu.md)
 ##### [EF5 (CHS)](ef6/versions/licenses/ef5-license-chs.md)

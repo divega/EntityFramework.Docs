@@ -12,19 +12,8 @@ ms.topic: "article"
 ms.assetid: ce0bc4e4-f036-452e-80b3-c483f742631e
 caps.latest.revision: 4
 ---
-# Entity Framework Windows SQL Azure
-This topic provides guidance for deploying to Windows Azure and accessing a Windows Azure SQL Database using Entity Framework. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.
-
-
-## Deploying to Windows Azure
-
-### Spatial Data Types
-
-In order to use spatial data types on Windows Azure you will need to deploy the Microsoft.SqlServer.Types assembly with your application. The easiest way to do this is to install the [Microsoft.SqlServer.Types NuGet package](http://www.nuget.org/packages/Microsoft.SqlServer.Types/) in your application.
-
-``` PowerShell
-Install-Package Microsoft.SqlServer.Types
-```
+# Working with Azure SQL Database
+This topic provides guidance for deploying to Azure and accessing a Azure SQL Database using Entity Framework. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.
 
 ## Connecting to SQL Azure
 
