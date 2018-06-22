@@ -1,12 +1,10 @@
 ---
-title: "Entity Framework IDbDependencyResolver Services - EF6"
+title: "IDbDependencyResolver Services - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 32d19ac6-9186-4ae1-8655-64ee49da55d0
@@ -32,7 +30,7 @@ This article does not contain full details on how to implement IDbDependencyReso
 
 Unless otherwise stated any object returned must be thread-safe since it can be used as a singleton. In many cases the object returned is a factory in which case the factory itself must be thread-safe but the object returned from the factory does not need to be thread-safe since a new instance is requested from the factory for each use.  
 
-### System.Data.Entity.IDatabaseInitializer\<TContext\>  
+### System.Data.Entity.IDatabaseInitializer<TContext\>  
 
 **Version introduced**: EF6.0.0  
 
@@ -40,7 +38,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Key**: Not used; will be null  
 
-### Func\<System.Data.Entity.Migrations.Sql.MigrationSqlGenerator\>  
+### Func<System.Data.Entity.Migrations.Sql.MigrationSqlGenerator\>  
 
 **Version introduced**: EF6.0.0
 
@@ -88,7 +86,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Key**: Not used; will be null  
 
-### Func\<DbContext, System.Data.Entity.Infrastructure.IDbModelCacheKey\>  
+### Func<DbContext, System.Data.Entity.Infrastructure.IDbModelCacheKey\>  
 
 **Version introduced**: EF6.0.0  
 
@@ -106,7 +104,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Notes**: For more details on provider-related services in EF6 see the [EF6 provider model documentation on CodePlex](http://entityframework.codeplex.com/wikipage?title=Rebuilding%20EF%20providers%20for%20EF6).  
 
-### Func\<System.Data.Entity.Infrastructure.IDbExecutionStrategy\>  
+### Func<System.Data.Entity.Infrastructure.IDbExecutionStrategy\>  
 
 **Version introduced**: EF6.0.0  
 
@@ -116,11 +114,11 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Notes**: For more details on provider-related services in EF6 see the [EF6 provider model documentation on CodePlex](http://entityframework.codeplex.com/wikipage?title=Rebuilding%20EF%20providers%20for%20EF6).  
 
-### Func\<DbConnection, string, System.Data.Entity.Migrations.History.HistoryContext\>  
+### Func<DbConnection, string, System.Data.Entity.Migrations.History.HistoryContext\>  
 
 **Version introduced**: EF6.0.0  
 
-**Object returned**: A factory that allows a provider to configure the mapping of the HistoryContext to the __MigrationHistory table used by EF Migrations. The HistoryContext is a Code First DbContext and can be configured using the normal fluent API to change things like the name of the table and the column mapping specifications.  
+**Object returned**: A factory that allows a provider to configure the mapping of the HistoryContext to the `__MigrationHistory` table used by EF Migrations. The HistoryContext is a Code First DbContext and can be configured using the normal fluent API to change things like the name of the table and the column mapping specifications.  
 
 **Key**: Not used; will be null  
 
@@ -170,7 +168,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Key**: Not used; will be null.  
 
-### Func\<System.Data.Entity.DbContext, Action\<string\>, System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter\>  
+### Func<System.Data.Entity.DbContext, Action<string\>, System.Data.Entity.Infrastructure.Interception.DatabaseLogFormatter\>  
 
 **Version introduced**: EF6.0.0  
 
@@ -178,7 +176,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Key**: Not used; will be null.  
 
-### Func\<System.Data.Entity.DbContext\>  
+### Func<System.Data.Entity.DbContext\>  
 
 **Version introduced**: EF6.1.0  
 
@@ -186,7 +184,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Key**: The Type object for the type of the derived DbContext for which a factory is needed.  
 
-### Func\<System.Data.Entity.Core.Metadata.Edm.IMetadataAnnotationSerializer\>  
+### Func<System.Data.Entity.Core.Metadata.Edm.IMetadataAnnotationSerializer\>  
 
 **Version introduced**: EF6.1.0  
 
@@ -194,7 +192,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 
 **Key**: The name of the annotation that is being serialized or deserialized.  
 
-### Func\<System.Data.Entity.Infrastructure.TransactionHandler\>  
+### Func<System.Data.Entity.Infrastructure.TransactionHandler\>  
 
 **Version introduced**: EF6.1.0  
 

@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Loading Related Entities - EF6"
+title: "Loading Related Entities - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

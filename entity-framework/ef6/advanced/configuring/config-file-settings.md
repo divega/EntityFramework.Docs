@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Configuration File Settings - EF6"
+title: "Configuration File Settings - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

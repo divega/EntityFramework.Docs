@@ -1,12 +1,10 @@
 ---
-title: "Entity Framework Code-Based Configuration - EF6"
+title: "Code-Based Configuration - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 13886d24-2c74-4a00-89eb-aa0dee328d83
@@ -100,7 +98,7 @@ In such situations EF is unable to discover the configuration automatically and 
 
 ## Overriding DbConfiguration  
 
-There are some situations where you need to override the configuration set in the DbConfiguration. This is not typically done by application developers but rather by thrid party providers and plug-ins that cannot use a derived DbConfiguration class.  
+There are some situations where you need to override the configuration set in the DbConfiguration. This is not typically done by application developers but rather by third party providers and plug-ins that cannot use a derived DbConfiguration class.  
 
 For this, EntityFramework allows an event handler to be registered that can modify existing configuration just before it is locked down.  It also provides a sugar method specifically for replacing any service returned by the EF service locator. This is how it is intended to be used:  
 

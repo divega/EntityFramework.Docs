@@ -1,12 +1,10 @@
 ---
-title: "Entity Framework Self-Tracking Entities - EF6"
+title: "Self-Tracking Entities - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 5e60f5be-7bbb-4bf8-835e-0ac808d6c84a
@@ -24,11 +22,11 @@ This template item generates two .tt (text template) files:
 
 ## STEs No Longer Recommended  
 
-We no longer recommend using the STE template, it continues to be available to support existing applications. Visit the [N-Tier](../ef6/n-tier.md) page for other options we recommend for N-Tier scenarios.  
+We no longer recommend using the STE template, it continues to be available to support existing applications. Visit the [Working with disconnected entities](~/ef6/advanced/disconnected-entities/index.md) article for other options we recommend for N-Tier scenarios.  
 
 ## Get Started  
 
-To get started, visit the [Self-Tracking Entities Walkthrough](../ef6/self-tracking-entities-walkthrough.md) page.  
+To get started, visit the [Self-Tracking Entities Walkthrough](walkthrough.md) page.  
 
 ## Considerations When Working with Self-Tracking Entities  
 

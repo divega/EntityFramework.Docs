@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Fluent API - Configuring and Mapping Properties and Types - EF6"
+title: "Fluent API - Configuring and Mapping Properties and Types - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

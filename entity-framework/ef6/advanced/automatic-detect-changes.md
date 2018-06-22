@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Automatic Detect Changes - EF6"
+title: "Automatic Detect Changes - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

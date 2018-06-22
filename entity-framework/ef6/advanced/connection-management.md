@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Connection Management - EF6"
+title: "Connection Management - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

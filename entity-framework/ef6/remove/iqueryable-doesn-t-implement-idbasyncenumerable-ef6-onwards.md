@@ -1,15 +1,14 @@
 ---
-title: "Entity Framework IQueryable doesn&#39;t implement IDbAsyncEnumerable - EF6"
+title: "IQueryable doesn&#39;t implement IDbAsyncEnumerable - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: bcbe5277-7699-46c2-a780-a9e37ca88690
+new.ms.assetid: bd66a638-d245-44d4-8e71-b9c6cb335cc7
 caps.latest.revision: 3
 ---
 # IQueryable doesn&#39;t implement IDbAsyncEnumerable (EF6 onwards)
@@ -19,7 +18,6 @@ Entity Framework 6 introduced a set of extension methods that can be used to asy
 
 Because Entity Framework queries make use of LINQ, the extension methods are defined on IQueryable and IEnumerable. However, because they are only designed to be used with Entity Framework you may receive the following error if you try to use them on a LINQ query that isn’t an Entity Framework query.  
 
-> [!NOTE]
 > The source IQueryable doesn't implement IDbAsyncEnumerable{0}. Only sources that implement IDbAsyncEnumerable can be used for Entity Framework asynchronous operations. For more details see [http://go.microsoft.com/fwlink/?LinkId=287068](http://go.microsoft.com/fwlink/?LinkId=287068).  
 
 ## Async Methods when Unit Testing  
@@ -27,3 +25,5 @@ Because Entity Framework queries make use of LINQ, the extension methods are def
 Whilst the async methods are only supported when running against an EF query, you may want to use them in your unit test when running against an in-memory test double of a DbSet.  
 
 For more details on how to achieve this scenario see the 'Testing with async queries' section of [Testing with a Mocking Framework](../ef6/testing-with-a-mocking-framework-ef6-onwards.md) or [Testing with Your Own Test Doubles](../ef6/testing-with-your-own-test-doubles-ef6-onwards.md).  
+
+TO-DO: Update http://go.microsoft.com/fwlink/?LinkId=287068

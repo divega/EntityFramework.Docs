@@ -1,12 +1,10 @@
 ---
-title: "Entity Framework Handling of Transaction Commit Failures - EF6"
+title: "Handling of Transaction Commit Failures - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 5b1f7a7d-1b24-4645-95ec-5608a31ef577
@@ -49,7 +47,7 @@ Although EF will do a best effort to prune rows from the table when they aren’
 
 ## How to handle commit failures with previous Versions
 
-There are several ways to dealing with this situation that can be applied to previous versions of EF6:  
+Before EF 6.1 there was not mechanism to handle commit failures in the EF product. There are several ways to dealing with this situation that can be applied to previous versions of EF6:  
 
 ### Option 1 - Do nothing  
 

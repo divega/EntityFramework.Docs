@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: d6d5a465-6434-45fa-855d-5eb48c61a2ea
@@ -147,7 +145,7 @@ If you have a large Code First model, using Independent Associations will have t
 |:----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Entity Designer | After adding an association between two entities, make sure you have a referential constraint. Referential constraints tell Entity Frameworkto use Foreign Keys instead of Independent Associations. For additional details visit \<http://blogs.msdn.com/b/efdesign/archive/2009/03/16/foreign-keys-in-the-entity-framework.aspx>. |
 | EDMGen          | When using EDMGen to generate your files from the database, your Foreign Keys will be respected and added to the model as such. For more information on the different options exposed by EDMGen visit [http://msdn.microsoft.com/library/bb387165.aspx](https://msdn.microsoft.com/library/bb387165.aspx).                          |
-| Code First      | See the "Relationship Convention" section of the [Code First Conventions](../ef6/code-first-conventions.md) topic for information on how to include foreign key properties on dependent objects when using Code First.                                                                                             |
+| Code First      | See the "Relationship Convention" section of the [Code First Conventions](../ef6/code-first-conventions.md) topic for information on how to include foreign key properties on dependent objects when using Code First.                                                                                                              |
 
 #### 2.4.2 Moving your model to a separate assembly
 
@@ -394,7 +392,7 @@ WHERE ((0 = (CASE WHEN (@p__linq__1 IS NOT NULL) THEN cast(1 as bit) WHEN (@p__l
 
 ### 3.4 Metadata caching
 
-The Entity Framework also supports Metadata caching. This is essentially caching of type information and type-to-database mapping information across different connections to the same model. The Metadata cache is unique per AppDomain. 
+The Entity Framework also supports Metadata caching. This is essentially caching of type information and type-to-database mapping information across different connections to the same model. The Metadata cache is unique per AppDomain.
 
 #### 3.4.1 Metadata Caching algorithm
 
@@ -420,7 +418,7 @@ This implementation of second-level caching is an injected functionality that ta
 
 #### 3.5.1 Additional references for results caching with the wrapping provider
 
--   Julie Lerman has written a "Second-Level Caching in Entity Frameworkand Windows Azure" MSDN article that includes how to update the sample wrapping provider to use Windows Server AppFabric caching: [http://msdn.microsoft.com/magazine/hh394143.aspx](https://msdn.microsoft.com/magazine/hh394143.aspx)
+-   Julie Lerman has written a "Second-Level Caching in Entity Frameworkand Windows Azure" MSDN article that includes how to update the sample wrapping provider to use Windows Server AppFabric caching: [https://msdn.microsoft.com/magazine/hh394143.aspx](https://msdn.microsoft.com/magazine/hh394143.aspx)
 -   If you are working with Entity Framework 5, the team blog has a post that describes how to get things running with the caching provider for Entity Framework 5: \<http://blogs.msdn.com/b/adonet/archive/2010/09/13/ef-caching-with-jarek-kowalski-s-provider.aspx>. It also includes a T4 template to help automate adding the 2nd-level caching to your project.
 
 ## 4 Autocompiled Queries
@@ -477,7 +475,6 @@ using (var context = new MyContext())
     ...
 }
 ```
- 
 
 In this example, each time this query is executed with a different value for id the query will be compiled into a new plan.
 
@@ -493,7 +490,6 @@ for (var i = 0; i < count; ++i)
     ProcessCustomer(currentCustomer);
 }
 ```
- 
 
 A faster version of this same code would involve calling Skip with a lambda:
 
@@ -505,7 +501,6 @@ for (var i = 0; i \< count; ++i)
     ProcessCustomer(currentCustomer);
 }
 ```
- 
 
 The second snippet may run up to 11% faster because the same query plan is used every time the query is run, which saves CPU time and avoids polluting the query cache. Furthermore, because the parameter to Skip is in a closure the code might as well look like this now:
 
@@ -518,7 +513,6 @@ for (; i < count; ++i)
     ProcessCustomer(currentCustomer);
 }
 ```
- 
 
 ### 4.3 Using the properties of a non-mapped object
 
@@ -637,8 +631,6 @@ Test Results, median over 3 runs:
 | **Entity Framework 5** | 460361728                 | 1163536 ms         | 596545536                 | 1273042 ms         |
 | **Entity Framework 6** | 647127040                 | 190228 ms          | 832798720                 | 195521 ms          |
 
- 
-
 Entity Framework 5 will have a smaller memory footprint at the end of the run than Entity Framework 6 does. The additional memory consumed by Entity Framework 6 is the result of additional memory structures and code that enable new features and better performance.
 
 There’s also a clear difference in memory footprint when using the ObjectStateManager. Entity Framework 5 increased its footprint by 30% when keeping track of all the entities we materialized from the database. Entity Framework 6 increased its footprint by 28% when doing so.
@@ -684,7 +676,6 @@ When the context derives ObjectContext:
 context.Products.MergeOption = MergeOption.NoTracking;
 var q = context.Products.Where(p => p.Category.CategoryName == "Beverages");
 ```
- 
 
 When the context derives DbContext:
 
@@ -692,7 +683,6 @@ When the context derives DbContext:
 var q = context.Products.AsNoTracking()
                         .Where(p => p.Category.CategoryName == "Beverages");
 ```
- 
 
 **Pros**
 
@@ -867,7 +857,6 @@ To compare the real-world performance of the different query options, we created
 | EF6 | DbContext Sql Query on DbSet                | 1023      | 41992192 |
 | EF6 | DbContext Linq Query                        | 1290      | 47529984 |
 
- 
 
 ![EF5WarmQuery1000](../ef6/media/ef5warmquery1000.png)
 
@@ -1274,7 +1263,7 @@ Tools like the profiler built into Visual Studio tell you where your application
 
 Two commercially available profilers are the Entity Framework Profiler ( \<http://efprof.com>) and ORMProfiler ( \<http://ormprofiler.com>).
 
-If your application is an MVC application using Code First, you can use StackExchange's MiniProfiler. Scott Hanselman describes this tool in his blog at: \<http://www.hanselman.com/blog/NuGetPackageOfTheWeek9ASPNETMiniProfilerFromStackExchangeRocksYourWorld.aspx>. 
+If your application is an MVC application using Code First, you can use StackExchange's MiniProfiler. Scott Hanselman describes this tool in his blog at: \<http://www.hanselman.com/blog/NuGetPackageOfTheWeek9ASPNETMiniProfilerFromStackExchangeRocksYourWorld.aspx>.
 
 For more information on profiling your application's database activity, see Julie Lerman's MSDN Magazine article titled [Profiling Database Activity in the Entity Framework](https://msdn.microsoft.com/magazine/gg490349.aspx).
 
@@ -1512,7 +1501,6 @@ namespace QueryComparison
     }
 }
 ```
- 
 
 ### 11.3 C. Navision Model
 

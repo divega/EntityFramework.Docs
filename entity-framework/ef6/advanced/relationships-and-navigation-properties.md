@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Relationships and Navigation Properties - EF6"
+title: "Relationships and Navigation Properties - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

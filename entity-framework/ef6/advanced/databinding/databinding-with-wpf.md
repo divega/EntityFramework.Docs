@@ -1,12 +1,10 @@
 ---
-title: "Entity Framework Databinding with WPF - EF6"
+title: "Databinding with WPF - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: e90d48e6-bea5-47ef-b756-7b89cce4daf0
@@ -19,8 +17,6 @@ The model defines two types that participate in one-to-many relationship: **Cate
 
 The screen shots and code listings in this walkthrough are taken from Visual Studio 2013 but you can complete this walkthrough with Visual Studio 2012 or Visual Studio 2010.
 
- 
-
 ## Use the 'Object' Option for Creating WPF Data Sources
 
 With previous version of Entity Framework we used to recommend using the **Database** option when creating a new Data Source based on a model created with the EF Designer. This was because the designer would generate a context that derived from ObjectContext and entity classes that derived from EntityObject. Using the Database option would help you write the best code for interacting with this API surface.
@@ -31,15 +27,11 @@ When using the DbContext API surface you should use the **Object** option when c
 
 If needed, you can [revert to ObjectContext based code generation](../ef6/reverting-to-objectcontext-in-entity-framework-designer.md) for models created with the EF Designer.
 
- 
-
 ## Pre-Requisites
 
 You need to have Visual Studio 2013, Visual Studio 2012 or Visual Studio 2010 installed to complete this walkthrough.
 
 If you are using Visual Studio 2010, you also have to install NuGet. For more information, see [Installing NuGet](http://docs.nuget.org/docs/start-here/installing-nuget).  
-
- 
 
 ## Create the Application
 
@@ -49,8 +41,6 @@ If you are using Visual Studio 2010, you also have to install NuGet. For more i
 -   Enter **WPFwithEFSample** as the name
 -   Select **OK**
 
- 
-
 ## Install the Entity Framework NuGet package
 
 -   In Solution Explorer, right-click on the **WinFormswithEFSample** project
@@ -58,8 +48,6 @@ If you are using Visual Studio 2010, you also have to install NuGet. For more i
 -   In the Manage NuGet Packages dialog, Select the **Online** tab and choose the **EntityFramework** package
 -   Click **Install**  
     >**Note**: In addition to the EntityFramework assembly a reference to System.ComponentModel.DataAnnotations is also added. If the project has a reference to System.Data.Entity, then it will be removed when the EntityFramework package is installed. The System.Data.Entity assembly is no longer used for Entity Framework 6 applications.
-
- 
 
 ## Define a Model
 
@@ -147,8 +135,6 @@ The database server that is installed with Visual Studio is different depending 
 -   If you are using Visual Studio 2010 you'll be creating a SQL Express database.
 -   If you are using Visual Studio 2012 then you'll be creating a [LocalDB](https://msdn.microsoft.com/library/hh510202.aspx) database.
 
- 
-
 Let's go ahead and generate the database.
 
 -   **View -&gt; Server Explorer**
@@ -209,8 +195,6 @@ We’re going to make use of Entity Framework Designer, which is included as par
 
     ![ChooseYourObjects](../ef6/media/chooseyourobjects.png)
 
- 
-
 Once the reverse engineer process completes the new model is added to your project and opened up for you to view in the Entity Framework Designer. An App.config file has also been added to your project with the connection details for the database.
 
 #### Additional Steps in Visual Studio 2010
@@ -240,10 +224,6 @@ If you now open the Category.cs file (which is nested under ProductModel.tt) the
 
 Compile the project.
 
- 
-
- 
-
 ## Lazy Loading
 
 The **Products** property on the **Category** class and **Category** property on the **Product** class are navigation properties. In Entity Framework, navigation properties provide a way to navigate a relationship between two entity types.
@@ -251,8 +231,6 @@ The **Products** property on the **Category** class and **Category** property on
 EF gives you an option of loading related entities from the database automatically the first time you access the navigation property. With this type of loading (called lazy loading), be aware that the first time you access each navigation property a separate query will be executed against the database if the contents are not already in the context.
 
 When using POCO entity types, EF achieves lazy loading by creating instances of derived proxy types during runtime and then overriding virtual properties in your classes to add the loading hook. To get lazy loading of related objects, you must declare navigation property getters as **public** and **virtual** (**Overridable** in Visual Basic), and you class must not be **sealed** (**NotOverridable** in Visual Basic). When using Database First navigation properties are automatically made virtual to enable lazy loading. In the Code First section we chose to make the navigation properties virtual for the same reason
-
- 
 
 ## Bind Object to Controls
 
@@ -300,8 +278,6 @@ The following happened when we dragged this source:
     </Grid>
 ```
 
- 
-
 ## Adding a Details Grid
 
 Now that we have a grid to display Categories let's add a details grid to display the associated Products.
@@ -315,8 +291,6 @@ Now that we have a grid to display Categories let's add a details grid to displa
 The form should look similar to this:
 
 ![Designer](../ef6/media/designer.png) 
-
- 
 
 ## Add Code that Handles Data Interaction
 
@@ -396,7 +370,6 @@ The code declares a long-running instance of **ProductContext**. The **ProductCo
                 this.productsDataGrid.Items.Refresh();
             }
 
-
             protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
             {
                 base.OnClosing(e);
@@ -406,8 +379,6 @@ The code declares a long-running instance of **ProductContext**. The **ProductCo
 
     }
 ```
-
- 
 
 ## Test the WPF Application
 

@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Automatic Code First Migrations - EF6"
+title: "Automatic Code First Migrations - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

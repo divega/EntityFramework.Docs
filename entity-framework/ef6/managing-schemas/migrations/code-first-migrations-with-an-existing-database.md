@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Code First Migrations with an existing database - EF6"
+title: "Code First Migrations with an existing database - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

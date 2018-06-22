@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Connection Failures During Transaction Commit - EF6"
+title: "Connection Failures During Transaction Commit - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

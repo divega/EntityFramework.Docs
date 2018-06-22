@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Code First Migrations in Team Environments - EF6"
+title: "Code First Migrations in Team Environments - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

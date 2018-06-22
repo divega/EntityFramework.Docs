@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Testing with Your Own Test Doubles - EF6"
+title: "Testing with Your Own Test Doubles - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

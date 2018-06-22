@@ -1,5 +1,5 @@
 ---
-title: "Entity Framework Connections and Models - EF6"
+title: "Connections and Models - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"

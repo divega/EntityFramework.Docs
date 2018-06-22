@@ -1,12 +1,10 @@
 ---
-title: "Entity Framework Testing with a Mocking Framework - EF6"
+title: "Testing with a Mocking Framework - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: bd66a638-d245-44d4-8e71-b9c6cb335cc7
@@ -232,9 +230,13 @@ namespace TestingDemo
 
 ### Testing with async queries  
 
-In order to use asynchronous queries we need to do a little more work. If we tried to use our Moq DbSet with the GetAllBlogsAsync method we would get the following exception:  
+Entity Framework 6 introduced a set of extension methods that can be used to asynchronously execute a query. Examples of these methods include ToListAsync, FirstAsync, ForEachAsync, etc.  
 
-*System.InvalidOperationException: The source IQueryable doesn't implement IDbAsyncEnumerable\<TestingDemo.Blog\>. Only sources that implement IDbAsyncEnumerable can be used for Entity Framework asynchronous operations. For more details see [http://go.microsoft.com/fwlink/?LinkId=287068](http://go.microsoft.com/fwlink/?LinkId=287068).*  
+Because Entity Framework queries make use of LINQ, the extension methods are defined on IQueryable and IEnumerable. However, because they are only designed to be used with Entity Framework you may receive the following error if you try to use them on a LINQ query that isn’t an Entity Framework query:
+
+> The source IQueryable doesn't implement IDbAsyncEnumerable{0}. Only sources that implement IDbAsyncEnumerable can be used for Entity Framework asynchronous operations. For more details see [http://go.microsoft.com/fwlink/?LinkId=287068](http://go.microsoft.com/fwlink/?LinkId=287068).  
+
+Whilst the async methods are only supported when running against an EF query, you may want to use them in your unit test when running against an in-memory test double of a DbSet.  
 
 In order to use the async methods we need to create an in-memory DbAsyncQueryProvider to process the async query. Whilst it would be possible to setup a query provider using Moq, it is much easier to create a test double implementation in code. The code for this implementation is as follows:  
 
