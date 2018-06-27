@@ -1,5 +1,5 @@
 ---
-title: "Automatic Detect Changes - EF6"
+title: "Automatic detect changes - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -12,15 +12,17 @@ ms.topic: "article"
 ms.assetid: a8d1488d-9a54-4623-a76b-e81329ff2756
 caps.latest.revision: 3
 ---
-# Automatic Detect Changes
+# Automatic detect changes
 When using most POCO entities the determination of how an entity has changed (and therefore which updates need to be sent to the database) is handled by the Detect Changes algorithm. Detect Changes works by detecting the differences between the current property values of the entity and the original property values that are stored in a snapshot when the entity was queried or attached. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
 By default, Entity Framework performs Detect Changes automatically when the following methods are called:  
 
 - DbSet.Find  
 - DbSet.Local  
-- DbSet.Remove  
 - DbSet.Add  
+- DbSet.AddRange
+- DbSet.Remove  
+- DbSet.RemoveRange
 - DbSet.Attach  
 - DbContext.SaveChanges  
 - DbContext.GetValidationErrors  
@@ -54,3 +56,5 @@ using (var context = new BloggingContext())
 Don’t forget to re-enable detection of changes after the loop — We've used a try/finally to ensure it is always re-enabled even if code in the loop throws an exception.  
 
 An alternative to disabling and re-enabling is to leave automatic detection of changes turned off at all times and either call context.ChangeTracker.DetectChanges explicitly or use change tracking proxies diligently. Both of these options are advanced and can easily introduce subtle bugs into your application so use them with care.  
+
+If you need to add or remove many objects from a context, consider using DbSet.AddRange and DbSet.RemoveRange. This methods automatically detect changes only once after the add or remove operations are completed. 

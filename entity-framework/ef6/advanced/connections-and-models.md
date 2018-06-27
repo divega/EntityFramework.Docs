@@ -1,5 +1,5 @@
 ---
-title: "Connections and Models - EF6"
+title: "Connections and models - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 294bb138-978f-4fe2-8491-fdf3cd3c60c4
 caps.latest.revision: 3
 ---
-# Connections and Models
+# Connections and models
 This topic covers how Entity Framework discovers which database connection to use, and how you can change it. Models created with Code First and the EF Designer are both covered in this topic.  
 
 Typically an Entity Framework application uses a class derived from DbContext. This derived class will call one of the constructors on the base DbContext class to control:  

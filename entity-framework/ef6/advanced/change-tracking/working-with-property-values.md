@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: e3278b4b-9378-4fdb-923d-f64d80aaae70

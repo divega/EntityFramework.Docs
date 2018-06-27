@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: e52a297e-85aa-42f6-a922-ba960f8a4b22
@@ -122,7 +120,8 @@ In this step we will use the XML Editor to add a defining query and an entity ty
     </EntityType>
 ```
 
-> **Note:** If later you run the **Update Model Wizard** dialog, any changes made to the storage model, including defining queries, will be overwritten.
+>[!NOTE]
+> If later you run the **Update Model Wizard** dialog, any changes made to the storage model, including defining queries, will be overwritten.
 
  
 

@@ -5,19 +5,18 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 0eb86787-2161-4cb4-9cb8-67c5d6e95650
 caps.latest.revision: 3
 ---
 # Automatic Code First Migrations
-This topic assumes you have a basic knowledge of [Code First Migrations](../ef6/code-first-migrations.md) in Entity Framework.
-
 Automatic Migrations allows you to use Code First Migrations without having a code file in your project for each change you make. Not all changes can be applied automatically - for example column renames require the use of a code-based migration.
 
-### Recommendation for Team Environments
+> [!NOTE]
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
+
+## Recommendation for Team Environments
 
 You can intersperse automatic and code-based migrations but this is not recommended in team development scenarios. If you are part of a team of developers that use source control you should either use purely automatic migrations or purely code-based migrations. Given the limitations of automatic migrations we recommend using code-based migrations in team environments.
 

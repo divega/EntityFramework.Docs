@@ -15,7 +15,7 @@ Entity Framework is made up of the EF Tools for Visual Studio and the EF Runtime
 
 ## EF Tools for Visual Studio
 
-The Entity Framework 6 Tools are included in current versions of Visual Studio. For some past versions of Visual Studio, tooling is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762).
+The Entity Framework Tools are included in current versions of Visual Studio. For some past versions of Visual Studio, tooling is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762).
 
 If you perform a custom install of Visual Studio you will need to ensure that the item "Entity Framework 6 Tools" is selected by either choosing a workload that includes it or by selecting it as an individual component.
 

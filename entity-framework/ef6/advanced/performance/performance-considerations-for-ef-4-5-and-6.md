@@ -1,5 +1,5 @@
 ---
-title: "Performance Considerations for EF4, EF5, and EF6"
+title: "Performance considerations for EF4, EF5, and EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: d6d5a465-6434-45fa-855d-5eb48c61a2ea
 caps.latest.revision: 4
 ---
-# Performance Considerations for EF 4, 5, and 6
+# Performance considerations for EF 4, 5, and 6
 By David Obando, Eric Dettinger and others
 
 Published: April 2012
@@ -141,11 +141,11 @@ When using EDMGen or the Entity Designer in Visual Studio, you get FKs by defaul
 
 If you have a large Code First model, using Independent Associations will have the same effect on view generation. You can avoid this impact by including Foreign Key properties on the classes for your dependent objects, though some developers will consider this to be polluting their object model. You can find more information on this subject in \<http://blog.oneunicorn.com/2011/12/11/whats-the-deal-with-mapping-foreign-keys-using-the-entity-framework/>.
 
-| When using      | Do this                                                                                                                                                                                                                                                                                                                             |
-|:----------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Entity Designer | After adding an association between two entities, make sure you have a referential constraint. Referential constraints tell Entity Frameworkto use Foreign Keys instead of Independent Associations. For additional details visit \<http://blogs.msdn.com/b/efdesign/archive/2009/03/16/foreign-keys-in-the-entity-framework.aspx>. |
-| EDMGen          | When using EDMGen to generate your files from the database, your Foreign Keys will be respected and added to the model as such. For more information on the different options exposed by EDMGen visit [http://msdn.microsoft.com/library/bb387165.aspx](https://msdn.microsoft.com/library/bb387165.aspx).                          |
-| Code First      | See the "Relationship Convention" section of the [Code First Conventions](../ef6/code-first-conventions.md) topic for information on how to include foreign key properties on dependent objects when using Code First.                                                                                                              |
+| When using      | Do this                                                                                                                                                                                                                                                                                                                              |
+|:----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Entity Designer | After adding an association between two entities, make sure you have a referential constraint. Referential constraints tell Entity Framework to use Foreign Keys instead of Independent Associations. For additional details visit \<http://blogs.msdn.com/b/efdesign/archive/2009/03/16/foreign-keys-in-the-entity-framework.aspx>. |
+| EDMGen          | When using EDMGen to generate your files from the database, your Foreign Keys will be respected and added to the model as such. For more information on the different options exposed by EDMGen visit [http://msdn.microsoft.com/library/bb387165.aspx](https://msdn.microsoft.com/library/bb387165.aspx).                           |
+| Code First      | See the "Relationship Convention" section of the [Code First Conventions](../ef6/code-first-conventions.md) topic for information on how to include foreign key properties on dependent objects when using Code First.                                                                                                               |
 
 #### 2.4.2 Moving your model to a separate assembly
 
@@ -412,13 +412,13 @@ The query plan cache instance lives in the MetadataWorkspace's ItemCollection of
 
 ### 3.5 Results caching
 
-With results caching (also known as "second-level caching"), you keep the results of queries in a local cache. When issuing a query, you first see if the results are available locally before you query against the store. While results caching isn't directly supported by Entity Framework, it's possible to add a second level cache by using a wrapping provider. An example wrapping provider with a second-level cache is available on CodePlex at \<https://efwrappers.codeplex.com/> and in the MSDN code samples at [http://code.msdn.microsoft.com/EFProviderWrappers-c0b88f32/view/Discussions/2](http://code.msdn.microsoft.com/efproviderwrappers-c0b88f32/view/discussions/2).
+With results caching (also known as "second-level caching"), you keep the results of queries in a local cache. When issuing a query, you first see if the results are available locally before you query against the store. While results caching isn't directly supported by Entity Framework, it's possible to add a second level cache by using a wrapping provider. An example wrapping provider with a second-level cache is Alachisoft's [Entity Framework Second Level Cache based on NCache](http://www.alachisoft.com/ncache/entity-framework.html).
 
 This implementation of second-level caching is an injected functionality that takes place after the LINQ expression has been evaluated (and funcletized) and the query execution plan is computed or retrieved from the first-level cache. The second-level cache will then store only the raw database results, so the materialization pipeline still executes afterwards.
 
 #### 3.5.1 Additional references for results caching with the wrapping provider
 
--   Julie Lerman has written a "Second-Level Caching in Entity Frameworkand Windows Azure" MSDN article that includes how to update the sample wrapping provider to use Windows Server AppFabric caching: [https://msdn.microsoft.com/magazine/hh394143.aspx](https://msdn.microsoft.com/magazine/hh394143.aspx)
+-   Julie Lerman has written a "Second-Level Caching in Entity Framework and Windows Azure" MSDN article that includes how to update the sample wrapping provider to use Windows Server AppFabric caching: [https://msdn.microsoft.com/magazine/hh394143.aspx](https://msdn.microsoft.com/magazine/hh394143.aspx)
 -   If you are working with Entity Framework 5, the team blog has a post that describes how to get things running with the caching provider for Entity Framework 5: \<http://blogs.msdn.com/b/adonet/archive/2010/09/13/ef-caching-with-jarek-kowalski-s-provider.aspx>. It also includes a T4 template to help automate adding the 2nd-level caching to your project.
 
 ## 4 Autocompiled Queries
@@ -829,7 +829,7 @@ Simple microbenchmarks where the context creation was not timed were put to the 
 
 ![EF6Micro5000Warm](../ef6/media/ef6micro5000warm.png)
 
-Microbenchmarks are very sensitive to small changes in the code. In this case, the difference between the costs of Entity Framework 5 and Entity Framework 6 are due to the addition of [interception](https://entityframework.codeplex.com/wikipage?title=Interception) and [transactional improvements](../ef6/working-with-transactions-ef6-onwards.md). These microbenchmarks numbers, however, are an amplified vision into a very small fragment of what Entity Framework does. Real-world scenarios of warm queries should not see a performance regression when upgrading from Entity Framework 5 to Entity Framework 6.
+Microbenchmarks are very sensitive to small changes in the code. In this case, the difference between the costs of Entity Framework 5 and Entity Framework 6 are due to the addition of [interception](~/ef6/advanced/logging-and-interception.md) and [transactional improvements](~/ef6/saving/transactions.md). These microbenchmarks numbers, however, are an amplified vision into a very small fragment of what Entity Framework does. Real-world scenarios of warm queries should not see a performance regression when upgrading from Entity Framework 5 to Entity Framework 6.
 
 To compare the real-world performance of the different query options, we created 5 separate test variations where we use a different query option to select all products whose category name is "Beverages". Each iteration includes the cost of creating the context, and the cost of materializing all returned entities. 10 iterations are run untimed before taking the sum of 1000 timed iterations. The results shown are the median run taken from 5 runs of each test. For more information, see Appendix B which includes the code for the test.
 
@@ -862,7 +862,8 @@ To compare the real-world performance of the different query options, we created
 
 ![EF6WarmQuery1000](../ef6/media/ef6warmquery1000.png)
 
-**Note:** for completeness, we included a variation where we execute an Entity SQL query on an EntityCommand. However, because results are not materialized for such queries, the comparison isn't necessarily apples-to-apples. The test includes a close approximation to materializing to try making the comparison fairer.
+> [!NOTE]
+> For completeness, we included a variation where we execute an Entity SQL query on an EntityCommand. However, because results are not materialized for such queries, the comparison isn't necessarily apples-to-apples. The test includes a close approximation to materializing to try making the comparison fairer.
 
 In this end-to-end case, Entity Framework 6 outperforms Entity Framework 5 due to performance improvements made on several parts of the stack, including a much lighter DbContext initialization and faster MetadataCollection&lt;T&gt; lookups.
 
@@ -870,7 +871,7 @@ In this end-to-end case, Entity Framework 6 outperforms Entity Framework 5 due t
 
 ### 7.1       Inheritance Strategies
 
-Another performance consideration when using Entity Frameworkis the inheritance strategy you use. Entity Framework supports 3 basic types of inheritance and their combinations:
+Another performance consideration when using Entity Framework is the inheritance strategy you use. Entity Framework supports 3 basic types of inheritance and their combinations:
 
 -   Table per Hierarchy (TPH) – where each inheritance set maps to a table with a discriminator column to indicate which particular type in the hierarchy is being represented in the row.
 -   Table per Type (TPT) – where each type has its own table in the database; the child tables only define the columns that the parent table doesn’t contain.
@@ -920,7 +921,7 @@ Setting the ContextTypeName field also prevents a functional problem where the E
 
 ### 7.5       POCO entities and change tracking proxies
 
-Entity Frameworkenables you to use custom data classes together with your data model without making any modifications to the data classes themselves. This means that you can use "plain-old" CLR objects (POCO), such as existing domain objects, with your data model. These POCO data classes (also known as persistence-ignorant objects), which are mapped to entities that are defined in a data model, support most of the same query, insert, update, and delete behaviors as entity types that are generated by the Entity Data Model tools.
+Entity Framework enables you to use custom data classes together with your data model without making any modifications to the data classes themselves. This means that you can use "plain-old" CLR objects (POCO), such as existing domain objects, with your data model. These POCO data classes (also known as persistence-ignorant objects), which are mapped to entities that are defined in a data model, support most of the same query, insert, update, and delete behaviors as entity types that are generated by the Entity Data Model tools.
 
 Entity Framework can also create proxy classes derived from your POCO types, which are used when you want to enable features such as lazy loading and automatic change tracking on POCO entities. Your POCO classes must meet certain requirements to allow Entity Framework to use proxies, as described here: [http://msdn.microsoft.com/library/dd468057.aspx](https://msdn.microsoft.com/library/dd468057.aspx).
 
@@ -934,7 +935,7 @@ In summary: you’ll pay a performance hit when creating the change tracking pro
 
 ### 8.1 Lazy Loading vs. Eager Loading
 
-Entity Frameworkoffers several different ways to load the entities that are related to your target entity. For example, when you query for Products, there are different ways that the related Orders will be loaded into the Object State Manager. From a performance standpoint, the biggest question to consider when loading related entities will be whether to use Lazy Loading or Eager Loading.
+Entity Framework offers several different ways to load the entities that are related to your target entity. For example, when you query for Products, there are different ways that the related Orders will be loaded into the Object State Manager. From a performance standpoint, the biggest question to consider when loading related entities will be whether to use Lazy Loading or Eager Loading.
 
 When using Eager Loading, the related entities are loaded along with your target entity set. You use an Include statement in your query to indicate which related entities you want to bring in.
 
@@ -1169,7 +1170,7 @@ This should decrease your thread contention and increase your throughput by up t
 
 ### 9.2      AutoDetectChanges
 
-As mentioned earlier, Entity Frameworkmight show performance issues when the object cache has many entities. Certain operations, such as Add, Remove, Find, Entry and SaveChanges, trigger calls to DetectChanges which might consume a large amount of CPU based on how large the object cache has become. The reason for this is that the object cache and the object state manager try to stay as synchronized as possible on each operation performed to a context so that the produced data is guaranteed to be correct under a wide array of scenarios.
+As mentioned earlier, Entity Framework might show performance issues when the object cache has many entities. Certain operations, such as Add, Remove, Find, Entry and SaveChanges, trigger calls to DetectChanges which might consume a large amount of CPU based on how large the object cache has become. The reason for this is that the object cache and the object state manager try to stay as synchronized as possible on each operation performed to a context so that the produced data is guaranteed to be correct under a wide array of scenarios.
 
 It is generally a good practice to leave Entity Framework’s automatic change detection enabled for the entire life of your application. If your scenario is being negatively affected by high CPU usage and your profiles indicate that the culprit is the call to DetectChanges, consider temporarily turning off AutoDetectChanges in the sensitive portion of your code:
 
@@ -1243,7 +1244,7 @@ Entity Framework 6 does not come in the default installation of .NET framework. 
 
 Entity Framework reasons about the impedance mismatch problem between object oriented programming and relational databases by having an in-memory representation of the conceptual model (the objects), the storage schema (the database) and a mapping between the two. This metadata is called an Entity Data Model, or EDM for short. From this EDM, Entity Framework will derive the views to roundtrip data from the objects in memory to the database and back.
 
-When Entity Frameworkis used with an EDMX file that formally specifies the conceptual model, the storage schema, and the mapping, then the model loading stage only has to validate that the EDM is correct (for example, make sure that no mappings are missing), then generate the views, then validate the views and have this metadata ready for use. Only then can a query be executed or new data be saved to the data store.
+When Entity Framework is used with an EDMX file that formally specifies the conceptual model, the storage schema, and the mapping, then the model loading stage only has to validate that the EDM is correct (for example, make sure that no mappings are missing), then generate the views, then validate the views and have this metadata ready for use. Only then can a query be executed or new data be saved to the data store.
 
 The Code First approach is, at its heart, a sophisticated Entity Data Model generator. The Entity Framework has to produce an EDM from the provided code; it does so by analyzing the classes involved in the model, applying conventions and configuring the model via the Fluent API. After the EDM is built, the Entity Framework essentially behaves the same way as it would had an EDMX file been present in the project. Thus, building the model from Code First adds extra complexity that translates into a slower startup time for the Entity Framework when compared to having an EDMX. The cost is completely dependent on the size and complexity of the model that’s being built.
 

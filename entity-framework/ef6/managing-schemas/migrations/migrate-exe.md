@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 989ea862-e936-4c85-926a-8cfbef5df5b8
@@ -15,9 +13,8 @@ caps.latest.revision: 3
 # Using migrate.exe
 Code First Migrations can be used to update a database from inside visual studio, but can also be executed via the command line tool migrate.exe. This page will give a quick overview on how to use migrate.exe to execute migrations against a database.
 
-The following assumes you have a basic knowledge of [Code First Migrations](../ef6/code-first-migrations.md) in Entity Framework.
-
- 
+> [!NOTE]
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
 
 ## Copy migrate.exe
 
@@ -33,8 +30,6 @@ If your application targets .NET 4, and not 4.5, then you will need to copy the 
 
 > [!NOTE]
 > migrate.exe doesn't support x64 assemblies.
-
- 
 
 ## Using Migrate.exe
 
@@ -87,8 +82,6 @@ Migrate.exe BlogDemo.dll /connectionString=”Data Source=localhost;Initial Cata
 ```
 
 If you wish to specify a connection string at the command line then you must also provide the provider name. Not specifying the provider name will cause an exception.
-
- 
 
 ## Common Problems
 

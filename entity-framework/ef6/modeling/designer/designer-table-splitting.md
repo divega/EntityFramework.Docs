@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 452f17c3-9f26-4de4-9894-8bc036e23b0f
@@ -39,8 +37,6 @@ This walkthrough is using Visual Studio 2012.
 -   In the left pane, click Visual C\#, and then select the Console Application template.
 -   Enter **TableSplittingSample** as the name of the project and click **OK**.
 
- 
-
 ## Create a Model based on the School Database
 
 -   Right-click the project name in Solution Explorer, point to **Add**, and then click **New Item**.
@@ -53,8 +49,6 @@ This walkthrough is using Visual Studio 2012.
 -   Click **Finish**.
 
 The Entity Designer, which provides a design surface for editing your model, is displayed. All the objects that you selected in the **Choose Your Database Objects** dialog box are added to the model.
-
- 
 
 ## Map Two Entities to a Single Table
 

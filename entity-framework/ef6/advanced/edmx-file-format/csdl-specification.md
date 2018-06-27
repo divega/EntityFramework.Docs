@@ -2042,10 +2042,6 @@ The table below lists the primitive data types that are supported by CSDL. The t
 | **Edm.GeometryMultiPolygon**     |                                                            | Nullable, Default, SRID                                                  |
 | **Edm.GeometryCollection**       |                                                            | Nullable, Default, SRID                                                  |
 
- 
-
- 
-
 ## Facets (CSDL)
 
 Facets in conceptual schema definition language (CSDL) represent constraints on properties of entity types and complex types. Facets appear as XML attributes on the following CSDL elements:
@@ -2056,8 +2052,8 @@ Facets in conceptual schema definition language (CSDL) represent constraints on 
 
 The following table describes the facets that are supported in CSDL. All facets are optional. Some facets listed below are used by the Entity Framework when generating a database from a conceptual model.
 
-**Note**:
-For information about data types in a conceptual model, see Conceptual Model Types (CSDL).
+> [!NOTE]
+> For information about data types in a conceptual model, see Conceptual Model Types (CSDL).
 
 | Facet               | Description                                                                                                                                                                                                                                                   | Applies to                                                                                                                                                                                                                                                                                                                                                                           | Used for the database generation | Used by the runtime |
 |:--------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|:--------------------|
@@ -2071,16 +2067,9 @@ For information about data types in a conceptual model, see Conceptual Model Typ
 | **Scale**           | Specifies the number of digits to the right of the decimal point for the property value.                                                                                                                                                                      | **Edm.Decimal**                                                                                                                                                                                                                                                                                                                                                                      | Yes                              | No                  |
 | **SRID**            | Specifies the Spatial System Reference System ID. For more information, see [SRID](http://en.wikipedia.org/wiki/SRID) and [SRID (SQL Server)](https://msdn.microsoft.com/library/bb964707.aspx).                                                              | **Edm.Geography, Edm.GeographyPoint, Edm.GeographyLineString, Edm.GeographyPolygon, Edm.GeographyMultiPoint, Edm.GeographyMultiLineString, Edm.GeographyMultiPolygon, Edm.GeographyCollection, Edm.Geometry, Edm.GeometryPoint, Edm.GeometryLineString, Edm.GeometryPolygon, Edm.GeometryMultiPoint, Edm.GeometryMultiLineString, Edm.GeometryMultiPolygon, Edm.GeometryCollection** | No                               | Yes                 |
 | **Unicode**         | Indicates whether the property value is stored as Unicode.                                                                                                                                                                                                    | **Edm.String**                                                                                                                                                                                                                                                                                                                                                                       | Yes                              | Yes                 |
- 
- 
- 
- 
- 
- 
- 
- 
 
-> **Note**: When generating a database from a conceptual model, the Generate Database Wizard will recognize the value of the **StoreGeneratedPattern** attribute on a **Property** element if it is in the following namespace: http://schemas.microsoft.com/ado/2009/02/edm/annotation. The supported values for the attribute are **Identity** and **Computed**. A value of **Identity** will produce a database column with an identity value that is generated in the database. A value of **Computed** will produce a column with a value that is computed in the database.
+>[!NOTE]
+> When generating a database from a conceptual model, the Generate Database Wizard will recognize the value of the **StoreGeneratedPattern** attribute on a **Property** element if it is in the following namespace: http://schemas.microsoft.com/ado/2009/02/edm/annotation. The supported values for the attribute are **Identity** and **Computed**. A value of **Identity** will produce a database column with an identity value that is generated in the database. A value of **Computed** will produce a column with a value that is computed in the database.
 
 ### Example
 

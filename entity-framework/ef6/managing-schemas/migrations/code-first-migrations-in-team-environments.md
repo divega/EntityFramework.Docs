@@ -5,23 +5,18 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 4c2d9a95-de6f-4e97-9738-c1f8043eff69
 caps.latest.revision: 3
 ---
 # Code First Migrations in Team Environments
-This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](../ef6/code-first-migrations.md) before continuing.
-
- 
+> [!NOTE]
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
 
 ## Grab a coffee, you need to read this whole article
 
 The issues in team environments are mostly around merging migrations when two developers have generated migrations in their local code base. While the steps to solve these are pretty simple, they require you to have a solid understanding of how migrations works. Please don’t just skip ahead to the end – take the time to read the whole article to ensure you are successful.
-
- 
 
 ## Some general guidelines
 
@@ -38,8 +33,6 @@ Of course, if you have team members that aren’t generating migrations, there i
 The bottom line is that automatic migrations initially look good in team environments, but in reality they just don’t work. If you want to know why, keep reading – if not, then you can skip to the next section.
 
 Automatic migrations allows you to have your database schema updated to match the current model without the need to generate code files (code-based migrations). Automatic migrations would work very well in a team environment if you only ever used them and never generated any code-based migrations. The problem is that automatic migrations are limited and don’t handle a number of operations – property/column renames, moving data to another table, etc. To handle these scenarios you end up generating code-based migrations (and editing the scaffolded code) that are mixed in between changes that are handled by automatic migrations. This makes it near on impossible to merge changes when two developers check in migrations.
-
- 
 
 ## Screencasts
 
@@ -91,15 +84,11 @@ There are a number of reasons EF keeps the model snapshot around:
     -   These same principles apply to adding extra indexes, including extra tables in your database, mapping EF to a database view that sits over a table, etc.
 -   The EF model contains more than just the shape of the database. Having the entire model allows migrations to look at information about the properties and classes in your model and how they map to the columns and tables. This information allows migrations to be more intelligent in the code that it scaffolds. For example, if you change the name of the column that a property maps to migrations can detect the rename by seeing that it’s the same property – something that can’t be done if you only have the database schema. 
 
- 
-
 ## What causes issues in team environments
 
 The workflow covered in the previous section works great when you are a single developer working on an application. It also works well in a team environment if you are the only person making changes to the model. In this scenario you can make model changes, generate migrations and submit them to your source control. Other developers can sync your changes and run **Update-Database** to have the schema changes applied.
 
 Issues start to arise when you have multiple developers making changes to the EF model and submitting to source control at the same time. What EF lacks is a first class way to merge your local migrations with migrations that another developer has submitted to source control since you last synced.
-
- 
 
 ## An example of a merge conflict
 
@@ -111,7 +100,8 @@ We’ll track the EF model and the migrations thru a number of changes. For a st
 
 Developer \#1 and developer \#2 now makes some changes to the EF model in their local code base. Developer \#1 adds a **Rating** property to **Blog** – and generates an **AddRating** migration to apply the changes to the database. Developer \#2 adds a **Readers** property to **Blog** – and generates the corresponding **AddReaders** migration. Both developers run **Update-Database**, to apply the changes to their local databases, and then continue developing the application.
 
-***Note:****Migrations are prefixed with a timestamp, so our graphic represents that the AddReaders migration from Developer \#2 comes after the AddRating migration from Developer \#1. Whether developer \#1 or \#2 generated the migration first makes no difference to the issues of working in a team, or the process for merging them that we’ll look at in the next section.*
+> [!NOTE]
+> Migrations are prefixed with a timestamp, so our graphic represents that the AddReaders migration from Developer \#2 comes after the AddRating migration from Developer \#1. Whether developer \#1 or \#2 generated the migration first makes no difference to the issues of working in a team, or the process for merging them that we’ll look at in the next section.
 
 ![LocalChanges](../ef6/media/localchanges.png)
 
@@ -132,8 +122,6 @@ There are a couple of problems though:
 2.  Running the application would result in an InvalidOperationException stating that “*The model backing the 'BloggingContext' context has changed since the database was created. Consider using Code First Migrations to update the database…”*
     Again, the problem is the model snapshot stored in the last migration doesn’t match the current model.
 3.  Finally, we would expect running **Add-Migration** now would generate an empty migration (since there are no changes to apply to the database). But because migrations compares the current model to the one from the last migration (which is missing the **Rating** property) it will actually scaffold another **AddColumn** call to add in the **Rating** column. Of course, this migration would fail during **Update-Database** because the **Rating** column already exists.
-
- 
 
 ## Resolving the merge conflict
 
@@ -189,8 +177,6 @@ The following process can be used for this approach, starting from the time you 
 Here is the state of Developer \#2’s local code base after using this approach.
 
 ![UpdatedMetadata](../ef6/media/updatedmetadata.png)
-
- 
 
 ## Summary
 

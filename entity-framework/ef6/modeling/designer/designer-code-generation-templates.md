@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 56e00fa2-f9f0-48b3-8006-f8266ca7e74b
@@ -139,7 +137,6 @@ The DbContext Generator is now the recommended template for generating POCO clas
 > [!NOTE]
 > There is no EF 5.x or EF 6.x version of the STE template.
 
-
 > [!NOTE]
 > There is no Visual Studio 2013 version of the POCO template.
 
@@ -177,7 +174,9 @@ If you don't already have the template installed, select **Online** from the lef
  
 
 If you are using Visual Studio 2012, the new .tt files will be nested under the .edmx file.*
-**Note:** For models created in Visual Studio 2012 you will need to delete the templates used for default code generation, otherwise you will have duplicate classes and context generated. The default files are **&lt;model name&gt;.tt** and **&lt;model name&gt;.context.tt**.*  
+
+> [!NOTE]
+> For models created in Visual Studio 2012 you will need to delete the templates used for default code generation, otherwise you will have duplicate classes and context generated. The default files are **&lt;model name&gt;.tt** and **&lt;model name&gt;.context.tt**. 
 
 ![VS2012_Templates](../ef6/media/vs2012-templates.png)
 

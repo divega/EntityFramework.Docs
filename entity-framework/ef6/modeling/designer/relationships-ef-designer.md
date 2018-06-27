@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 402fe960-754b-470f-976b-e5de3e9986b5
@@ -33,8 +31,6 @@ At run time, entity type instances at one end of an association can be accessed 
 > In many-to-many (\*:\*) you cannot add foreign keys to the entities. In a \*:\* relationship, the association information is managed with an independent object.
 
 For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](../ef6/csdl-specification.md).
-
- 
 
 ## Create and Delete Associations
 
@@ -64,8 +60,6 @@ To delete an association do one of the following:
 
 -   Select one or more associations and press the DELETE key.
 
- 
-
 ## Include Foreign Key Properties in Your Entities (Referential Constraints)
 
 It is recommended that you always expose foreign keys for relationships in your entities. Entity Framework uses a referential constraint to identify that a property acts as the foreign key for a relationship.
@@ -84,8 +78,6 @@ When you use the EF Designer to add or edit a referential constraint, the EF Des
     ![RefConstraint](../ef6/media/refconstraint.png)
 
 -   Click **OK**.
-
- 
 
 ## Create and Edit Association Mappings
 
@@ -115,8 +107,6 @@ You can specify how an association maps to the database in the **Mapping Details
 -   Select the table to which the association will map.
     The **Mapping Details** window displays both ends of the association and the key properties for the entity type at each End.
 -   For each key property, click the **Column** field, and select the column to which the property will map.
-
- 
 
 ## Edit and Delete Navigation Properties
 

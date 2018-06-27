@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 80abefbd-23c9-4fce-9cd3-520e5df9856e
@@ -95,7 +93,8 @@ If you were to try and use the above class in your EF model you wuld get an Inva
 
 When you have composite keys, Entity Framework requires you to define an order of the key properties. You can do this using the Column annotation to specify an order.
 
-> **Note:** The order value is relative (rather than index based) so any values can be used. For example, 100 and 200 would be acceptable in place of 1 and 2.
+>[!NOTE]
+> The order value is relative (rather than index based) so any values can be used. For example, 100 and 200 would be acceptable in place of 1 and 2.
 
 ``` csharp
     public class Passport
@@ -152,7 +151,8 @@ With no additional no code or markup changes in the application, an MVC applicat
 
 The Required attribute will also affect the generated database by making the mapped property non-nullable. Notice that the Title field has changed to “not null”.
 
-> **Note:** In some cases it may not be possible for the column in the database to be non-nullable even though the property is required. For example, when using a TPH inheritance strategy data for multiple types is stored in a single table. If a derived type includes a required property the column cannot be made non-nullable since not all types in the hierarchy will have this property.
+>[!NOTE]
+> In some cases it may not be possible for the column in the database to be non-nullable even though the property is required. For example, when using a TPH inheritance strategy data for multiple types is stored in a single table. If a derived type includes a required property the column cannot be made non-nullable since not all types in the hierarchy will have this property.
 
  
 

@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 9a8228ef-acfd-4575-860d-769d2c0e18a1
@@ -19,9 +17,8 @@ The following image shows the main windows that are used when working with the E
 
 ![EFDesigner](../ef6/media/efdesigner.png)
 
-**Note:***When you build the conceptual model, warnings about unmapped entities and associations may appear in the Error List. You can ignore these warnings because after you choose to generate the database from the model, the errors will go away. *
-
- 
+> [!NOTE]
+> When you build the conceptual model, warnings about unmapped entities and associations may appear in the Error List. You can ignore these warnings because after you choose to generate the database from the model, the errors will go away.
 
 ## What is a Complex Type
 
@@ -35,8 +32,6 @@ When you work with objects that represent complex types, be aware of the followi
 -   Complex types cannot inherit from other complex types.
 -   You must define the complex type as a **class**. 
 -   EF detects changes to members on a complex type object when **DbContext.DetectChanges** is called. Entity Framework calls **DetectChanges** automatically when the following members are called: **DbSet.Find**, **DbSet.Local**, **DbSet.Remove**, **DbSet.Add**, **DbSet.Attach**, **DbContext.SaveChanges**, **DbContext.GetValidationErrors**, **DbContext.Entry**, **DbChangeTracker.Entries**.
-
- 
 
 ## Refactor an Entity’s Properties into New Complex Type
 
@@ -52,8 +47,6 @@ A complex property of the newly created type replaces the selected properties. A
 
 ![Refactor2](../ef6/media/refactor2.png)
 
- 
-
 ## Create a New Complex Type
 
 You can also create a new complex type that does not contain properties of an existing entity.
@@ -63,8 +56,6 @@ Right-click the **Complex Types** folder in the Model Browser, point to **AddNe
 ![AddNewComplextype](../ef6/media/addnewcomplextype.png)
 
 A new complex type is added to the folder with a default name. You can now add properties to the type.
-
- 
 
 ## Add Properties to a Complex Type
 
@@ -81,8 +72,6 @@ You can add a property to a complex type in any of the ways listed below.
 - OR -
 
 -   Right-click an entity property on the **EF  Designer** surface and select **Copy**, then right-click the complex type in the **Model Browser** and select **Paste**.
-
- 
 
 ## Rename a Complex Type
 
@@ -102,8 +91,6 @@ When you rename a complex type, all references to the type are updated throughou
 - OR -
 
 -   Right-click a complex type in the **Model Browser** and select **Properties**. Edit the name in the **Properties** window.
-
- 
 
 ## Add an Existing Complex Type to an Entity and Map its Properties to Table Columns
 
@@ -125,9 +112,8 @@ When you rename a complex type, all references to the type are updated throughou
 
 8.  Repeat steps 6 and 7 for each table column.
 
-> **Note:** To delete a column mapping, select the column that you want to map, and then click the **Value/Property** field. Then, select **Delete** from the drop-down list.
-
- 
+>[!NOTE]
+> To delete a column mapping, select the column that you want to map, and then click the **Value/Property** field. Then, select **Delete** from the drop-down list.
 
 ## Map a Function Import to a Complex Type
 
@@ -153,8 +139,6 @@ Function imports are based on stored procedures. To map a function import to a c
     The **Mapping Details** window appears and shows the default mapping for the function import. Arrows indicate the mappings between column values and property values. By default, the column names are assumed to be the same as the complex type's property names. The default column names appear in gray text.
 -   If necessary, change the column names to match the column names that are returned by the stored procedure that corresponds to the function import.
 
- 
-
 ## Delete a Complex Type
 
 When you delete a complex type, the type is deleted from the conceptual model and mappings for all instances of the type are deleted. However, references to the type are not updated. For example, if an entity has a complex type property of type ComplexType1 and ComplexType1 is deleted in the **Model Browser**, the corresponding entity property is not updated. The model will not validate  because it contains an entity that references a deleted complex type. You can update or delete references to deleted complex types by using the Entity Designer.
@@ -164,8 +148,6 @@ When you delete a complex type, the type is deleted from the conceptual model an
 - OR -
 
 -   Select a complex type in the Model Browser and press the Delete key on your keyboard.
-
- 
 
 ## Query for Entities Containing Properties of Complex Type
 

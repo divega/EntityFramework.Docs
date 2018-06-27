@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 0d0f1824-d781-4cb3-8fda-b7eaefced1cd
@@ -117,7 +115,7 @@ using (var conn = new SqlConnection("..."))
 }
 ```  
 
-Furthermore, you must start the transaction yourself (including the IsolationLevel if you want to avoid the default setting) and let Entity Frameworkknow that there is an existing transaction already started on the connection (see line 33 below).  
+Furthermore, you must start the transaction yourself (including the IsolationLevel if you want to avoid the default setting) and let Entity Framework know that there is an existing transaction already started on the connection (see line 33 below).  
 
 Then you are free to execute database operations either directly on the SqlConnection itself, or on the DbContext. All such operations are executed within one transaction. You take responsibility for committing or rolling back the transaction and for calling Dispose() on it, as well as for closing and disposing the database connection. E.g.:  
 
@@ -177,14 +175,17 @@ namespace TransactionsExamples
 }
 ```  
 
-**Notes**:  
+### Clearing up the transaction
 
-- You can pass null to Database.UseTransaction() to clear Entity Framework’s knowledge of the current transaction. Entity Framework will neither commit nor rollback the existing transaction when you do this, so use with care and only if you’re sure this is what you want to do.  
-- You will see an exception from Database.UseTransaction() if you pass a transaction:  
-    - When Entity Frameworkalready has an existing transaction  
-    - When Entity Framework is already operating within a TransactionScope  
-    - Whose connection object is null (i.e. one which has no connection – usually this is a sign that that transaction has already completed)  
-    - Whose connection object does not match the Entity Framework’s connection.  
+You can pass null to Database.UseTransaction() to clear Entity Framework’s knowledge of the current transaction. Entity Framework will neither commit nor rollback the existing transaction when you do this, so use with care and only if you’re sure this is what you want to do.  
+
+### Errors in UseTransaction
+
+You will see an exception from Database.UseTransaction() if you pass a transaction when:  
+- Entity Framework already has an existing transaction  
+- Entity Framework is already operating within a TransactionScope  
+- The connection object in the transaction passed is null (i.e. one which has no connection – usually this is a sign that that transaction has already completed)  
+- The connection object in the transaction passed does not match the Entity Framework’s connection.  
 
 ## Using transactions with other features  
 

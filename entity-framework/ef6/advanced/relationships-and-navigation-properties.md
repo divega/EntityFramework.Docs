@@ -1,5 +1,5 @@
 ---
-title: "Relationships and Navigation Properties - EF6"
+title: "Relationships, navigation properties and foreign keys - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,16 +10,16 @@ ms.topic: "article"
 ms.assetid: 8a21ae73-6d9b-4b50-838a-ec1fddffcf37
 caps.latest.revision: 3
 ---
-# Relationships and Navigation Properties
+# Relationships, navigation properties and foreign keys
 This topic gives an overview of how Entity Framework manages relationships between entities. It also gives some guidance on how to map and manipulate relationships.
 
-## Relationships, Navigation Properties, and Foreign Keys
+## Relationships in EF
 
 In relational databases, relationships (also called associations) between tables are defined through foreign keys. A foreign key (FK) is a column or combination of columns that is used to establish and enforce a link between the data in two tables. There are generally three types of relationships: one-to-one, one-to-many, and many-to-many. In a one-to-many relationship, the foreign key is defined on the table that represents the many end of the relationship. The many-to-many relationship involves defining a third table (called a junction or join table), whose primary key is composed of the foreign keys from both related tables. In a one-to-one relationship, the primary key acts additionally as a foreign key and there is no separate foreign key column for either table.
 
 The following image shows two tables that participate in one-to-many relationship. The **Course** table is the dependent table because it contains the **DepartmentID** column that links it to the **Department** table.
 
-![Database2](../../ef6/media/database2.png)
+![Database2](~/ef6/media/database2.png)
 
 In Entity Framework, an entity can be related to other entities through an association or relationship. Each relationship contains two ends that describe the entity type and the multiplicity of the type (one, zero-or-one, or many) for the two entities in that relationship. The relationship may be governed by a referential constraint, which describes which end in the relationship is a principal role and which is a dependent role.
 
@@ -62,14 +62,14 @@ public class DepartmentID
 }
 ```
 
-## Configuring/Mapping Relationships
+## Configuring or mapping relationships
 
 The rest of this page covers how to access and manipulate data using relationships. For information on setting up relationships in your model, see the following pages.
 
 -   To configure relationships in Code First, see [Data Annotations](../../ef6/code-first-data-annotations.md) and [Fluent API – Relationships](../../ef6/fluent-api-relationships.md).
 -   To configure relationships using the Entity Framework Designer, see [Relationships with the EF Designer](../../ef6/relationships-ef-designer.md).
 
-## Creating and Modifying Relationships
+## Creating and modifying relationships
 
 In a *foreign key association*, when you change the relationship, the state of a dependent object with an EntityState.Unchanged state changes to EntityState.Modified. In an independent relationship, changing the relationship does not update the state of the dependent object.
 
@@ -125,15 +125,17 @@ In the following example, there is a many-to-many relationship between Instructo
                   ChangeRelationshipState(course, oldInstructor, c => c.Instructor, EntityState.Deleted);
 ```
 
-## Synchronizing the changes between the FKs and Navigation properties
+## Synchronizing the changes between the foreign keys and navigation properties
 
 When you change the relationship of the objects attached to the context by using one of the methods described above, Entity Framework needs to keep foreign keys, references, and collections in sync. Entity Framework automatically manages this synchronization (also known as relationship fix-up) for the POCO entities with proxies. For more information, see [Working with Proxies](../../ef6/working-with-proxies.md).
 
 If you are using POCO entities without proxies, you must make sure that the **DetectChanges** method is called to synchronize the related objects in the context. Note, that the following APIs automatically trigger a **DetectChanges** call.
 
 -   `DbSet.Add`
--   `DbSet.Find`
+-   `DbSet.AddRange`
 -   `DbSet.Remove`
+-   `DbSet.RemoveRange`
+-   `DbSet.Find`
 -   `DbSet.Local`
 -   `DbContext.SaveChanges`
 -   `DbSet.Attach`
@@ -142,7 +144,7 @@ If you are using POCO entities without proxies, you must make sure that the **De
 -   `DbChangeTracker.Entries`
 -   Executing a LINQ query against a `DbSet`
 
-## Loading Related Objects
+## Loading related objects
 
 In Entity Framework you use most commonly use the navigation properties to load entities that are related to the returned entity by the defined association. For more information, see [Loading Related Objects](../../ef6/loading-related-entities.md).
 
@@ -163,14 +165,14 @@ In Entity Framework you use most commonly use the navigation properties to load 
 
 In an independent association, the related end of a dependent object is queried based on the foreign key value that is currently in the database. However, if the relationship was modified, and the reference property on the dependent object points to a different principal object that is loaded in the object context, Entity Framework will try to create a relationship as it is defined on the client.
 
-## Managing Concurrency
+## Managing concurrency
 
 In both foreign key and independent associations, concurrency checks are based on the entity keys and other entity properties that are defined in the model. When using the EF Designer to create a model, set the `ConcurrencyMode` attribute to **fixed** to specify that the property should be checked for concurrency. When using Code First to define a model, use the `ConcurrencyCheck` annotation on properties that you want to be checked for concurrency. When working with Code First you can also use the `TimeStamp` annotation to specify that the property should be checked for concurrency. You can have only one timestamp property in a given class. Code First maps this property to a non-nullable field in the database.
 
 We recommend that you always use the foreign key association when working with entities that participate in concurrency checking and resolution.
 
-For more information, see [Optimistic Concurrency Patterns](../../ef6/optimistic-concurrency-patterns.md).
+For more information, see [Handling Concurrency Conflicts](~/ef6/saving/concurrency.md).
 
-## Working with Overlapping Keys
+## Working with overlapping Keys
 
 Overlapping keys are composite keys where some properties in the key are also part of another key in the entity. You cannot have an overlapping key in an independent association. To change a foreign key association that includes overlapping keys, we recommend that you modify the foreign key values instead of using the object references.

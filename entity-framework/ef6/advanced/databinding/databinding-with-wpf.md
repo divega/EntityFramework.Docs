@@ -47,7 +47,8 @@ If you are using Visual Studio 2010, you also have to install NuGet. For more i
 -   Select **Manage NuGet Packages…**
 -   In the Manage NuGet Packages dialog, Select the **Online** tab and choose the **EntityFramework** package
 -   Click **Install**  
-    >**Note**: In addition to the EntityFramework assembly a reference to System.ComponentModel.DataAnnotations is also added. If the project has a reference to System.Data.Entity, then it will be removed when the EntityFramework package is installed. The System.Data.Entity assembly is no longer used for Entity Framework 6 applications.
+    >[!NOTE]
+    > In addition to the EntityFramework assembly a reference to System.ComponentModel.DataAnnotations is also added. If the project has a reference to System.Data.Entity, then it will be removed when the EntityFramework package is installed. The System.Data.Entity assembly is no longer used for Entity Framework 6 applications.
 
 ## Define a Model
 

@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: f0cc4f93-67dd-4664-9753-0a9f913814db
@@ -15,10 +13,10 @@ caps.latest.revision: 3
 # Code First Migrations with an existing database
 > **EF4.3 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 4.1. If you are using an earlier version, some or all of the information does not apply.
 
-This topic covers using Code First Migrations with an existing database, one that wasn’t created by Entity Framework.
+This article covers using Code First Migrations with an existing database, one that wasn’t created by Entity Framework.
 
-It’s assumed that you already have an understanding of Code First Migrations. If not, you should read the [Code First Migrations](../ef6/code-first-migrations.md) topic before continuing.
-
+> [!NOTE]
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
 
 ## Screencasts
 
@@ -36,17 +34,14 @@ Building on the concepts from the previous video, [this screencast](http://chann
 
 Your first step will be to create a Code First model that targets your existing database. The [Code First to an Existing Database](../ef6/code-first-to-an-existing-database.md) topic provides detailed guidance on how to do this.
 
->**Note**: It is important to follow the rest of the steps in this topic before making any changes to your model that would require changes to the database schema. The following steps require the model to be in-sync with the database schema.
-
- 
+>[!NOTE]
+> It is important to follow the rest of the steps in this topic before making any changes to your model that would require changes to the database schema. The following steps require the model to be in-sync with the database schema.
 
 ## Step 2: Enable Migrations
 
 The next step is to enable migrations. You can do this by running the **Enable-Migrations** command in Package Manager Console.
 
 This command will create a folder in your solution called Migrations, and put a single class inside it called Configuration. The Configuration class is where you configure migrations for your application, you can find out more about it in the [Code First Migrations](../ef6/code-first-migrations.md) topic.
-
- 
 
 ## Step 3: Add an initial migration
 
@@ -70,8 +65,6 @@ In this scenario we need Migrations to be able to create the entire database fro
 2.  Comment out all code in the Up method of the newly created migration. This will allow us to ‘apply’ the migration to the local database without trying to recreate all the tables etc. that already exist.
 3.  Run the **Update-Database** command in Package Manager Console. This will apply the InitialCreate migration to the database. Since the actual migration doesn’t contain any changes (because we temporarily commented them out), it will simply add a row to the \_\_MigrationsHistory table indicating that this migration has already been applied.
 4.  Un-comment the code in the Up method. This means that when this migration is applied to future databases, the schema that already existed in the local database will be created by migrations.
-
- 
 
 ## Things to be aware of
 

@@ -5,8 +5,6 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: aa2dd48a-1f0e-49dd-863d-d6b4f5834832
@@ -19,12 +17,9 @@ The following image shows the main windows that are used when working with the E
 
 ![EFDesigner](../ef6/media/efdesigner.png)
 
-
 ## Prerequisites
 
 Visual Studio 2012 or Visual Studio 2010, Ultimate, Premium, Professional, or Web Express edition.
-
- 
 
 ## Create the Database
 
@@ -69,16 +64,12 @@ CONSTRAINT [FK_Person_PersonInfo] FOREIGN KEY ([PersonId]) REFERENCES [dbo].[Per
 );
 ```
 
- 
-
 ## Create the Project
 
 -   On the **File** menu, point to **New**, and then click **Project**.
 -   In the left pane, click **Visual C\#**, and then select the **Console Application** template.
 -   Enter **MapEntityToTablesSample** as the name of the project and click **OK**.
 -   Click **No** if prompted to save the SQL query created in the first section.
-
- 
 
 ## Create a Model based on the Database
 
@@ -92,8 +83,6 @@ CONSTRAINT [FK_Person_PersonInfo] FOREIGN KEY ([PersonId]) REFERENCES [dbo].[Per
 -   Click **Finish**.
 
 The Entity Designer, which provides a design surface for editing your model, is displayed.
-
- 
 
 ## Map an Entity to Two Tables
 
@@ -115,8 +104,6 @@ The next steps require the **Mapping Details** window. If you cannot see this 
 The **Person** entity type is now mapped to the **Person** and **PersonInfo** tables.
 
 ![Mapping2](../ef6/media/mapping2.png)
-
- 
 
 ## Use the Model
 
@@ -142,8 +129,6 @@ The **Person** entity type is now mapped to the **Person** and **PersonInfo
         }
     }
 ```
-
- 
 
 -   Compile and run the application.
 

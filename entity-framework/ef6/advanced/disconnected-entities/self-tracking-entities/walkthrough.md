@@ -12,7 +12,7 @@ caps.latest.revision: 3
 ---
 # Self-Tracking Entities Walkthrough
 > [!IMPORTANT]
-> The self-tracking entities templates is not recommended for new applications. If your application requires working with disconnected graphs of entities, consider other alternatives such as [Trackable Entities](http://trackableentities.github.io/) or writing custom code using the low-level change tracking APIs.     
+> We no longer recommend using the self-tracking-entities template. It will only continue to be available to support existing applications. If your application requires working with disconnected graphs of entities, consider other alternatives such as [Trackable Entities](http://trackableentities.github.io/), which is a technology similar to Self-Tracking-Entities that is more actively developed by the community, or writing custom code using the low-level change tracking APIs.
 
 This walkthrough demonstrates the scenario in which a Windows Communication Foundation (WCF) service exposes an operation that returns an entity graph. Next, a client application manipulates that graph and submits the modifications to a service operation that validates and saves the updates to a database using Entity Framework.
 
@@ -161,7 +161,8 @@ Finally, the project with our context in it will need a reference to the entity 
     -   In Visual Studio 2012 - select **Solution** from the left pane, check the box next to **STESample.Entities** and click **OK**
     -   In Visual Studio 2010 - select the **Projects** tab, select **STESample.Entities** and click **OK**
 
-> **Note:** Another option for moving the entity types to a separate project is to move the template file, rather than linking it from its default location. If you do this, you will need to update the **inputFile** variable in the template to provide the relative path to the edmx file (in this example that would be **..\\BloggingModel.edmx**).
+>[!NOTE]
+> Another option for moving the entity types to a separate project is to move the template file, rather than linking it from its default location. If you do this, you will need to update the **inputFile** variable in the template to provide the relative path to the edmx file (in this example that would be **..\\BloggingModel.edmx**).
 
 ## Create a WCF Service
 
