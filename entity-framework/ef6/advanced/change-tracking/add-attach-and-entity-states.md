@@ -1,5 +1,5 @@
 ---
-title: "Add, Attach, and Entity States - EF6"
+title: "Add, Attach, and entity state - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,8 +10,10 @@ ms.topic: "article"
 ms.assetid: acb27f46-3f3a-4179-874a-d6bea5d7120c
 caps.latest.revision: 3
 ---
-# Add, Attach, and Entity States
-This topic will cover how to add and attach entities to a context and how Entity Framework processes these during SaveChanges. Entity Framework takes care of tracking the state of entities while they are connected to a context, but in disconnected or N-Tier scenarios you can let EF know what state your entities should be in. The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
+# Add, Attach, and entity state
+This topic will cover how to add and attach entities to a context and how Entity Framework processes these during SaveChanges.
+Entity Framework takes care of tracking the state of entities while they are connected to a context, but in disconnected or N-Tier scenarios you can let EF know what state your entities should be in.
+The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
 ## Entity states and SaveChanges  
 
@@ -34,7 +36,9 @@ The following examples show ways in which the state of an entity or an entity gr
 
 ## Adding a new entity to the context  
 
-A new entity can be added to the context by calling the Add method on DbSet. This puts the entity into the Added state, meaning that it will be inserted into the database the next time that SaveChanges is called. For example:  
+A new entity can be added to the context by calling the Add method on DbSet.
+This puts the entity into the Added state, meaning that it will be inserted into the database the next time that SaveChanges is called.
+For example:  
 
 ``` csharp
 using (var context = new BloggingContext())
@@ -56,7 +60,8 @@ using (var context = new BloggingContext())
 }
 ```  
 
-Finally, you can add a new entity to the context by hooking it up to another entity that is already being tracked. This could be by adding the new entity to the collection navigation property of another entity or by setting a reference navigation property of another entity to point to the new entity. For example:  
+Finally, you can add a new entity to the context by hooking it up to another entity that is already being tracked.
+This could be by adding the new entity to the collection navigation property of another entity or by setting a reference navigation property of another entity to point to the new entity. For example:  
 
 ``` csharp
 using (var context = new BloggingContext())
@@ -113,7 +118,8 @@ Note that for both of these examples if the entity being attached has references
 
 ## Attaching an existing but modified entity to the context  
 
-If you have an entity that you know already exists in the database but to which changes may have been made then you can tell the context to attach the entity and set its state to Modified. For example:  
+If you have an entity that you know already exists in the database but to which changes may have been made then you can tell the context to attach the entity and set its state to Modified.
+For example:  
 
 ``` csharp
 var existingBlog = new Blog { BlogId = 1, Name = "ADO.NET Blog" };
@@ -130,7 +136,8 @@ using (var context = new BloggingContext())
 
 When you change the state to Modified all the properties of the entity will be marked as modified and all the property values will be sent to the database when SaveChanges is called.  
 
-Note that if the entity being attached has references to other entities that are not yet tracked, then these new entities will attached to the context in the Unchanged state—they will not automatically be made Modified. If you have multiple entities that need to be marked Modified you should set the state for each of these entities individually.  
+Note that if the entity being attached has references to other entities that are not yet tracked, then these new entities will attached to the context in the Unchanged state—they will not automatically be made Modified.
+If you have multiple entities that need to be marked Modified you should set the state for each of these entities individually.  
 
 ## Changing the state of a tracked entity  
 
@@ -154,7 +161,9 @@ Note that calling Add or Attach for an entity that is already tracked can also b
 
 ## Insert or update pattern  
 
-A common pattern for some applications is to either Add an entity as new (resulting in a database insert) or Attach an entity as existing and mark it as modified (resulting in a database update) depending on the value of the primary key. For example, when using database generated integer primary keys it is common to treat an entity with a zero key as new and an entity with a non-zero key as existing. This pattern can be achieved by setting the entity state based on a check of the primary key value. For example:  
+A common pattern for some applications is to either Add an entity as new (resulting in a database insert) or Attach an entity as existing and mark it as modified (resulting in a database update) depending on the value of the primary key.
+For example, when using database generated integer primary keys it is common to treat an entity with a zero key as new and an entity with a non-zero key as existing.
+This pattern can be achieved by setting the entity state based on a check of the primary key value. For example:  
 
 ``` csharp
 public void InsertOrUpdate(Blog blog)
