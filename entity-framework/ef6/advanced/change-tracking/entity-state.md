@@ -1,5 +1,5 @@
 ---
-title: "Add, Attach, and entity state - EF6"
+title: "Working with entity states - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,12 +10,12 @@ ms.topic: "article"
 ms.assetid: acb27f46-3f3a-4179-874a-d6bea5d7120c
 caps.latest.revision: 3
 ---
-# Add, Attach, and entity state
+# Working with entity states
 This topic will cover how to add and attach entities to a context and how Entity Framework processes these during SaveChanges.
 Entity Framework takes care of tracking the state of entities while they are connected to a context, but in disconnected or N-Tier scenarios you can let EF know what state your entities should be in.
 The techniques shown in this topic apply equally to models created with Code First and the EF Designer.  
 
-## Entity states and SaveChanges  
+## Entity states and SaveChanges
 
 An entity can be in one of five states as defined by the EntityState enumeration. These states are:  
 

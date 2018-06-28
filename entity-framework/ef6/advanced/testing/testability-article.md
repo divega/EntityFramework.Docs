@@ -415,13 +415,13 @@ The “object mother” we use in the base class is one common pattern for creat
 
 We can use the EmployeeControllerTestBase as the base class for a number of test fixtures (see figure 3). Each test fixture will test a specific controller action. For example, one test fixture will focus on testing the Create action used during an HTTP GET request (to display the view for creating an employee), and a different fixture will focus on the Create action used in an HTTP POST request (to take information submitted by the user to create an employee). Each derived class is only responsible for the setup needed in its specific context, and to provide the assertions needed to verify the outcomes for its specific test context.
 
-![eftest_03](../ef6/media/eftest-03.png)
+![eftest_03](~/ef6/media/eftest-03.png)
 
 **Figure 3**
 
 The naming convention and test style presented here isn’t required for testable code – it’s just one approach. Figure 4 shows the tests running in the Jet Brains Resharper test runner plugin for Visual Studio 2010.
 
-![eftest_04](../ef6/media/eftest-04.png)
+![eftest_04](~/ef6/media/eftest-04.png)
 
 **Figure 4**
 
