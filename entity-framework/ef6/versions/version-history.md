@@ -83,12 +83,12 @@ The EF 6.1.1 runtime was released to NuGet in June of 2014. This version contain
 ### EF 6.1
 The EF 6.1.0 runtime was released to NuGet in March of 2014. This minor update includes a significant number of new features:
 
-- **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](../ef6/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
-- **[Handling of transaction commit failures](../ef6/handling-of-transaction-commit-failures-ef6-1-onwards.md)** provides the CommitFailureHandler which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction.
-- **[IndexAttribute](../ef6/code-first-data-annotations.md)** allows indexes to be specified by placing an `[Index]` attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database.
+- **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](~/ef6/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
+- **[Handling of transaction commit failures](~/ef6/handling-of-transaction-commit-failures-ef6-1-onwards.md)** provides the CommitFailureHandler which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction.
+- **[IndexAttribute](~/ef6/code-first-data-annotations.md)** allows indexes to be specified by placing an `[Index]` attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database.
 - **The public mapping API** provides access to the information EF has on how properties and types are mapped to columns and tables in the database. In past releases this API was internal.
-- **[Ability to configure interceptors via the App/Web.config file](../ef6/config-file-settings.md)** allows interceptors to be added without recompiling the application.
-- **System.Data.Entity.Infrastructure.Interception.DatabaseLogger**is a new interceptor that makes it easy to log all database operations to a file. In combination with the previous feature, this allows you to easily [switch on logging of database operations for a deployed application](../ef6/config-file-settings.md), without the need to recompile.
+- **[Ability to configure interceptors via the App/Web.config file](~/ef6/config-file-settings.md)** allows interceptors to be added without recompiling the application.
+- **System.Data.Entity.Infrastructure.Interception.DatabaseLogger**is a new interceptor that makes it easy to log all database operations to a file. In combination with the previous feature, this allows you to easily [switch on logging of database operations for a deployed application](~/ef6/config-file-settings.md), without the need to recompile.
 - **Migrations model change detection** has been improved so that scaffolded migrations are more accurate; performance of the change detection process has also been enhanced.
 - **Performance improvements** including reduced database operations during initialization, optimizations for null equality comparison in LINQ queries, faster view generation (model creation) in more scenarios, and more efficient materialization of tracked entities with multiple associations.
 
@@ -104,14 +104,14 @@ the EF bits that are part of the .NET Framework. Moving the remaining parts of t
 
 This release includes numerous new features. The following features work for models created with Code First or the EF Designer:
 
-- **[Async Query and Save](../ef6/async-query-and-save-ef6-onwards.md)** adds support for the task-based asynchronous patterns that were introduced in .NET 4.5.
-- **[Connection Resiliency](../ef6/connection-resiliency-and-retry-logic-ef6-onwards.md)** enables automatic recovery from transient connection failures.
-- **[Code-Based Configuration](../ef6/code-based-configuration-ef6-onwards.md)** gives you the option of performing configuration – that was traditionally performed in a config file – in code.
-- **[Dependency Resolution](../ef6/idbdependencyresolver-services-ef6-onwards.md)** introduces support for the Service Locator pattern and we've factored out some pieces of functionality that can be replaced with custom implementations.
-- **[Interception/SQL logging](../ef6/logging-and-intercepting-database-operations-ef6-onwards.md)** provides low-level building blocks for interception of EF operations with simple SQL logging built on top.
+- **[Async Query and Save](~/ef6/async-query-and-save-ef6-onwards.md)** adds support for the task-based asynchronous patterns that were introduced in .NET 4.5.
+- **[Connection Resiliency](~/ef6/connection-resiliency-and-retry-logic-ef6-onwards.md)** enables automatic recovery from transient connection failures.
+- **[Code-Based Configuration](~/ef6/code-based-configuration-ef6-onwards.md)** gives you the option of performing configuration – that was traditionally performed in a config file – in code.
+- **[Dependency Resolution](~/ef6/idbdependencyresolver-services-ef6-onwards.md)** introduces support for the Service Locator pattern and we've factored out some pieces of functionality that can be replaced with custom implementations.
+- **[Interception/SQL logging](~/ef6/logging-and-intercepting-database-operations-ef6-onwards.md)** provides low-level building blocks for interception of EF operations with simple SQL logging built on top.
 - **Testability improvements** make it easier to create test doubles for DbContext and DbSet when [using a mocking framework](http://msdn.com/data/dn314429) or [writing your own test doubles](http://msdn.com/data/dn314431).
-- **[DbContext can now be created with a DbConnection that is already opened](../ef6/connection-management.md)** which enables scenarios where it would be helpful if the connection could be open when creating the context (such as sharing a connection between components where you can not guarantee the state of the connection).
-- **[Improved Transaction Support](../ef6/working-with-transactions-ef6-onwards.md)** provides support for a transaction external to the framework as well as improved ways of creating a transaction within the Framework.
+- **[DbContext can now be created with a DbConnection that is already opened](~/ef6/connection-management.md)** which enables scenarios where it would be helpful if the connection could be open when creating the context (such as sharing a connection between components where you can not guarantee the state of the connection).
+- **[Improved Transaction Support](~/ef6/working-with-transactions-ef6-onwards.md)** provides support for a transaction external to the framework as well as improved ways of creating a transaction within the Framework.
 - **Enums, Spatial and Better Performance on .NET 4.0** - By moving the core components that used to be in the .NET Framework into the EF NuGet package we are now able to offer enum support, spatial data types and the performance improvements from EF5 on .NET 4.0.
 - **Improved performance of Enumerable.Contains in LINQ queries**.
 - **Improved warm up time (view generation)**, especially for large models.
@@ -123,12 +123,12 @@ This release includes numerous new features. The following features work for mod
 
 The following features apply to Code First only:
 
-- **[Custom Code First Conventions](../ef6/custom-code-first-conventions-ef6-onwards.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions.
-- **[Code First Mapping to Insert/Update/Delete Stored Procedures](../ef6/code-first-insert-update-and-delete-stored-procedures.md)** is now supported.
-- **[Idempotent migrations scripts](../ef6/code-first-migrations.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
-- **[Configurable Migrations History Table](../ef6/customizing-the-migrations-history-table-ef6-onwards.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
+- **[Custom Code First Conventions](~/ef6/custom-code-first-conventions-ef6-onwards.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions.
+- **[Code First Mapping to Insert/Update/Delete Stored Procedures](~/ef6/code-first-insert-update-and-delete-stored-procedures.md)** is now supported.
+- **[Idempotent migrations scripts](~/ef6/code-first-migrations.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
+- **[Configurable Migrations History Table](~/ef6/customizing-the-migrations-history-table-ef6-onwards.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
 - **Multiple Contexts per Database** removes the previous limitation of one Code First model per database when using Migrations or when Code First automatically created the database for you.
-- **[DbModelBuilder.HasDefaultSchema](../ef6/fluent-api-configuring-and-mapping-properties-and-types.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API.
+- **[DbModelBuilder.HasDefaultSchema](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API.
 - **DbModelBuilder.Configurations.AddFromAssembly method** allows you to easily add all configuration classes defined in an assembly when you are using configuration classes with the Code First Fluent API.
 - **[Custom Migrations Operations](http://romiller.com/2013/02/27/ef6-writing-your-own-code-first-migration-operations/)** enabled you to add additional operations to be used in your code-based migrations.
 - **Default transaction isolation level is changed to READ_COMMITTED_SNAPSHOT** for databases created using Code First, allowing for more scalability and fewer deadlocks.
@@ -143,72 +143,72 @@ Here is a list of content we put together specifically for the EF 5 release.
 
 -   [EF 5 Release Post](http://blogs.msdn.com/b/adonet/archive/2012/08/15/ef5-released.aspx)
 -   Getting Started
-    -   [Which workflow should I use?](../ef6/development-workflows-video.md)
-    -   [Code First to a new database (walkthrough and video)](../ef6/code-first-to-a-new-database.md)
-    -   [Code First to an existing database (walkthrough and video)](../ef6/code-first-to-an-existing-database.md)
-    -   [Model First (walkthrough and video)](../ef6/model-first.md)
-    -   [Database First (walkthrough and video)](../ef6/database-first.md)
+    -   [Which workflow should I use?](~/ef6/development-workflows-video.md)
+    -   [Code First to a new database (walkthrough and video)](~/ef6/code-first-to-a-new-database.md)
+    -   [Code First to an existing database (walkthrough and video)](~/ef6/code-first-to-an-existing-database.md)
+    -   [Model First (walkthrough and video)](~/ef6/model-first.md)
+    -   [Database First (walkthrough and video)](~/ef6/database-first.md)
 -   New Features in EF5
-    -   [Enum Support in Code First](../ef6/enum-support-code-first-ef5-onwards.md)
-    -   [Enum Support in EF Designer](../ef6/enum-support-ef-designer-ef5-onwards.md)
-    -   [Spatial Data Types in Code First](../ef6/spatial-code-first-ef5-onwards.md)
-    -   [Spatial Data Types in EF Designer](../ef6/spatial-ef-designer-ef5-onwards.md)
-    -   [Provider Support for Spatial Types](../ef6/provider-support-for-spatial-types.md)
-    -   [Table-Valued Functions](../ef6/table-valued-functions-tvfs-ef5-onwards.md)
-    -   [Multiple Diagrams per Model](../ef6/multiple-diagrams-per-model-ef5-onwards.md)
+    -   [Enum Support in Code First](~/ef6/enum-support-code-first-ef5-onwards.md)
+    -   [Enum Support in EF Designer](~/ef6/enum-support-ef-designer-ef5-onwards.md)
+    -   [Spatial Data Types in Code First](~/ef6/spatial-code-first-ef5-onwards.md)
+    -   [Spatial Data Types in EF Designer](~/ef6/spatial-ef-designer-ef5-onwards.md)
+    -   [Provider Support for Spatial Types](~/ef6/provider-support-for-spatial-types.md)
+    -   [Table-Valued Functions](~/ef6/table-valued-functions-tvfs-ef5-onwards.md)
+    -   [Multiple Diagrams per Model](~/ef6/multiple-diagrams-per-model-ef5-onwards.md)
 -   Setting up your model
-    -   [Which Workflow Should I Use](../ef6/development-workflows-video.md)
-    -   [Connections and Models](../ef6/connections-and-models.md)
-    -   [Performance Considerations](../ef6/performance-considerations-for-ef-4-5-and-6.md)
-    -   [Working with Microsoft SQL Azure](../ef6/windows-sql-azure.md)
-    -   [Entity Framework Power Tools](../ef6/power-tools.md)
-    -   [Configuration File Settings](../ef6/config-file-settings.md)
-    -   [Glossary](../ef6/glossary.md)
+    -   [Which Workflow Should I Use](~/ef6/development-workflows-video.md)
+    -   [Connections and Models](~/ef6/connections-and-models.md)
+    -   [Performance Considerations](~/ef6/performance-considerations-for-ef-4-5-and-6.md)
+    -   [Working with Microsoft SQL Azure](~/ef6/windows-sql-azure.md)
+    -   [Entity Framework Power Tools](~/ef6/power-tools.md)
+    -   [Configuration File Settings](~/ef6/config-file-settings.md)
+    -   [Glossary](~/ef6/glossary.md)
     -   Code First
-        -   [Code First to a new database (walkthrough and video)](../ef6/code-first-to-a-new-database.md)
-        -   [Code First to an existing database (walkthrough and video)](../ef6/code-first-to-an-existing-database.md)
-        -   [Conventions](../ef6/code-first-conventions.md)
-        -   [Data Annotations](../ef6/code-first-data-annotations.md)
-        -   [Fluent API - Configuring/Mapping Properties & Types](../ef6/fluent-api-configuring-and-mapping-properties-and-types.md)
-        -   [Fluent API - Configuring Relationships](../ef6/fluent-api-relationships.md)
-        -   [Fluent API with VB.NET](../ef6/fluent-api-with-vb-net.md)
-        -   [Code First Migrations](../ef6/code-first-migrations.md)
-        -   [Automatic Code First Migrations](../ef6/automatic-code-first-migrations.md)
-        -   [Migrate.exe](../ef6/migrate-exe.md)
-        -   [Defining DbSets](../ef6/defining-dbsets.md)
+        -   [Code First to a new database (walkthrough and video)](~/ef6/code-first-to-a-new-database.md)
+        -   [Code First to an existing database (walkthrough and video)](~/ef6/code-first-to-an-existing-database.md)
+        -   [Conventions](~/ef6/code-first-conventions.md)
+        -   [Data Annotations](~/ef6/code-first-data-annotations.md)
+        -   [Fluent API - Configuring/Mapping Properties & Types](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)
+        -   [Fluent API - Configuring Relationships](~/ef6/fluent-api-relationships.md)
+        -   [Fluent API with VB.NET](~/ef6/fluent-api-with-vb-net.md)
+        -   [Code First Migrations](~/ef6/code-first-migrations.md)
+        -   [Automatic Code First Migrations](~/ef6/automatic-code-first-migrations.md)
+        -   [Migrate.exe](~/ef6/migrate-exe.md)
+        -   [Defining DbSets](~/ef6/defining-dbsets.md)
     -   EF Designer
-        -   [Model First (walkthrough and video)](../ef6/model-first.md)
-        -   [Database First (walkthrough and video)](../ef6/database-first.md)
-        -   [Complex Types](../ef6/complex-types-ef-designer.md)
-        -   [Associations/Relationships](../ef6/relationships-ef-designer.md)
-        -   [TPT Inheritance Pattern](../ef6/designer-tpt-inheritance.md)
-        -   [TPH Inheritance Pattern](../ef6/designer-tph-inheritance.md)
-        -   [Query with Stored Procedures](../ef6/designer-query-sprocs.md)
-        -   [Stored Procedures with Multiple Result Sets](../ef6/sprocs-with-multiple-result-sets.md)
-        -   [Insert, Update & Delete with Stored Procedures](../ef6/designer-cud-sprocs.md)
-        -   [Map an Entity to Multiple Tables (Entity Splitting)](../ef6/designer-entity-splitting.md)
-        -   [Map Multiple Entities to One Table (Table Splitting)](../ef6/designer-table-splitting.md)
-        -   [Defining Queries](../ef6/defining-query-ef-designer.md)
-        -   [Code Generation Templates](../ef6/designer-code-generation-templates.md)
-        -   [Reverting to ObjectContext](../ef6/reverting-to-objectcontext-in-entity-framework-designer.md)
+        -   [Model First (walkthrough and video)](~/ef6/model-first.md)
+        -   [Database First (walkthrough and video)](~/ef6/database-first.md)
+        -   [Complex Types](~/ef6/complex-types-ef-designer.md)
+        -   [Associations/Relationships](~/ef6/relationships-ef-designer.md)
+        -   [TPT Inheritance Pattern](~/ef6/designer-tpt-inheritance.md)
+        -   [TPH Inheritance Pattern](~/ef6/designer-tph-inheritance.md)
+        -   [Query with Stored Procedures](~/ef6/designer-query-sprocs.md)
+        -   [Stored Procedures with Multiple Result Sets](~/ef6/sprocs-with-multiple-result-sets.md)
+        -   [Insert, Update & Delete with Stored Procedures](~/ef6/designer-cud-sprocs.md)
+        -   [Map an Entity to Multiple Tables (Entity Splitting)](~/ef6/designer-entity-splitting.md)
+        -   [Map Multiple Entities to One Table (Table Splitting)](~/ef6/designer-table-splitting.md)
+        -   [Defining Queries](~/ef6/defining-query-ef-designer.md)
+        -   [Code Generation Templates](~/ef6/designer-code-generation-templates.md)
+        -   [Reverting to ObjectContext](~/ef6/reverting-to-objectcontext-in-entity-framework-designer.md)
 -   Using Your Model
-    -   [Working with DbContext](../ef6/working-with-dbcontext.md)
-    -   [Querying/Finding Entities](../ef6/querying-and-finding-entities.md)
-    -   [Working with Relationships](../ef6/relationships-and-navigation-properties.md)
-    -   [Loading Related Entities](../ef6/loading-related-entities.md)
-    -   [Working with Local Data](../ef6/local-data.md)
-    -   [N-Tier Applications](../ef6/n-tier.md)
-    -   [Raw SQL Queries](../ef6/raw-sql-queries.md)
-    -   [Optimistic Concurrency Patterns](../ef6/optimistic-concurrency-patterns.md)
-    -   [Working with Proxies](../ef6/working-with-proxies.md)
-    -   [Automatic Detect Changes](../ef6/automatic-detect-changes.md)
-    -   [No-Tracking Queries](../ef6/no-tracking-queries.md)
-    -   [The Load Method](../ef6/the-load-method.md)
-    -   [Add/Attach and Entity States](../ef6/add-and-attach-and-entity-states.md)
-    -   [Working with Property Values](../ef6/working-with-property-values.md)
+    -   [Working with DbContext](~/ef6/working-with-dbcontext.md)
+    -   [Querying/Finding Entities](~/ef6/querying-and-finding-entities.md)
+    -   [Working with Relationships](~/ef6/relationships-and-navigation-properties.md)
+    -   [Loading Related Entities](~/ef6/loading-related-entities.md)
+    -   [Working with Local Data](~/ef6/local-data.md)
+    -   [N-Tier Applications](~/ef6/n-tier.md)
+    -   [Raw SQL Queries](~/ef6/raw-sql-queries.md)
+    -   [Optimistic Concurrency Patterns](~/ef6/optimistic-concurrency-patterns.md)
+    -   [Working with Proxies](~/ef6/working-with-proxies.md)
+    -   [Automatic Detect Changes](~/ef6/automatic-detect-changes.md)
+    -   [No-Tracking Queries](~/ef6/no-tracking-queries.md)
+    -   [The Load Method](~/ef6/the-load-method.md)
+    -   [Add/Attach and Entity States](~/ef6/add-and-attach-and-entity-states.md)
+    -   [Working with Property Values](~/ef6/working-with-property-values.md)
     -   [API Documentation](https://msdn.microsoft.com/library/hh289362)
-    -   [Data Binding with WPF (Windows Presentation Foundation)](../ef6/databinding-with-wpf.md)
-    -   [Data Binding with WinForms (Windows Forms)](../ef6/databinding-with-winforms.md)
+    -   [Data Binding with WPF (Windows Presentation Foundation)](~/ef6/databinding-with-wpf.md)
+    -   [Data Binding with WinForms (Windows Forms)](~/ef6/databinding-with-winforms.md)
 
 ### EF 4.3.1
 The EF 4.3.1 runtime was released to NuGet in February 2012 shortly after EF 4.3.0. This patch release included some bug fixes to the EF 4.3 release and introduced better LocalDB support for customers using EF 4.3 with Visual Studio 2012.

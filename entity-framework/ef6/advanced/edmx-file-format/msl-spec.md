@@ -17,7 +17,7 @@ In an Entity Framework application, mapping metadata is loaded from an .msl file
 
 The Entity Framework Designer (EF Designer) stores mapping information in an .edmx file at design time. At build time, the Entity Designer uses information in an .edmx file to create the .msl file that is needed by Entity Framework at runtime
 
-Names of all conceptual or storage model types that are referenced in MSL must be qualified by their respective namespace names. For information about the conceptual model namespace name, see [CSDL Specification](../ef6/csdl-specification.md). For information about the storage model namespace name, see [SSDL Specification](../ef6/ssdl-specification.md).
+Names of all conceptual or storage model types that are referenced in MSL must be qualified by their respective namespace names. For information about the conceptual model namespace name, see [CSDL Specification](~/ef6/csdl-specification.md). For information about the storage model namespace name, see [SSDL Specification](~/ef6/ssdl-specification.md).
 
 Versions of MSL are differentiated by XML namespaces.
 

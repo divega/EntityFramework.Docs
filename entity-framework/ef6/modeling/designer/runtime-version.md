@@ -15,7 +15,7 @@ caps.latest.revision: 3
 
 Starting with EF6 the following screen was added to the EF Designer to allow you to select the version of the runtime you wish to target when creating a model. The screen will appear when the latest version of Entity Framework is not already installed in the project. If the latest version is already installed it will just be used by default.
 
-![Screen](../ef6/media/screen.png)
+![Screen](~/ef6/media/screen.png)
 
 
 ## Targeting EF6.x

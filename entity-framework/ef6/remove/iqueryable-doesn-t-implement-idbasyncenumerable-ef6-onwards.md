@@ -24,6 +24,6 @@ Because Entity Framework queries make use of LINQ, the extension methods are def
 
 Whilst the async methods are only supported when running against an EF query, you may want to use them in your unit test when running against an in-memory test double of a DbSet.  
 
-For more details on how to achieve this scenario see the 'Testing with async queries' section of [Testing with a Mocking Framework](../ef6/testing-with-a-mocking-framework-ef6-onwards.md) or [Testing with Your Own Test Doubles](../ef6/testing-with-your-own-test-doubles-ef6-onwards.md).  
+For more details on how to achieve this scenario see the 'Testing with async queries' section of [Testing with a Mocking Framework](~/ef6/testing-with-a-mocking-framework-ef6-onwards.md) or [Testing with Your Own Test Doubles](~/ef6/testing-with-your-own-test-doubles-ef6-onwards.md).  
 
 TO-DO: Update http://go.microsoft.com/fwlink/?LinkId=287068

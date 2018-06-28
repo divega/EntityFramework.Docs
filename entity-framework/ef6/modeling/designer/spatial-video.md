@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Spatial - EF Designer Video
 This video shows how to map spatial types with the Entity Framework Designer. It also demonstrates how to use a LINQ query to find a distance between two locations.
 
-[See the step-by-step walkthrough that accompanies this video.](../ef6/spatial-ef-designer-ef5-onwards.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/spatial-ef-designer-ef5-onwards.md)
 
 **Presented By**: Julia Kornich
 

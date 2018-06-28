@@ -15,13 +15,13 @@ caps.latest.revision: 3
 
 This video and step-by-step walkthrough shows how to use enum types with Entity Framework Code First. It also demonstrates how to use enums in a LINQ query.
 
-This walkthrough will use Code First to create a new database, but you can also use [Code First to map to an existing database](../ef6/code-first-to-an-existing-database.md).
+This walkthrough will use Code First to create a new database, but you can also use [Code First to map to an existing database](~/ef6/code-first-to-an-existing-database.md).
 
 Enum support was introduced in Entity Framework 5. To use the new features like enums, spatial data types, and table-valued functions, you must target .NET Framework 4.5. Visual Studio 2012 targets .NET 4.5 by default.
 
 In Entity Framework, an enumeration can have the following underlying types: **Byte**, **Int16**, **Int32**, **Int64** , or **SByte**.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/enum-support-code-first-ef5-onwards-video.md)
+[See the video that accompanies this step-by-step walkthrough.](~/ef6/enum-support-code-first-ef5-onwards-video.md)
 
 ## Pre-Requisites
 
@@ -125,7 +125,7 @@ DepartmentID: 1 Name: English
 
 When you run the application the first time, the Entity Framework creates a database for you. Because we have Visual Studio 2012 installed, the database will be created on the LocalDB instance. By default, the Entity Framework names the database after the fully qualified name of the derived context (for this example that is **EnumCodeFirst.EnumTestContext**). The subsequent times the existing database will be used.  
 
-Note, that if you make any changes to your model after the database has been created, you should use Code First Migrations to update the database schema. See [Code First to a New Database](../ef6/code-first-to-a-new-database.md) for an example of using Migrations.
+Note, that if you make any changes to your model after the database has been created, you should use Code First Migrations to update the database schema. See [Code First to a New Database](~/ef6/code-first-to-a-new-database.md) for an example of using Migrations.
 
 To view the database and data, do the following:
 

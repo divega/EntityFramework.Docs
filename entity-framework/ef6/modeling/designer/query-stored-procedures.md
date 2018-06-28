@@ -47,7 +47,7 @@ See the section on [Walkthrough Prerequisites](../../../ef6/get-started/school-d
 -   In the Choose Your Database Objects dialog box, check the **Tables** checkbox to select all the tables.  
     Also, select the following stored procedures under the **Stored Procedures and Functions** node: **GetStudentGrades** and **GetDepartmentName**. 
 
-    ![Import](../ef6/media/import.jpg)
+    ![Import](~/ef6/media/import.jpg)
 
     *Starting with Visual Studio 2012 the EF Designer supports bulk import of stored procedures. The **Import selected stored procedures and functions into theentity model** is checked by default.*
 -   Click **Finish**.

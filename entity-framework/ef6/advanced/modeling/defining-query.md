@@ -11,11 +11,11 @@ ms.assetid: e52a297e-85aa-42f6-a922-ba960f8a4b22
 caps.latest.revision: 3
 ---
 # Defining Query - EF Designer
-This walkthrough demonstrates how to add a defining query and a corresponding entity type to a model using the EF Designer. A defining query is commonly used to provide functionality similar to that provided by a database view, but the view is defined in the model, not the database. A defining query allows you to execute a SQL statement that is specified in the **DefiningQuery** element of an .edmx file. For more information, see **DefiningQuery** in the [SSDL Specification](../ef6/ssdl-specification.md).
+This walkthrough demonstrates how to add a defining query and a corresponding entity type to a model using the EF Designer. A defining query is commonly used to provide functionality similar to that provided by a database view, but the view is defined in the model, not the database. A defining query allows you to execute a SQL statement that is specified in the **DefiningQuery** element of an .edmx file. For more information, see **DefiningQuery** in the [SSDL Specification](~/ef6/ssdl-specification.md).
 
 When using defining queries, you also have to define an entity type in your model. The entity type is used to surface data exposed by the defining query. Note that data surfaced through this entity type is read-only.
 
-Parameterized queries cannot be executed as defining queries. However, the data can be updated by mapping the insert, update, and delete functions of the entity type that surfaces the data to stored procedures. For more information, see [Insert, Update, and Delete with Stored Procedures](../ef6/designer-cud-sprocs.md).
+Parameterized queries cannot be executed as defining queries. However, the data can be updated by mapping the insert, update, and delete functions of the entity type that surfaces the data to stored procedures. For more information, see [Insert, Update, and Delete with Stored Procedures](~/ef6/designer-cud-sprocs.md).
 
 This topic shows how to perform the following tasks.
 
@@ -56,11 +56,11 @@ This walkthrough is using Visual Studio 2012 or newer.
 -   In Solution Explorer, right-click the **DefiningQueryModel.edmx** file and select **Open With…**.
 -   Select **XML (Text) Editor**.
 
-    ![XMLEditor](../ef6/media/xmleditor.png)
+    ![XMLEditor](~/ef6/media/xmleditor.png)
 
 -   Click **Yes** if prompted with the following message:
 
-    ![Warning2](../ef6/media/warning2.png)
+    ![Warning2](~/ef6/media/warning2.png)
 
  
 
@@ -138,7 +138,7 @@ Open the model in the EF Designer.
 -   Double-click the DefiningQueryModel.edmx.
 -   Say **Yes** to the following message:
 
-    ![Warning2](../ef6/media/warning2.png)
+    ![Warning2](~/ef6/media/warning2.png)
 
  
 
@@ -174,7 +174,7 @@ In this step, we will use the Mapping Details window to map the conceptual and s
     The **Mapping Details** window is displayed.
 -   Select **GradeReport** from the **&lt;Add a Table or View&gt;** dropdown list (located under **Table**s).  
     Default mappings between the conceptual and storage **GradeReport** entity type appear.  
-    ![MappingDetails3](../ef6/media/mappingdetails.png)
+    ![MappingDetails3](~/ef6/media/mappingdetails.png)
 
 As a result, the **EntitySetMapping** element is added to the mapping section of the .edmx file. 
 

@@ -20,7 +20,7 @@ This video and step-by-step walkthrough provide an introduction to Code First de
 
 You will need to have **Visual Studio 2012** or **Visual Studio 2013** installed to complete this walkthrough.
 
-You will also need version **6.1** (or later) of the **Entity Framework Tools for Visual Studio** installed. See [Get Entity Framework](../ef6/get-entity-framework.md) for information on installing the latest version of the Entity Framework Tools.
+You will also need version **6.1** (or later) of the **Entity Framework Tools for Visual Studio** installed. See [Get Entity Framework](~/ef6/get-entity-framework.md) for information on installing the latest version of the Entity Framework Tools.
 
 ## 1. Create an Existing Database
 
@@ -33,15 +33,15 @@ Let's go ahead and generate the database.
 -   Right click on **Data Connections -&gt; Add Connection…**
 -   If you haven’t connected to a database from **Server Explorer** before you’ll need to select **Microsoft SQL Server** as the data source
 
-    ![SelectDataSource](../ef6/media/selectdatasource.png)
+    ![SelectDataSource](~/ef6/media/selectdatasource.png)
 
 -   Connect to your LocalDB instance, and enter **Blogging** as the database name
 
-    ![LocalDBConnection](../ef6/media/localdbconnection.png)
+    ![LocalDBConnection](~/ef6/media/localdbconnection.png)
 
 -   Select **OK** and you will be asked if you want to create a new database, select **Yes**
 
-    ![CreateDatabaseDialog](../ef6/media/createdatabasedialog.png)
+    ![CreateDatabaseDialog](~/ef6/media/createdatabasedialog.png)
 
 -   The new database will now appear in Server Explorer, right-click on it and select **New Query**
 -   Copy the following SQL into the new query, then right-click on the query and select **Execute**
@@ -92,15 +92,15 @@ We’re going to make use of the Entity Framework Tools for Visual Studio to hel
 -   This launches the **Entity Data Model Wizard**
 -   Select **Code First from Database** and click **Next**
 
-    ![WizardOneCFE](../ef6/media/wizardonecfe.png)
+    ![WizardOneCFE](~/ef6/media/wizardonecfe.png)
 
 -   Select the connection to the database you created in the first section and click **Next**
 
-    ![WizardTwoCFE](../ef6/media/wizardtwocfe.png)
+    ![WizardTwoCFE](~/ef6/media/wizardtwocfe.png)
 
 -   Click the checkbox next to **Tables** to import all tables and click **Finish**
 
-    ![WizardThreeCFE](../ef6/media/wizardthreecfe.png)
+    ![WizardThreeCFE](~/ef6/media/wizardthreecfe.png)
 
 Once the reverse engineer process completes a number of items will have been added to the project, let's take a look at what's been added.
 
@@ -224,7 +224,7 @@ The Code First to Database wizard is designed to generate a starting point set o
 
 ## Using Code First Migrations with an Existing Database
 
-If you want to use Code First Migrations with your existing database, see [Code First Migrations with an existing database](../ef6/code-first-migrations-with-an-existing-database.md).
+If you want to use Code First Migrations with your existing database, see [Code First Migrations with an existing database](~/ef6/code-first-migrations-with-an-existing-database.md).
 
  
 

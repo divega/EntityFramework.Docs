@@ -25,7 +25,7 @@ The EF Designers for Visual Studio 2012 and Visual Studio 2013 generate a contex
 
 When using the DbContext API surface you should use the **Object** option when creating a new Data Source, as shown in this walkthrough.
 
-If needed, you can [revert to ObjectContext based code generation](../ef6/reverting-to-objectcontext-in-entity-framework-designer.md) for models created with the EF Designer.
+If needed, you can [revert to ObjectContext based code generation](~/ef6/reverting-to-objectcontext-in-entity-framework-designer.md) for models created with the EF Designer.
 
 ## Pre-Requisites
 
@@ -142,17 +142,17 @@ Let's go ahead and generate the database.
 -   Right click on **Data Connections -&gt; Add Connection…**
 -   If you haven’t connected to a database from Server Explorer before you’ll need to select Microsoft SQL Server as the data source
 
-    ![ChangeDataSource](../ef6/media/changedatasource.png)
+    ![ChangeDataSource](~/ef6/media/changedatasource.png)
 
 -   Connect to either LocalDB or SQL Express, depending on which one you have installed, and enter **Products** as the database name
 
-    ![AddConnectionLocalDB](../ef6/media/addconnectionlocaldb.png)
+    ![AddConnectionLocalDB](~/ef6/media/addconnectionlocaldb.png)
 
-    ![AddConnectionExpress](../ef6/media/addconnectionexpress.png)
+    ![AddConnectionExpress](~/ef6/media/addconnectionexpress.png)
 
 -   Select **OK** and you will be asked if you want to create a new database, select **Yes**
 
-    ![CreateDatabase](../ef6/media/createdatabase.png)
+    ![CreateDatabase](~/ef6/media/createdatabase.png)
 
 -   The new database will now appear in Server Explorer, right-click on it and select **New Query**
 -   Copy the following SQL into the new query, then right-click on the query and select **Execute**
@@ -186,15 +186,15 @@ We’re going to make use of Entity Framework Designer, which is included as par
 -   This launches the **Entity Data Model Wizard**
 -   Select **Generate from Database** and click **Next**
 
-    ![ChooseModelContents](../ef6/media/choosemodelcontents.png)
+    ![ChooseModelContents](~/ef6/media/choosemodelcontents.png)
 
 -   Select the connection to the database you created in the first section, enter **ProductContext** as the name of the connection string and click **Next**
 
-    ![ChooseYourConnection](../ef6/media/chooseyourconnection.png)
+    ![ChooseYourConnection](~/ef6/media/chooseyourconnection.png)
 
 -   Click the checkbox next to ‘Tables’ to import all tables and click ‘Finish’
 
-    ![ChooseYourObjects](../ef6/media/chooseyourobjects.png)
+    ![ChooseYourObjects](~/ef6/media/chooseyourobjects.png)
 
 Once the reverse engineer process completes the new model is added to your project and opened up for you to view in the Entity Framework Designer. An App.config file has also been added to your project with the connection details for the database.
 
@@ -213,7 +213,7 @@ EF generates code from your model using T4 templates. The templates shipped with
 -   Open the **Solution Explorer** and find **ProductModel.edmx** file
 -   Find the **ProductModel.tt** file which will be nested under the ProductModel.edmx file
 
-    ![WpfProductModelTemplate](../ef6/media/wpfproductmodeltemplate.png)
+    ![WpfProductModelTemplate](~/ef6/media/wpfproductmodeltemplate.png)
 
 -   Double-click on the ProductModel.tt file to open it in the Visual Studio editor
 -   Find and replace the two occurrences of “**ICollection**” with “**ObservableCollection**”. These are located approximately at lines 296 and 484.
@@ -244,14 +244,14 @@ Add the classes that are defined in the model as data sources for this WPF appli
 -   In the Select the Data Objects dialog, unfold the **WPFwithEFSample** two times and select **Category**  
     *There is no need to select the **Product** data source, because we will get to it through the **Product**’s property on the **Category** data source*  
 
-    ![SelectDataObjects](../ef6/media/selectdataobjects.png)
+    ![SelectDataObjects](~/ef6/media/selectdataobjects.png)
 
 -   Click **Finish.**
 -   The Data Sources window is opened next to the MainWindow.xaml window
     *If the Data Sources window is not showing up, select **View -&gt; Other Windows-&gt; Data Sources***
 -   Press the pin icon, so the Data Sources window does not auto hide. You may need to hit the refresh button if the window was already visible.
 
-    ![DataSources](../ef6/media/datasources.png)
+    ![DataSources](~/ef6/media/datasources.png)
 
 -   Select the **Category **data source and drag it on the form.
 
@@ -291,7 +291,7 @@ Now that we have a grid to display Categories let's add a details grid to displa
 
 The form should look similar to this:
 
-![Designer](../ef6/media/designer.png) 
+![Designer](~/ef6/media/designer.png) 
 
 ## Add Code that Handles Data Interaction
 
@@ -300,7 +300,7 @@ It's time to add some event handlers to the main window.
 -   In the XAML window, click on the **&lt;Window** element, this selects the main window
 -   In the **Properties** window choose **Events** at the top right, then double-click the text box to right of the **Loaded** label
 
-    ![MainWindowProperties](../ef6/media/mainwindowproperties.png)
+    ![MainWindowProperties](~/ef6/media/mainwindowproperties.png)
 
 -   Also add the **Click** event for the **Save** button by double-clicking the Save button in the designer. 
 
@@ -387,10 +387,10 @@ The code declares a long-running instance of **ProductContext**. The **ProductCo
 -   Enter a category name in the top grid and product names in the bottom grid
     *Do not enter anything in ID columns, because the primary key is generated by the database*
 
-    ![Screen1](../ef6/media/screen1.png)
+    ![Screen1](~/ef6/media/screen1.png)
 
 -   Press the **Save** button to save the data to the database
 
 After the call to DbContext’s **SaveChanges**(), the IDs are populated with the database generated values. Because we called **Refresh**() after **SaveChanges**() the **DataGrid** controls are updated with the new values as well.
 
-![Screen2](../ef6/media/screen2.png)
+![Screen2](~/ef6/media/screen2.png)

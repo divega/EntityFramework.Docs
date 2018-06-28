@@ -13,7 +13,7 @@ caps.latest.revision: 4
 # Code First Conventions
 Code First enables you to describe a model by using C# or Visual Basic .NET classes. The basic shape of the model is detected by using conventions. Conventions are sets of rules that are used to automatically configure a conceptual model based on class definitions when working with Code First. The conventions are defined in the System.Data.Entity.ModelConfiguration.Conventions namespace.  
 
-You can further configure your model by using data annotations or the fluent API. Precedence is given to configuration through the fluent API followed by data annotations and then conventions. For more information see [Data Annotations](../ef6/code-first-data-annotations.md), [Fluent API - Relationships](../ef6/fluent-api-relationships.md), [Fluent API - Types & Properties](../ef6/fluent-api-configuring-and-mapping-properties-and-types.md) and [Fluent API with VB.NET](../ef6/fluent-api-with-vb-net.md).  
+You can further configure your model by using data annotations or the fluent API. Precedence is given to configuration through the fluent API followed by data annotations and then conventions. For more information see [Data Annotations](~/ef6/code-first-data-annotations.md), [Fluent API - Relationships](~/ef6/fluent-api-relationships.md), [Fluent API - Types & Properties](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md) and [Fluent API with VB.NET](~/ef6/fluent-api-with-vb-net.md).  
 
 A detailed list of Code First conventions is available in the [API Documentation](https://msdn.microsoft.com/library/system.data.entity.modelconfiguration.conventions.aspx). This topic provides an overview of the conventions used by Code First.  
 
@@ -128,7 +128,7 @@ public class Course
 ```  
 
 > [!NOTE]
-> If you have multiple relationships between the same types (for example, suppose you define the **Person** and **Book** classes, where the **Person** class contains the **ReviewedBooks** and **AuthoredBooks** navigation properties and the **Book** class contains the **Author** and **Reviewer** navigation properties) you need to manually configure the relationships by using Data Annotations or the fluent API. For more information, see [Data Annotations - Relationships](../ef6/code-first-data-annotations.md) and [Fluent API - Relationships](../ef6/fluent-api-relationships.md).  
+> If you have multiple relationships between the same types (for example, suppose you define the **Person** and **Book** classes, where the **Person** class contains the **ReviewedBooks** and **AuthoredBooks** navigation properties and the **Book** class contains the **Author** and **Reviewer** navigation properties) you need to manually configure the relationships by using Data Annotations or the fluent API. For more information, see [Data Annotations - Relationships](~/ef6/code-first-data-annotations.md) and [Fluent API - Relationships](~/ef6/fluent-api-relationships.md).  
 
 ## Complex Types Convention  
 
@@ -155,7 +155,7 @@ public class Details
 
 ## Connection String Convention  
 
-To learn about the conventions that DbContext uses to discover the connection to use see [Connections and Models](../ef6/connections-and-models.md).  
+To learn about the conventions that DbContext uses to discover the connection to use see [Connections and Models](~/ef6/connections-and-models.md).  
 
 ## Removing Conventions  
 
@@ -178,4 +178,4 @@ public class SchoolEntities : DbContext
 
 ## Custom Conventions  
 
-Custom conventions are supported in EF6 onwards. For more information see [Custom Code First Conventions](../ef6/custom-code-first-conventions-ef6-onwards.md).
+Custom conventions are supported in EF6 onwards. For more information see [Custom Code First Conventions](~/ef6/custom-code-first-conventions-ef6-onwards.md).

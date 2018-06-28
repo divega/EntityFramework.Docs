@@ -17,7 +17,7 @@ This page provides a list of keyboard shorcuts that are available in the various
 
 ### Step One: Choose Model Contents
 
-![WizardOne](../ef6/media/wizardone.png)
+![WizardOne](~/ef6/media/wizardone.png)
 
 | Shortcut  | Action                                                     | Notes                                               |
 |:----------|:-----------------------------------------------------------|:----------------------------------------------------|
@@ -27,7 +27,7 @@ This page provides a list of keyboard shorcuts that are available in the various
 
 ### Step Two: Choose Your Connection
 
-![WizardTwo](../ef6/media/wizardtwo.png)
+![WizardTwo](~/ef6/media/wizardtwo.png)
 
 | Shortcut  | Action                                                     | Notes                                                   |
 |:----------|:-----------------------------------------------------------|:--------------------------------------------------------|
@@ -41,7 +41,7 @@ This page provides a list of keyboard shorcuts that are available in the various
 
 ### Step Three: Choose Your Version
 
-![WizardThree](../ef6/media/wizardthree.png)
+![WizardThree](~/ef6/media/wizardthree.png)
 
 | Shortcut  | Action                                             | Notes                                                                                 |
 |:----------|:---------------------------------------------------|:--------------------------------------------------------------------------------------|
@@ -51,7 +51,7 @@ This page provides a list of keyboard shorcuts that are available in the various
 
 ### Step Four: Choose Your Database Objects and Settings
 
-![WizardFour](../ef6/media/wizardfour.png)
+![WizardFour](~/ef6/media/wizardfour.png)
 
 | Shortcut  | Action                                                                                    | Notes                                                               |
 |:----------|:------------------------------------------------------------------------------------------|:--------------------------------------------------------------------|
@@ -70,7 +70,7 @@ This page provides a list of keyboard shorcuts that are available in the various
 
 ## EF Designer Surface
 
-![DesignerSurface](../ef6/media/designersurface.png)
+![DesignerSurface](~/ef6/media/designersurface.png)
 
 | Shortcut                                                                                | Action                      | Notes                                                                                                                                                                                                                           |
 |:----------------------------------------------------------------------------------------|:----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -113,7 +113,7 @@ This page provides a list of keyboard shorcuts that are available in the various
 
 ## Mapping Details Window
 
-![MappingDetailsShortcuts](../ef6/media/mappingdetailsshortcuts.png)
+![MappingDetailsShortcuts](~/ef6/media/mappingdetailsshortcuts.png)
 
 | Shortcut                  | Action         | Notes                                                                                                                                 |
 |:--------------------------|:---------------|:--------------------------------------------------------------------------------------------------------------------------------------|

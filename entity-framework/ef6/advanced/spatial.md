@@ -15,8 +15,8 @@ Entity Framework supports working with spatial data through the DbGeography or D
 
 Additional information on how to use spatial types in an application can be found in two walkthroughs, one for Code First, the other for Database First or Model First:  
 
-- [Spatial Data Types in Code First](../ef6/spatial-code-first-ef5-onwards.md)  
-- [Spatial Data Types in EF Designer](../ef6/spatial-ef-designer-ef5-onwards.md)  
+- [Spatial Data Types in Code First](~/ef6/spatial-code-first-ef5-onwards.md)  
+- [Spatial Data Types in EF Designer](~/ef6/spatial-ef-designer-ef5-onwards.md)  
 
 ## EF releases that support spatial types  
 

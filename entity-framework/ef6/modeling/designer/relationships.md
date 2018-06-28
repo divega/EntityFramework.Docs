@@ -12,11 +12,11 @@ caps.latest.revision: 3
 ---
 # Relationships - EF Designer
 > [!NOTE]
-> This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](../ef6/relationships-and-navigation-properties.md).
+> This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/relationships-and-navigation-properties.md).
 
 Associations define relationships between entity types in a model. This topic shows how to map associations with the Entity Framework Designer (EF Designer). The following image shows the main windows that are used when working with the EF Designer.
 
-![EFDesigner](../ef6/media/efdesigner.png)
+![EFDesigner](~/ef6/media/efdesigner.png)
 
 > [!NOTE]
 > When you build the conceptual model, warnings about unmapped entities and associations may appear in the Error List. You can ignore these warnings because after you choose to generate the database from the model, the errors will go away.
@@ -30,7 +30,7 @@ At run time, entity type instances at one end of an association can be accessed 
 > [!NOTE]
 > In many-to-many (\*:\*) you cannot add foreign keys to the entities. In a \*:\* relationship, the association information is managed with an independent object.
 
-For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](../ef6/csdl-specification.md).
+For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](~/ef6/csdl-specification.md).
 
 ## Create and Delete Associations
 
@@ -44,7 +44,7 @@ Creating an association with the EF Designer updates the model content of the .e
 1.  Right-click an empty area of the design surface, point to **Add New**, and select **Association…**.
 2.  Fill in the settings for the association in the **Add Association** dialog.
 
-    ![AddAssociation](../ef6/media/addassociation.png)
+    ![AddAssociation](~/ef6/media/addassociation.png)
 
     > [!NOTE]
 > You can choose to not add navigation properties or foreign key properties to the entities at the ends of the association by clearing the **Navigation Property **and **Add foreign key properties to the &lt;entity type name&gt; Entity **checkboxes. If you add only one navigation property, the association will be traversable in only one direction. If you add no navigation properties, you must choose to add foreign key properties in order to access entities at the ends of the association.
@@ -75,7 +75,7 @@ When you use the EF Designer to add or edit a referential constraint, the EF Des
 -   From the **Dependent** drop-down list, select the dependent entity in the referential constraint.
 -   For each principal key that has a dependent key, select a corresponding dependent key from the drop-down lists in the **Dependent Key** column.
 
-    ![RefConstraint](../ef6/media/refconstraint.png)
+    ![RefConstraint](~/ef6/media/refconstraint.png)
 
 -   Click **OK**.
 
@@ -96,7 +96,7 @@ You can specify how an association maps to the database in the **Mapping Details
     The **Mapping Details** window displays both ends of the association and the key properties for the entity type at each **End**.
 -   For each key property, click the **Column** field, and select the column to which the property will map.
 
-    ![MappingDetails4](../ef6/media/mappingdetails4.png)
+    ![MappingDetails4](~/ef6/media/mappingdetails4.png)
 
 ### Edit an association mapping
 

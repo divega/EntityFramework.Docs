@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Enum Support - Code First (EF5 onwards) Video
 This video shows how to use enum types with Entity Framework Code First. It also demonstrates how to use enums in a LINQ query.
 
-[See the step-by-step walkthrough that accompanies this video.](../ef6/enum-support-code-first-ef5-onwards.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/enum-support-code-first-ef5-onwards.md)
 
 **Presented By**: Julia Kornich
 

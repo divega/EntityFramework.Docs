@@ -19,7 +19,7 @@ You can also start with the Model First and then generate the database from the 
 
 ## Other Inheritance Options
 
-Table-per-Hierarchy (TPH) is another type of inheritance in which one database table is used to maintain data for all of the entity types in an inheritance hierarchy.  For information about how to map Table-per-Hierarchy inheritance with the Entity Designer, see [EF Designer TPH Inheritance](../ef6/designer-tph-inheritance.md). 
+Table-per-Hierarchy (TPH) is another type of inheritance in which one database table is used to maintain data for all of the entity types in an inheritance hierarchy.  For information about how to map Table-per-Hierarchy inheritance with the Entity Designer, see [EF Designer TPH Inheritance](~/ef6/designer-tph-inheritance.md). 
 
 Note that, the Table-per-Concrete Type Inheritance (TPC) and mixed inheritance models are supported by the Entity Framework runtime but are not supported by the EF Designer. If you want to use TPC or mixed inheritance, you have two options: use Code First, or manually edit the EDMX file. If you choose to work with the EDMX file, the Mapping Details Window will be put into “safe mode” and you will not be able to use the designer to change the mappings.
 
@@ -71,7 +71,7 @@ We will now delete the **CourseID** property from **OnlineCourse** and **OnsiteC
 -   Right-click the **CourseID** property of the **OnsiteCourse** entity type, and then select **Delete from Model**
 -   Table-per-type inheritance is now implemented.
 
-![TPT](../ef6/media/tpt.png)
+![TPT](~/ef6/media/tpt.png)
 
 ## Use the Model
 

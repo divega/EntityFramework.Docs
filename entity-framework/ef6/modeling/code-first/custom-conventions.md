@@ -13,14 +13,14 @@ caps.latest.revision: 3
 # Custom Code First Conventions
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
-When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](../ef6/code-first-conventions.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.
+When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](~/ef6/code-first-conventions.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.
 
 Sometimes these default conventions are not ideal for your model, and you have to work around them by configuring many individual entities using Data Annotations or the Fluent API. Custom Code First Conventions let you define your own conventions that provide configuration defaults for your model. In this walkthrough, we will explore the different types of custom conventions and how to create each of them.
 
 
 ## Model-Based Conventions
 
-This page covers the DbModelBuilder API for custom conventions. This API should be sufficient for authoring most custom conventions. However, there is also the ability to author model-based conventions - conventions that manipulate the final model once it is created - to handle advanced scenarios. For more information, see [Model-Based Conventions (EF6 onwards)](../ef6/model-based-conventions-ef6-onwards.md).
+This page covers the DbModelBuilder API for custom conventions. This API should be sufficient for authoring most custom conventions. However, there is also the ability to author model-based conventions - conventions that manipulate the final model once it is created - to handle advanced scenarios. For more information, see [Model-Based Conventions (EF6 onwards)](~/ef6/model-based-conventions-ef6-onwards.md).
 
  
 
@@ -114,7 +114,7 @@ An interesting feature of the IsKey method is that it is additive. Which means t
 
 This code will configure the types in our model to have a composite key consisting of the int Key column and the string Name column. If we view the model in the designer it would look like this:
 
-![compositeKey](../ef6/media/compositekey.png)
+![compositeKey](~/ef6/media/compositekey.png)
 
 Another example of property conventions is to configure all DateTime properties in my model to map to the datetime2 type in SQL Server instead of datetime. You can achieve this with the following:
 
@@ -291,7 +291,7 @@ By default both employee and manager are mapped to the same table (Employees) in
 
 The code above will map to a table structure that looks like the following:
 
-![tptExample](../ef6/media/tptexample.jpg)
+![tptExample](~/ef6/media/tptexample.jpg)
 
 You can avoid this, and maintain the default TPH mapping, in a couple ways:
 

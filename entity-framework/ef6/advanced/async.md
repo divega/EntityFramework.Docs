@@ -33,7 +33,7 @@ Here are some more resources to learn about async:
 
 ## Create the model
 
-We’ll be using the [Code First workflow](../ef6/code-first-to-a-new-database.md) to create our model and generate the database, however the asynchronous functionality will work with all EF models including those created with the EF Designer.
+We’ll be using the [Code First workflow](~/ef6/code-first-to-a-new-database.md) to create our model and generate the database, however the asynchronous functionality will work with all EF models including those created with the EF Designer.
 
 -   Create a Console Application and call it **AsyncDemo**
 -   Add the EntityFramework NuGet package
@@ -144,7 +144,7 @@ Since the code is syncronous, we can observe the following execution flow when w
 4.  Query returns and results are written to **Console**
 5.  Quote of the day is written to **Console**
 
-![SyncOutput](../ef6/media/syncoutput.png) 
+![SyncOutput](~/ef6/media/syncoutput.png) 
 
  
 
@@ -228,7 +228,7 @@ Now that the code is asyncronous, we can observe a different execution flow when
     *Again, the managed thread is free to do other work while the query is processed in the database. Since all other execution has completed, the thread will just halt on the Wait call though.*
 5.  Query returns and results are written to **Console**
 
-![AsyncOutput](../ef6/media/asyncoutput.png) 
+![AsyncOutput](~/ef6/media/asyncoutput.png) 
 
  
 

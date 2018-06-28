@@ -15,7 +15,7 @@ This topic shows how to map complex types with the Entity Framework Designer (E
 
 The following image shows the main windows that are used when working with the EF Designer.
 
-![EFDesigner](../ef6/media/efdesigner.png)
+![EFDesigner](~/ef6/media/efdesigner.png)
 
 > [!NOTE]
 > When you build the conceptual model, warnings about unmapped entities and associations may appear in the Error List. You can ignore these warnings because after you choose to generate the database from the model, the errors will go away.
@@ -39,13 +39,13 @@ If you already have an entity in your conceptual model you may want to refactor 
 
 On the designer surface, select one or more properties (excluding navigation properties) of an entity, then right-click and select **Refactor -&gt; Move to New Complex Type**.
 
-![Refactor](../ef6/media/refactor.png)
+![Refactor](~/ef6/media/refactor.png)
 
 A new complex type with the selected properties is added to the **Model Browser**. The complex type is given a default name.
 
 A complex property of the newly created type replaces the selected properties. All property mappings are preserved.
 
-![Refactor2](../ef6/media/refactor2.png)
+![Refactor2](~/ef6/media/refactor2.png)
 
 ## Create a New Complex Type
 
@@ -53,7 +53,7 @@ You can also create a new complex type that does not contain properties of an ex
 
 Right-click the **Complex Types** folder in the Model Browser, point to **AddNew Complex Type…**. Alternatively, you can select the **Complex Types** folder and press the **Insert** key on your keyboard.
 
-![AddNewComplextype](../ef6/media/addnewcomplextype.png)
+![AddNewComplextype](~/ef6/media/addnewcomplextype.png)
 
 A new complex type is added to the folder with a default name. You can now add properties to the type.
 
@@ -65,7 +65,7 @@ You can add a property to a complex type in any of the ways listed below.
 
 -   Right-click a complex type in the Model Browser, point to **Add**, then point to **Scalar Property** or **Complex Property**, then select the desired property type. Alternatively, you can select a complex type and then press the **Insert** key on your keyboard.  
 
-    ![AddPropertiestoComplexType](../ef6/media/addpropertiestocomplextype.png)
+    ![AddPropertiestoComplexType](~/ef6/media/addpropertiestocomplextype.png)
 
     A new property is added to the complex type with a default name.
 
@@ -108,7 +108,7 @@ When you rename a complex type, all references to the type are updated throughou
     A drop-down list of all the scalar properties is displayed.
 7.  Select the appropriate property.
 
-    ![MapComplexType](../ef6/media/mapcomplextype.png)
+    ![MapComplexType](~/ef6/media/mapcomplextype.png)
 
 8.  Repeat steps 6 and 7 for each table column.
 
@@ -121,14 +121,14 @@ Function imports are based on stored procedures. To map a function import to a c
 
 -   Double-click on an imported function that you want to map to a complex type.
 
-    ![FunctionImports](../ef6/media/functionimports.png)
+    ![FunctionImports](~/ef6/media/functionimports.png)
 
 -   Fill in the settings for the new function import, as follows:
     -   Specify the stored procedure for which you are creating a function import in the **Stored Procedure Name** field. This field is a drop-down list that displays all the stored procedures in the storage model.
     -   Specify the name of the function import in the **Function Import Name** field.
     -   Select **Complex** as the return type and then specify the specific complex return type by choosing the appropriate type from the drop-down list.
 
-        ![EditFunctionImport](../ef6/media/editfunctionimport.png)
+        ![EditFunctionImport](~/ef6/media/editfunctionimport.png)
 
 -   Click **OK**.
     The function import entry is created in the conceptual model.

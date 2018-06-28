@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Enum Support - EF Designer Video
 This video shows how to use enum types with the Entity Framework Designer. It also demonstrates how to use enums in a LINQ query.
 
-[See the step-by-step walkthrough that accompanies this video.](../ef6/enum-support-ef-designer-ef5-onwards.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/enum-support-ef-designer-ef5-onwards.md)
 
 **Presented By**: Julia Kornich
 

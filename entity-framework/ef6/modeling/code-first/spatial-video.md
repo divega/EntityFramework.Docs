@@ -15,7 +15,7 @@ caps.latest.revision: 3
 # Spatial - Code First Video
 This video shows how to map spatial types with Entity Framework Code First. It also demonstrates how to use a LINQ query to find a distance between two locations.
 
-[See the step-by-step walkthrough that accompanies this video.](../ef6/spatial-code-first-ef5-onwards.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/spatial-code-first-ef5-onwards.md)
 
 **Presented By**: Julia Kornich
 

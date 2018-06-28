@@ -15,7 +15,7 @@ This walkthrough shows how to map an entity type to two tables by modifying a mo
 
 The following image shows the main windows that are used when working with the EF Designer.
 
-![EFDesigner](../ef6/media/efdesigner.png)
+![EFDesigner](~/ef6/media/efdesigner.png)
 
 ## Prerequisites
 
@@ -93,7 +93,7 @@ In this step we will update the **Person** entity type to combine data from the 
 -   On the design surface, select the **PersonInfo** entity and press **Delete** button on the keyboard.
 -   Click **No** when asked if you want to remove the **PersonInfo** table from the model, we are about to map it to the **Person** entity.
 
-    ![DeleteTables](../ef6/media/deletetables.png)
+    ![DeleteTables](~/ef6/media/deletetables.png)
 
 The next steps require the **Mapping Details** window. If you cannot see this window, right-click the design surface and select **Mapping Details**.
 
@@ -103,7 +103,7 @@ The next steps require the **Mapping Details** window. If you cannot see this 
 
 The **Person** entity type is now mapped to the **Person** and **PersonInfo** tables.
 
-![Mapping2](../ef6/media/mapping2.png)
+![Mapping2](~/ef6/media/mapping2.png)
 
 ## Use the Model
 
@@ -136,9 +136,9 @@ The following T-SQL statements were executed against the database as a result of
 
 -   The following two **INSERT** statements were executed as a result of executing context.SaveChanges(). They take the data from the **Person** entity and split it between the **Person** and **PersonInfo** tables.
 
-    ![Insert1](../ef6/media/insert1.png)
+    ![Insert1](~/ef6/media/insert1.png)
 
-    ![Insert2](../ef6/media/insert2.png)
+    ![Insert2](~/ef6/media/insert2.png)
 -   The following **SELECT** was executed as a result of enumerating the people in the database. It combines the data from the **Person** and **PersonInfo** table.
 
-    ![Select](../ef6/media/select.png)
+    ![Select](~/ef6/media/select.png)

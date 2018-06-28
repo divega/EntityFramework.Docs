@@ -13,7 +13,7 @@ caps.latest.revision: 4
 # Code First to a New Database Video
 This video provides an introduction to Code First development targeting a new database. This scenario includes targeting a database that doesn’t exist and Code First will create, or an empty database that Code First will add new tables too. Code First allows you to define your model using C# or VB.Net classes. Additional configuration can optionally be performed using attributes on your classes and properties or by using a fluent API.
 
-[See the step-by-step walkthrough that accompanies this video.](../ef6/code-first-to-a-new-database.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/code-first-to-a-new-database.md)
 
 **Presented By**: [Rowan Miller](http://romiller.com/)
 

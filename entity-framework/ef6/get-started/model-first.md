@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Model First
 This video and step-by-step walkthrough provide an introduction to Model First development using Entity Framework. Model First allows you to create a new model using the Entity Framework Designer and then generate a database schema from the model. The model is stored in an EDMX file (.edmx extension) and can be viewed and edited in the Entity Framework Designer. The classes that you interact with in your application are automatically generated from the EDMX file.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/model-first-video.md)
+[See the video that accompanies this step-by-step walkthrough.](~/ef6/model-first-video.md)
  
 
 ## Pre-Requisites
@@ -45,7 +45,7 @@ We’re going to make use of Entity Framework Designer, which is included as par
 -   Enter **BloggingModel** as the name and click **OK**, this launches the Entity Data Model Wizard
 -   Select **Empty Model** and click **Finish**
 
-    ![CreateEmptyModel](../ef6/media/createemptymodel.png)
+    ![CreateEmptyModel](~/ef6/media/createemptymodel.png)
 
  
 
@@ -57,7 +57,7 @@ The Entity Framework Designer is opened with a blank model. Now we can start add
 -   Right-click on the design surface and select **Add New -&gt; Entity…**
 -   Enter **Blog** as the entity name and **BlogId** as the key name and click **OK**
 
-    ![AddBlogEntity](../ef6/media/addblogentity.png)
+    ![AddBlogEntity](~/ef6/media/addblogentity.png)
 
 -   Right-click on the new entity on the design surface and select **Add New -&gt; Scalar Property**, enter **Name** as the name of the property.
 -   Repeat this process to add a **Url** property.
@@ -75,13 +75,13 @@ Now that we have a couple of entities, it’s time to add an association (or rel
     *This means that a Blog has many Posts and a Post belongs to one Blog*
 -   Ensure the **Add foreign key properties to 'Post' Entity** box is checked and click **OK**
 
-    ![AddAssociationMF](../ef6/media/addassociationmf.png)
+    ![AddAssociationMF](~/ef6/media/addassociationmf.png)
 
  
 
 We now have a simple model that we can generate a database from and use to read and write data.
 
-![ModelInitial](../ef6/media/modelinitial.png)
+![ModelInitial](~/ef6/media/modelinitial.png)
 
  
 
@@ -103,7 +103,7 @@ Next, we need to swap our model to generate code that makes use of the DbContext
 -   Select **Online Templates** from the left menu and search for **DbContext**
 -   Select the EF **5.x DbContext Generator for C\#**, enter **BloggingModel** as the name and click **Add**
 
-    ![DbContextTemplate](../ef6/media/dbcontexttemplate.png)
+    ![DbContextTemplate](~/ef6/media/dbcontexttemplate.png)
 
  
 
@@ -123,9 +123,9 @@ Let's go ahead and generate the database.
 -   Right-click on the design surface and select **Generate Database from Model…**
 -   Click **New Connection…** and specify either LocalDB or SQL Express, depending on which version of Visual Studio you are using, enter **ModelFirst.Blogging** as the database name.
 
-    ![LocalDBConnectionMF](../ef6/media/localdbconnectionmf.png)
+    ![LocalDBConnectionMF](~/ef6/media/localdbconnectionmf.png)
 
-    ![SqlExpressConnectionMF](../ef6/media/sqlexpressconnectionmf.png)
+    ![SqlExpressConnectionMF](~/ef6/media/sqlexpressconnectionmf.png)
 
 -   Select **OK** and you will be asked if you want to create a new database, select **Yes**
 -   Select **Next** and the Entity Framework Designer will calculate a script to create the database schema
@@ -140,7 +140,7 @@ Now that we have a model it’s time to use it to access some data. The classes 
 
 *This screen shot is from Visual Studio 2012, if you are using Visual Studio 2010 the BloggingModel.tt and BloggingModel.Context.tt files will be directly under your project rather than nested under the EDMX file.*
 
-![GeneratedClasses](../ef6/media/generatedclasses.png)
+![GeneratedClasses](~/ef6/media/generatedclasses.png)
 
  
 
@@ -197,7 +197,7 @@ We’ll start by adding a new User entity to our model.
 
 -   Add a new **User** entity name with **Username** as the key name and **String** as the property type for the key
 
-    ![AddUserEntity](../ef6/media/adduserentity.png)
+    ![AddUserEntity](~/ef6/media/adduserentity.png)
 
 -   Right-click on the **Username** property on the design surface and select **Properties**, In the Properties window change the **MaxLength** setting to **50**
     *This restricts the data that can be stored in username to 50 characters*

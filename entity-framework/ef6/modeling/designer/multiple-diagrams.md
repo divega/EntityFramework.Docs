@@ -17,7 +17,7 @@ This video and page shows how to split a model into multiple diagrams using the 
 
 In earlier versions of the EF Designer you could only have one diagram per the EDMX file. Starting with Visual Studio 2012, you can use the EF Designer to split your EDMX file into multiple diagrams.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/multiple-diagrams-per-model-ef5-onwards-video.md)
+[See the video that accompanies this step-by-step walkthrough.](~/ef6/multiple-diagrams-per-model-ef5-onwards-video.md)
 
 ## EF Designer Overview
 
@@ -33,7 +33,7 @@ The visual design surface window is automatically opened when the Entity Data Mo
 
 The following screenshot shows an .edmx file opened in the EF Designer. The screenshot shows the visual design surface (to the left) and the **Model Browser** window (to the right).
 
-![EFDesigner2](../ef6/media/efdesigner2.png)
+![EFDesigner2](~/ef6/media/efdesigner2.png)
 
 To undo an operation done in the EF Designer, click Ctrl-Z.
 
@@ -45,11 +45,11 @@ As you add new diagrams, they appear under the Diagrams folder in the Model Brow
 
 The diagram name is displayed next to the .edmx file name, in the Visual Studio editor. For example Model1.edmx\[Diagram1\].
 
-![DiagramName](../ef6/media/diagramname.png)
+![DiagramName](~/ef6/media/diagramname.png)
 
 The diagrams content (shape and color of entities and associations) is stored in the .edmx.diagram file. To view this file, select Solution Explorer and unfold the .edmx file. 
 
-![DiagramFiles](../ef6/media/diagramfiles.png)
+![DiagramFiles](~/ef6/media/diagramfiles.png)
 
 You should not edit the .edmx.diagram file manually, the content of this file maybe overwritten by the EF Designer.
  
@@ -69,7 +69,7 @@ In addition to splitting a model into multiple diagrams, you can also change col
 
 To change the color, select an entity (or multiple entities) on the design surface. Then, click the right mouse button and select **Properties**. In the Properties window, select the **Fill Color** property. Specify the color using either a valid color name (for example, Red) or a valid RGB (for example, 255, 128, 128). 
 
-![Color](../ef6/media/color.png)
+![Color](~/ef6/media/color.png)
 
 ## Summary
 

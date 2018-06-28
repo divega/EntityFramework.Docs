@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Model-Based Conventions
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.  
 
-Model based conventions are an advanced method of convention based model configuration. For most scenarios the [Custom Code First Convention API on DbModelBuilder](../ef6/custom-code-first-conventions-ef6-onwards.md) should be used. An understanding of the DbModelBuilder API for conventions is recommended before using model based conventions.  
+Model based conventions are an advanced method of convention based model configuration. For most scenarios the [Custom Code First Convention API on DbModelBuilder](~/ef6/custom-code-first-conventions-ef6-onwards.md) should be used. An understanding of the DbModelBuilder API for conventions is recommended before using model based conventions.  
 
 Model based conventions allow the creation of conventions that affect properties and tables which are not configurable through standard conventions. Examples of these are discriminator columns in table per hierarchy models and Independent Association columns.  
 

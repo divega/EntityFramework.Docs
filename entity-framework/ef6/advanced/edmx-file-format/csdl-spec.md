@@ -11,7 +11,7 @@ ms.assetid: c54255f4-253f-49eb-bec8-ad7927ac2fa3
 caps.latest.revision: 3
 ---
 # CSDL Specification
-Conceptual schema definition language (CSDL) is an XML-based language that describes the entities, relationships, and functions that make up a conceptual model of a data-driven application. This conceptual model can be used by the Entity Framework or WCF Data Services. The metadata that is described with CSDL is used by the Entity Framework to map entities and relationships that are defined in a conceptual model to a data source. For more information, see [SSDL Specification](../ef6/ssdl-specification.md) and [MSL Specification](../ef6/msl-specification.md).
+Conceptual schema definition language (CSDL) is an XML-based language that describes the entities, relationships, and functions that make up a conceptual model of a data-driven application. This conceptual model can be used by the Entity Framework or WCF Data Services. The metadata that is described with CSDL is used by the Entity Framework to map entities and relationships that are defined in a conceptual model to a data source. For more information, see [SSDL Specification](~/ef6/ssdl-specification.md) and [MSL Specification](~/ef6/msl-specification.md).
 
 CSDL is the Entity Framework's implementation of the Entity Data Model.
 

@@ -15,13 +15,13 @@ caps.latest.revision: 3
 
 This video and step-by-step walkthrough shows how to use enum types with the Entity Framework Designer. It also demonstrates how to use enums in a LINQ query.
 
-This walkthrough will use Model First to create a new database, but the EF Designer can also be used with the [Database First](../ef6/database-first.md) workflow to map to an existing database.
+This walkthrough will use Model First to create a new database, but the EF Designer can also be used with the [Database First](~/ef6/database-first.md) workflow to map to an existing database.
 
 Enum support was introduced in Entity Framework 5. To use the new features like enums, spatial data types, and table-valued functions, you must target .NET Framework 4.5. Visual Studio 2012 targets .NET 4.5 by default.
 
 In Entity Framework, an enumeration can have the following underlying types: **Byte**, **Int16**, **Int32**, **Int64** , or **SByte**.
 
-[See the video that accompanies this step-by-step walkthrough.](../ef6/enum-support-ef-designer-ef5-onwards-video.md)
+[See the video that accompanies this step-by-step walkthrough.](~/ef6/enum-support-ef-designer-ef5-onwards-video.md)
 
 ## Pre-Requisites
 
@@ -65,11 +65,11 @@ The wizard performs the following actions:
 
 1.  In the Entity Framework Designer, right-click the Name property, select **Convert to enum**
 
-    ![ConvertToEnum](../ef6/media/converttoenum.png)
+    ![ConvertToEnum](~/ef6/media/converttoenum.png)
 
 2.  In the **Add Enum** dialog box type **DepartmentNames** for the Enum Type Name, change the Underlying Type to **Int32**, and then add the following members to the type: English, Math, and Economics
 
-    ![AddEnumType](../ef6/media/addenumtype.png)
+    ![AddEnumType](~/ef6/media/addenumtype.png)
 
 3.  Press **OK**
 4.  Save the model and build the project
@@ -80,7 +80,7 @@ If you look at the Properties window, you will notice that the type of the Name 
 
 If you switch to the Model Browser window, you will see that the type was also added to the Enum Types node.
 
-![ModelBrowser](../ef6/media/modelbrowser.png)
+![ModelBrowser](~/ef6/media/modelbrowser.png)
 
 >[!NOTE]
 > You can also add new enum types from this window by clicking the right mouse button and selecting **Add Enum Type**. Once the type is created it will appear in the list of types and you would be able to associate with a property

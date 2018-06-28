@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Multiple Diagrams per Model Video
 This video shows how to split a model into multiple diagrams using the Entity Framework Designer (EF Designer). You might want to use this feature when your model becomes too large to view or edit.
 
-[See the step-by-step walkthrough that accompanies this video.](../ef6/multiple-diagrams-per-model-ef5-onwards.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/multiple-diagrams-per-model-ef5-onwards.md)
 
 **Presented By**: Julia Kornich
 

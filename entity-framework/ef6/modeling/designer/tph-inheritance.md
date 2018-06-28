@@ -19,7 +19,7 @@ It is possible to map to a TPH inheritance using Model First but you would have 
 
 ## Other Inheritance Options
 
-Table-per-Type (TPT) is another type of inheritance in which separate tables in the database are mapped to entities that participate in the inheritance.  For information about how to map Table-per-Type inheritance with the EF Designer, see [EF Designer TPT Inheritance](../ef6/designer-tpt-inheritance.md).
+Table-per-Type (TPT) is another type of inheritance in which separate tables in the database are mapped to entities that participate in the inheritance.  For information about how to map Table-per-Type inheritance with the EF Designer, see [EF Designer TPT Inheritance](~/ef6/designer-tpt-inheritance.md).
 
 Table-per-Concrete Type Inheritance (TPC) and mixed inheritance models are supported by the Entity Framework runtime but are not supported by the EF Designer. If you want to use TPC or mixed inheritance, you have two options: use Code First, or manually edit the EDMX file. If you choose to work with the EDMX file, the Mapping Details Window will be put into “safe mode” and you will not be able to use the designer to change the mappings.
 
@@ -56,7 +56,7 @@ The Entity Designer, which provides a design surface for editing your model, is 
 
 That is how the **Person** table looks in the database.
 
-![PersonTable](../ef6/media/persontable.png) 
+![PersonTable](~/ef6/media/persontable.png) 
 
 ## Implement Table-per-Hierarchy Inheritance
 
@@ -96,14 +96,14 @@ Two new entity types were added to the design surface. An arrow points from the 
 -   In the **Operator** column of the **Mapping Details** window, select = from the drop-down list.
 -   In the **Value/Property** column, type **Instructor**. The end result should look like this:
 
-    ![MappingDetails2](../ef6/media/mappingdetails2.png)
+    ![MappingDetails2](~/ef6/media/mappingdetails2.png)
 
 -   Repeat these steps for the **Student** entity type, but make the condition equal to **Student** value.  
     *The reason we wanted to remove the **Discriminator** property, is because you cannot map a table column more than once. This column will be used for conditional mapping, so it cannot be used for property mapping as well. The only way it can be used for both, if a condition uses an **Is Null** or **Is Not Null** comparison.*
 
 Table-per-hierarchy inheritance is now implemented.
 
-![FinalTPH](../ef6/media/finaltph.png)
+![FinalTPH](~/ef6/media/finaltph.png)
 
 ## Use the Model
 

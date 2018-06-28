@@ -88,4 +88,4 @@ Once your custom HistoryContext is ready you need to make EF aware of it by regi
 
 That’s pretty much it. Now you can go to the Package Manager Console, Enable-Migrations, Add-Migration and finally Update-Database. This should result in adding to the database a migrations history table configured according to the details you specified in your HistoryContext derived class.
 
-![Database](../ef6/media/database.png)
+![Database](~/ef6/media/database.png)

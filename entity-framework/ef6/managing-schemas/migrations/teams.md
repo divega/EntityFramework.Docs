@@ -54,7 +54,7 @@ The key to successfully using migrations in a team environment is a basic unders
 
 When you add the first migration to your project, you run something like **Add-Migration First** in Package Manager Console. The high level steps that this command performs are pictured below.
 
-![FirstMigration](../ef6/media/firstmigration.png)
+![FirstMigration](~/ef6/media/firstmigration.png)
 
 The current model is calculated from your code (1). The required database objects are then calculated by the model differ (2) – since this is the first migration the model differ just uses an empty model for the comparison. The required changes are passed to the code generator to build the required migration code (3) which is then added to your Visual Studio solution (4).
 
@@ -66,7 +66,7 @@ At this point you would probably run **Update-Database** to apply your changes t
 
 Later you come back and make some changes to your model – in our example we’ll add a **Url** property to **Blog**. You would then issue a command such as **Add-Migration AddUrl** to scaffold a migration to apply the corresponding database changes. The high level steps that this command performs are pictured below.
 
-![SecondMigration](../ef6/media/secondmigration.png)
+![SecondMigration](~/ef6/media/secondmigration.png)
 
 Just like last time, the current model is calculated from code (1). However, this time there are existing migrations so the previous model is retrieved from the latest migration (2). These two models are diffed to find the required database changes (3) and then the process completes as before.
 
@@ -96,22 +96,22 @@ First let’s look at a concrete example of such a merge conflict. We’ll conti
 
 We’ll track the EF model and the migrations thru a number of changes. For a starting point, both developers have synced to the source control repository, as depicted in the following graphic.
 
-![StartingPoint](../ef6/media/startingpoint.png)
+![StartingPoint](~/ef6/media/startingpoint.png)
 
 Developer \#1 and developer \#2 now makes some changes to the EF model in their local code base. Developer \#1 adds a **Rating** property to **Blog** – and generates an **AddRating** migration to apply the changes to the database. Developer \#2 adds a **Readers** property to **Blog** – and generates the corresponding **AddReaders** migration. Both developers run **Update-Database**, to apply the changes to their local databases, and then continue developing the application.
 
 > [!NOTE]
 > Migrations are prefixed with a timestamp, so our graphic represents that the AddReaders migration from Developer \#2 comes after the AddRating migration from Developer \#1. Whether developer \#1 or \#2 generated the migration first makes no difference to the issues of working in a team, or the process for merging them that we’ll look at in the next section.
 
-![LocalChanges](../ef6/media/localchanges.png)
+![LocalChanges](~/ef6/media/localchanges.png)
 
 It’s a lucky day for Developer \#1 as they happen to submit their changes first. Because no one else has checked in since they synced their repository, they can just submit their changes without performing any merging.
 
-![Submit](../ef6/media/submit.png)
+![Submit](~/ef6/media/submit.png)
 
 Now it’s time for Developer \#2 to submit. They aren’t so lucky. Because someone else has submitted changes since they synced, they will need to pull down the changes and merge. The source control system will likely be able to automatically merge the changes at the code level since they are very simple. The state of Developer \#2’s local repository after syncing is depicted in the following graphic. 
 
-![Pull](../ef6/media/pull.png)
+![Pull](~/ef6/media/pull.png)
 
 At this stage Developer \#2 can run **Update-Database** which will detect the new **AddRating** migration (which hasn’t been applied to Developer \#2’s database) and apply it. Now the **Rating** column is added to the **Blogs** table and the database is in sync with the model.
 
@@ -147,7 +147,7 @@ The following process can be used for this approach, starting from the time you 
 
 Here is the state of Developer \#2’s local code base after using this approach.
 
-![MergeMigration](../ef6/media/mergemigration.png)
+![MergeMigration](~/ef6/media/mergemigration.png)
 
 ### Option 2: Update the model snapshot in the last migration
 
@@ -176,7 +176,7 @@ The following process can be used for this approach, starting from the time you 
 
 Here is the state of Developer \#2’s local code base after using this approach.
 
-![UpdatedMetadata](../ef6/media/updatedmetadata.png)
+![UpdatedMetadata](~/ef6/media/updatedmetadata.png)
 
 ## Summary
 

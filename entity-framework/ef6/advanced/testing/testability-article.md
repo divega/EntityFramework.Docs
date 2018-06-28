@@ -194,13 +194,13 @@ These class definitions will change slightly as we explore different approaches 
 
 With the POCOs in place we can create an Entity Data Model (EDM) in Visual Studio (see figure 1). We will not use the EDM to generate code for our entities. Instead, we want to use the entities we lovingly craft by hand. We will only use the EDM to generate our database schema and provide the metadata EF4 needs to map objects into the database.
 
-![eftest_01](../ef6/media/eftest-01.jpg)
+![eftest_01](~/ef6/media/eftest-01.jpg)
 
 **Figure 1**
 
 Note: if you want to develop the EDM model first, it is possible to generate clean, POCO code from the EDM. You can do this with a Visual Studio 2010 extension provided by the Data Programmability team. To download the extension, launch the Extension Manager from the Tools menu in Visual Studio and search the online gallery of templates for “POCO” (See figure 2). There are several POCO templates available for EF. For more information on using the template, see “ [Walkthrough: POCO Template for the Entity Framework](http://blogs.msdn.com/adonet/pages/walkthrough-poco-template-for-the-entity-framework.aspx)”.
 
-![eftest_02](../ef6/media/eftest-02.png)
+![eftest_02](~/ef6/media/eftest-02.png)
 
 **Figure 2**
 
