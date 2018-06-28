@@ -1,5 +1,5 @@
 ---
-title: "Prerequisites for Walkthroughs - EF6"
+title: "School Sample Database - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,31 +10,16 @@ ms.topic: "article"
 ms.assetid: e83a6a06-e63b-4530-8656-614bf609b12b
 caps.latest.revision: 3
 ---
-# Prerequisites for Entity Framework 6 Walkthroughs
-The EF6 documentation contains multiple walkthroughs to help you learn by using the features. Two of the most common prerequisites are:
-
-- A recent version of Visual Studio
-- Install the School sample database
-
-## Visual Studio versions
-
-All the walkthroughs assume that you are using a recent version of Visual Studio, such as Visual Studio 2017. However, it is possible to use previous versions as long as you take into account some differences:
-
-- **Visual Studio 2010:** By default, the SQL Server instance available with this version of Visual Studio is SQL Server Express named SQLEXPRESS. The server section of connection string you should use is ".\\SQLEXPRESS". Remember to use a verbatim string prefixed with `@` or double back-slashes "\\\\" when specifying a connection string in C# code). By default, all code generation for this version of Visual Studio is based on EntityObject. We recommend that you switch the code generation to be based on DbContext by installing the code generation templates.
-
-- **Visual Studio 2012:** By default, the SQL Server instance available with this version of Visual Studio is a LocalDB instance called v11.0. The server section of connection string you should use is "(localdb)\\v11.0". Remember to use a verbatim string prefixed with `@` or double back-slashes "\\\\" when specifying a connection string in C# code).  
-
-- **Visual Studio 2013 and newer:** By default, the SQL Server instance available with this version of Visual Studio is a LocalDB instance called MSSQLLocalDB. The server section of connection string you should use is "(localdb)\\MSSQLLocalDB". Remember to use a verbatim string prefixed with `@` or double back-slashes "\\\\" when specifying a connection string in C# code).  
-
-## School Sample Database
+# School Sample Database
 This topic contains the schema and data for the School database. The sample School database is used in various places throughout the Entity Framework documentation.  
+
 
 The database server that is installed with Visual Studio is different depending on the version of Visual Studio you have installed:  
 
 - If you are using Visual Studio 2012 or newer, you'll be creating a LocalDB database.  
 - If you are using Visual Studio 2010 you'll be creating a SQL Express database.  
 
-Here are the steps to create the database.  
+Here are the steps to create the database:
 
 - Open Visual Studio  
 - **View** -> **Server Explorer**  
