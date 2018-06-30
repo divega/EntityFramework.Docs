@@ -1,5 +1,5 @@
 ---
-title: "Tools Keyboard Shortcuts - EF6"
+title: "Entity Framework Designer Keyboard Shortcuts - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: 3c76cdd5-17c5-4c54-a6a5-cf21b974636b
 caps.latest.revision: 3
 ---
-# Tools Keyboard Shortcuts
+# Entity Framework Designer Keyboard Shortcuts
 This page provides a list of keyboard shorcuts that are available in the various screens of the Entity Framework Tools for Visual Studio.
 
 ## ADO.NET Entity Data Model Wizard
