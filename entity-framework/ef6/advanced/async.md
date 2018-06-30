@@ -1,22 +1,19 @@
 ---
-title: "Entity Framework Async Query and Save (EF6 onwards) - EF6"
+title: "Async query and save - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: d56e6f1d-4bd1-4b50-9558-9a30e04a8ec3
 caps.latest.revision: 3
 ---
-# Entity Framework Async Query and Save (EF6 onwards)
+# Async query and save
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
-EF6 introduced support for asynchronous query and save using the [async and await keywords](https://msdn.microsoft.com/library/vstudio/hh191443.aspx) that were introduced in .NET 4.5. While not all applications may benefit from asynchrony, it can be used to improve client responsiveness and server scalability when handling long-running, network or IO-bound tasks.
-
+EF6 introduced support for asynchronous query and save using the [async and await keywords](https://msdn.microsoft.com/library/vstudio/hh191443.aspx) that were introduced in .NET 4.5. While not all applications may benefit from asynchrony, it can be used to improve client responsiveness and server scalability when handling long-running, network or I/O-bound tasks.
 
 ## When to really use async
 
@@ -34,11 +31,9 @@ Here are some more resources to learn about async:
 -   [Asynchronous Programming](https://msdn.microsoft.com/library/hh191443.aspx) pages in the MSDN Library
 -   [How to Build ASP.NET Web Applications Using Async](http://channel9.msdn.com/events/teched/northamerica/2013/dev-b337) (includes a demo of increased server throughput)
 
- 
-
 ## Create the model
 
-We’ll be using the [Code First workflow](../ef6/entity-framework-code-first-to-a-new-database.md) to create our model and generate the database, however the asynchronous functionality will work with all EF models including those created with the EF Designer.
+We’ll be using the [Code First workflow](~/ef6/code-first-to-a-new-database.md) to create our model and generate the database, however the asynchronous functionality will work with all EF models including those created with the EF Designer.
 
 -   Create a Console Application and call it **AsyncDemo**
 -   Add the EntityFramework NuGet package
@@ -48,7 +43,7 @@ We’ll be using the [Code First workflow](../ef6/entity-framework-code-first-to
     -   Click **Install**
 -   Add a **Model.cs** class with the following implementation
 
-```
+``` csharp
     using System.Collections.Generic;
     using System.Data.Entity;
 
@@ -88,7 +83,7 @@ Now that we have an EF model, let's write some code that uses it to perform some
 
 -   Replace the contents of **Program.cs** with the following code
 
-```
+``` csharp
     using System;
     using System.Linq;
 
@@ -149,7 +144,7 @@ Since the code is syncronous, we can observe the following execution flow when w
 4.  Query returns and results are written to **Console**
 5.  Quote of the day is written to **Console**
 
-![SyncOutput](../ef6/media/syncoutput.png) 
+![SyncOutput](~/ef6/media/syncoutput.png) 
 
  
 
@@ -166,7 +161,7 @@ Now that we have our program up and running, we can begin making use of the new 
 
 For a comprehensive list of available extension methods in the System.Data.Entity namespace, refer to the QueryableExtensions class. *You’ll also need to add “using System.Data.Entity” to your using statements.*
 
-```
+``` csharp
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -233,7 +228,7 @@ Now that the code is asyncronous, we can observe a different execution flow when
     *Again, the managed thread is free to do other work while the query is processed in the database. Since all other execution has completed, the thread will just halt on the Wait call though.*
 5.  Query returns and results are written to **Console**
 
-![AsyncOutput](../ef6/media/asyncoutput.png) 
+![AsyncOutput](~/ef6/media/asyncoutput.png) 
 
  
 

@@ -1,35 +1,33 @@
 ---
-title: "Entity Framework N-Tier - EF6"
+title: "Working with disconnected entities - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 12138003-a373-4817-b1b7-724130202f5f
 caps.latest.revision: 3
 ---
-# Entity Framework N-Tier
-In an Entity Framework-based application, a context is responsible for tracking changes in your objects. You then use the SaveChanges method to persist the changes to the database. When working with N-Tier applications, the entity objects are usually disconnected from the context and you must decide how to track changes and report those changes back to the context. This topic discusses different options that are available when using Entity Framework in N-Tier applications.  
-  
-You can use one of the following options to transfer data between tiers and track changes on a disconnected tier when working with the Entity Framework.  
-  
-## ASP.NET Web API  
-  
-ASP.NET Web API is a framework that makes it easy to build HTTP services that reach a broad range of clients, including browsers and mobile devices. ASP.NET Web API is an ideal platform for building RESTful applications on the .NET Framework. The ASP.NET Web API tooling in Visual Studio makes it easy to scaffold a Web API controller from your Entity Framework model. ASP.NET Web API is great if you want a lot of control over how your data is retrieved and saved by clients. For more information, see [ASP.NET Web API](http://www.asp.net/web-api).  
-  
-## WCF Data Services  
-  
-WCF Data Services enables you to create services that use the Open Data Protocol (OData) to expose and consume data over the Web or intranet. OData uses the same Entity Data Model as Entity Framework, making it easy to build an OData end point using your Entity Framework Model. WCF Data Services is great if you want a quick and easy way to expose your model and data over the web. For more information, see [WCF Data Services](https://msdn.microsoft.com/library/cc668772.aspx).  
-  
-## Entity Framework APIs  
-  
-If you don't want to use an existing N-Tier solution, Entity Framework provides APIs that allow you to apply changes made on a disconnected tier. You have various design options when it comes to implementing the logic to apply these changes. [Programming Entity Framework: DbContext](http://shop.oreilly.com/product/0636920022237.do) by Julia Lerman and Rowan Miller, talks about this subject in great detail. For more information, see [Add/Attach and Entity States](../ef6/entity-framework-add-and-attach-and-entity-states.md). ***Be aware that this can be a complex problem to solve and we would recommend using one of the solutions listed above if possible.***  
-  
+# Working with disconnected entities
+In an Entity Framework-based application, a context class is responsible for detecting changes applied to tracked entities. Calling the SaveChanges method persists the changes tracked by the context to the database. When working with n-tier applications, entity objects are usually modified while disconnected from the context, and you must decide how to track changes and report those changes back to the context. This topic discusses different options that are available when using Entity Framework with disconnected entities.   
+
+## Web service frameworks
+
+Web services technologies typically support patterns that can be used to persist changes on individual disconnected objects. For example, ASP.NET Web API allows you to code controller actions that can include calls to EF to persist changes made to an object on a database. In fact, the Web API tooling in Visual Studio makes it easy to scaffold a Web API controller from your Entity Framework 6 model. For more information, see [using Web API with Entity Framework 6](https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/).   
+
+Historically, there have been several other Web services technologies that offered integration with Entity Framework, like [WCF Data Services](https://docs.microsoft.com/dotnet/framework/data/wcf/create-a-data-service-using-an-adonet-ef-data-wcf) and [RIA Services](https://docs.microsoft.com/en-us/previous-versions/dotnet/wcf-ria/ee707344(v=vs.91).
+
+## Low-level EF APIs
+
+If you don't want to use an existing n-tier solution, or if you want to customize what happens inside a controller action in a Web API services, Entity Framework provides APIs that allow you to apply changes made on a disconnected tier. For more information, see [Add, Attach, and entity state](~/ef6/advanced/change-tracking/add-attach-and-entity-states.md).  
+
 ## Self-Tracking Entities  
-  
-There is a Self-Tracking Entities code generation template that can be used with models created using the EF Designer. This template will generate entity classes that contain logic to track changes made on a disconnected tier. A set of extension methods is also generated to apply those changes to a context. **We no longer recommend using the STE template, it continues to be available to support existing applications - we recommend using one of the solution listed above.** Self-Tracking Entities can not be used with Code First models. For more information, see [Self-Tracking Entities](../ef6/entity-framework-self-tracking-entities.md).  
-  
+
+Tracking changes on arbitrary graphs of entities while disconnected from the EF context is a hard problem. One of the attempts to solve it was the Self-Tracking Entities code generation template. This template generates entity classes that contain logic to track changes made on a disconnected tier as state in the entities themselves. A set of extension methods is also generated to apply those changes to a context.
+
+This template can be used with models created using the EF Designer, but can not be used with Code First models. For more information, see [Self-Tracking Entities](self-tracking-entities/index.md).  
+
+> [!IMPORTANT]
+> We no longer recommend using the self-tracking-entities template. It will only continue to be available to support existing applications. If your application requires working with disconnected graphs of entities, consider other alternatives such as [Trackable Entities](http://trackableentities.github.io/), which is a technology similar to Self-Tracking-Entities that is more actively developed by the community, or writing custom code using the low-level change tracking APIs.
