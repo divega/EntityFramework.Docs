@@ -12,23 +12,19 @@ caps.latest.revision: 3
 ---
 # Entity Framework Version History
 
-We highly recommend that you use the latest released version of Entity Framework to ensure you get the latest features and the highest stability. However, we realize that you may need to use a previous version, or that you may want to experiment with new improvements in the latest pre-release.
+We highly recommend that you use the latest released version of Entity Framework to ensure you get the latest features and the highest stability.
+However, we realize that you may need to use a previous version, or that you may want to experiment with new improvements in the latest pre-release.
 
-This page documents the version history of EF. It contains links to content on features that are new on each release, most of which are still relevant to the latest release.
+This page documents the version history of EF.
+It contains links to content on features that are new on each release, most of which are still relevant to the latest release.
 
-To install specific versions of EF, see [Get Entity Framework](~/ef6/get-started/get-entity-Framework.md)
-
-## Future Versions
-
-While most of the focus of the EF team is nowadays on adding new features and improvements to [EF Core](https://docs.microsoft.com/en-us/ef/core/index), we plan to  still fix important bugs, implement small improvements, and incorporate community contributions in the EF6 codebase.
-
-### Post-EF 6.2 releases
-
-The roadmap of post-EF 6.2 releases is still undefined. More information will be posted here once available on the [.NET team blog](https://blogs.msdn.microsoft.com/dotnet/tag/entity-framework/) or [Twitter](http://twitter.com/efmagicunicorns).
+To install specific versions of EF, see [Get Entity Framework](~/ef6/get-started/get-entity-Framework.md).
+## Recent releases
 
 ### EF 6.2 Tools
 
-We release an updated version of the EF6 Tools in Visual Studio 2017 15.7. It includes improvements on some common pain areas:
+We release an updated version of the EF6 Tools in Visual Studio 2017 15.7.
+It includes improvements on some common pain areas:
 
 - An overhaul to the accessibility of the user interface
 - Workaround for SQL Server performance regression on reverse engineering [#4](https://github.com/aspnet/entityframework6/issues/4)
@@ -36,11 +32,10 @@ We release an updated version of the EF6 Tools in Visual Studio 2017 15.7. It in
 
 With older versions of Visual Studio, it is possible to use the EF 6.2 runtime (as well as any past version of EF) with existing versions of the EF6 Tools.
 
-## Recent releases
-
 ### EF 6.2 Runtime
 
-The EF 6.2 runtime was released to NuGet in October of 2017. To a great extent, thanks to the efforts our community of open source contributors, EF 6.2 includes numerous [bugs fixes](https://github.com/aspnet/entityframework6/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A6.2.0%20is%3Aclosed%20label%3Aclosed-fixed%20-label%3Aarea-tools%20label%3Atype-bug) and [product enhancements](https://github.com/aspnet/entityframework6/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A6.2.0%20is%3Aclosed%20label%3Aclosed-fixed%20-label%3Aarea-tools%20label%3Atype-enhancement%20).
+The EF 6.2 runtime was released to NuGet in October of 2017.
+To a great extent, thanks to the efforts our community of open source contributors, EF 6.2 includes numerous [bugs fixes](https://github.com/aspnet/entityframework6/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A6.2.0%20is%3Aclosed%20label%3Aclosed-fixed%20-label%3Aarea-tools%20label%3Atype-bug) and [product enhancements](https://github.com/aspnet/entityframework6/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A6.2.0%20is%3Aclosed%20label%3Aclosed-fixed%20-label%3Aarea-tools%20label%3Atype-enhancement%20).
 
 Here is a brief list of the most important changes affecting the EF 6.2 runtime:
 
@@ -56,7 +51,9 @@ Here is a brief list of the most important changes affecting the EF 6.2 runtime:
 ## Past releases
 
 ### EF 6.1.3
-The EF 6.1.3 runtime was released to NuGet in October of 2015. This release contains only fixes to high-priority defects and regressions reported on the 6.1.2 release. The fixes include:
+The EF 6.1.3 runtime was released to NuGet in October of 2015.
+This release contains only fixes to high-priority defects and regressions reported on the 6.1.2 release.
+The fixes include:
 
 - Query: Regression in EF 6.1.2: OUTER APPLY introduced and more complex queries for 1:1 relationships and “let” clause
 - TPT problem with hiding base class property in inherited class
@@ -66,7 +63,8 @@ The EF 6.1.3 runtime was released to NuGet in October of 2015. This release cont
 - “You have an error in your SQL syntax” exception after upgrading from EF 6.1.1 to 6.1.2
 
 ### EF 6.1.2
-The EF 6.1.2 runtime was released to NuGet in December of 2014. This version is mostly about bug fixes. We also accepted a couple of noteworthy changes from members of the community:
+The EF 6.1.2 runtime was released to NuGet in December of 2014.
+This version is mostly about bug fixes. We also accepted a couple of noteworthy changes from members of the community:
 - **Query cache parameters can be configured from the app/web.configuration file**
     ``` xml
     <entityFramework>
@@ -76,12 +74,14 @@ The EF 6.1.2 runtime was released to NuGet in December of 2014. This version is 
 - **SqlFile and SqlResource methods on DbMigration** allow you to run a SQL script stored as a file or embedded resource.
 
 ### EF 6.1.1
-The EF 6.1.1 runtime was released to NuGet in June of 2014. This version contains fixes for issues that a number of people have encountered. Among others:
+The EF 6.1.1 runtime was released to NuGet in June of 2014.
+This version contains fixes for issues that a number of people have encountered. Among others:
 - Designer: Error opening EF5 edmx with decimal precision in EF6 designer
 - Default instance detection logic for LocalDB doesn't work with SQL Server 2014
 
 ### EF 6.1
-The EF 6.1.0 runtime was released to NuGet in March of 2014. This minor update includes a significant number of new features:
+The EF 6.1.0 runtime was released to NuGet in March of 2014.
+This minor update includes a significant number of new features:
 
 - **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](~/ef6/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
 - **[Handling of transaction commit failures](~/ef6/handling-of-transaction-commit-failures-ef6-1-onwards.md)** provides the CommitFailureHandler which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction.
@@ -93,16 +93,23 @@ The EF 6.1.0 runtime was released to NuGet in March of 2014. This minor update i
 - **Performance improvements** including reduced database operations during initialization, optimizations for null equality comparison in LINQ queries, faster view generation (model creation) in more scenarios, and more efficient materialization of tracked entities with multiple associations.
 
 ### EF 6.0.2
-The EF 6.0.2 runtime was released to NuGet in December of 2013. This patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5).
+The EF 6.0.2 runtime was released to NuGet in December of 2013.
+This patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5).
 
 ### EF 6.0.1
-The EF 6.0.1 runtime was released to NuGet in October of 2013 simultaneously with EF 6.0.0, because the latter was embedded in a version of Visual Studio that had locked down a few months before. This patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5). The most notable changes were to fix some performance issues during warm-up for EF models. This was important as warm-up performance was an area of focus in EF6 and these issues were negating some of the other performance gains made in EF6.
+The EF 6.0.1 runtime was released to NuGet in October of 2013 simultaneously with EF 6.0.0, because the latter was embedded in a version of Visual Studio that had locked down a few months before.
+This patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5).
+The most notable changes were to fix some performance issues during warm-up for EF models.
+This was important as warm-up performance was an area of focus in EF6 and these issues were negating some of the other performance gains made in EF6.
 
 ### EF 6.0
-The EF 6.0.0 runtime was released to NuGet in October of 2013. This is the first version in which a complete EF runtime is included in the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) which does not depend on  
-the EF bits that are part of the .NET Framework. Moving the remaining parts of the runtime to the NuGet package required a number of breaking change for existing code. See the section on [Upgrading to Entity Framework 6](upgrading-to-entity-framework-6.md) for more details on the manual steps required to upgrade.
+The EF 6.0.0 runtime was released to NuGet in October of 2013.
+This is the first version in which a complete EF runtime is included in the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) which does not depend on the EF bits that are part of the .NET Framework.
+Moving the remaining parts of the runtime to the NuGet package required a number of breaking change for existing code.
+See the section on [Upgrading to Entity Framework 6](upgrading-to-entity-framework-6.md) for more details on the manual steps required to upgrade.
 
-This release includes numerous new features. The following features work for models created with Code First or the EF Designer:
+This release includes numerous new features.
+The following features work for models created with Code First or the EF Designer:
 
 - **[Async Query and Save](~/ef6/async-query-and-save-ef6-onwards.md)** adds support for the task-based asynchronous patterns that were introduced in .NET 4.5.
 - **[Connection Resiliency](~/ef6/connection-resiliency-and-retry-logic-ef6-onwards.md)** enables automatic recovery from transient connection failures.
@@ -135,7 +142,8 @@ The following features apply to Code First only:
 - **Entity and complex types can now be nestedinside classes**. |
 
 ### EF 5.0
-The EF 5.0.0 runtime was released to NuGet in August of 2012. This release introduces some new features including enum support, table-valued functions, spatial data types and various performance improvements.
+The EF 5.0.0 runtime was released to NuGet in August of 2012.
+This release introduces some new features including enum support, table-valued functions, spatial data types and various performance improvements.
 
 The Entity Framework Designer in Visual Studio 2012 also introduces support for multiple-diagrams per model, coloring of shapes on the design surface and batch import of stored procedures.
 
@@ -211,14 +219,16 @@ Here is a list of content we put together specifically for the EF 5 release.
     -   [Data Binding with WinForms (Windows Forms)](~/ef6/databinding-with-winforms.md)
 
 ### EF 4.3.1
-The EF 4.3.1 runtime was released to NuGet in February 2012 shortly after EF 4.3.0. This patch release included some bug fixes to the EF 4.3 release and introduced better LocalDB support for customers using EF 4.3 with Visual Studio 2012.
+The EF 4.3.1 runtime was released to NuGet in February 2012 shortly after EF 4.3.0. 
+This patch release included some bug fixes to the EF 4.3 release and introduced better LocalDB support for customers using EF 4.3 with Visual Studio 2012.
 
 Here is a list of content we put together specifically for the EF 4.3.1 release, most of the content provided for EF 4.1 still applies to EF 4.3 as well.
 
 -   [EF 4.3.1 Release Blog  Post](http://blogs.msdn.com/b/adonet/archive/2012/02/29/ef4-3-1-and-ef5-beta-1-available-on-nuget.aspx)
 
 ### EF 4.3
-The EF 4.3.0 runtime was released to NuGet in February of 2012. This release included the new Code First Migrations feature that allows a database created by Code First to be incrementally changed as your Code First model evolves.
+The EF 4.3.0 runtime was released to NuGet in February of 2012. 
+This release included the new Code First Migrations feature that allows a database created by Code First to be incrementally changed as your Code First model evolves.
 
 Here is a list of content we put together specifically for the EF 4.3 release, most of the content provided for EF 4.1 still applies to EF 4.3 as well:
 -   [EF 4.3 Release Post](http://blogs.msdn.com/b/adonet/archive/2012/02/09/ef-4-3-released.aspx)
@@ -226,7 +236,9 @@ Here is a list of content we put together specifically for the EF 4.3 release, m
 -   [EF 4.3 Automatic Migrations Walkthrough](http://blogs.msdn.com/b/adonet/archive/2012/02/09/ef-4-3-automatic-migrations-walkthrough.aspx)
 
 ### EF 4.2
-The EF 4.2.0 runtime was released to NuGet in November of 2011. This release includes bug fixes to the EF 4.1.1 release. Because this release only included bug fixes it could have been the EF 4.1.2 patch release but we opted to move to 4.2 to allow us to move away from the date based patch version numbers we used in the 4.1.x releases and adopt the [Semantic Versionsing](https://semver.org) standard for semantic versioning.
+The EF 4.2.0 runtime was released to NuGet in November of 2011.
+This release includes bug fixes to the EF 4.1.1 release.
+Because this release only included bug fixes it could have been the EF 4.1.2 patch release but we opted to move to 4.2 to allow us to move away from the date based patch version numbers we used in the 4.1.x releases and adopt the [Semantic Versionsing](https://semver.org) standard for semantic versioning.
 
 Here is a list of content we put together specifically for the EF 4.2 release, the content provided for EF 4.1 still applies to EF 4.2 as well.
 
@@ -235,18 +247,24 @@ Here is a list of content we put together specifically for the EF 4.2 release, t
 -   [Model & Database First Walkthrough](http://blogs.msdn.com/b/adonet/archive/2011/09/28/ef-4-2-model-amp-database-first-walkthrough.aspx)
 
 ### EF 4.1.1
-The EF 4.1.10715 runtime was released to NuGet in July of 2011. In addition to bug fixes this patch release introduced some components to make it easier for design time tooling to work with a Code First model. These components are used by Code First Migrations (included in EF 4.3) and the EF Power Tools.
+The EF 4.1.10715 runtime was released to NuGet in July of 2011.
+In addition to bug fixes this patch release introduced some components to make it easier for design time tooling to work with a Code First model.
+These components are used by Code First Migrations (included in EF 4.3) and the EF Power Tools.
 
-You’ll notice that the strange version number 4.1.10715 of the package. We used to use date based patch versions before we decided to adopt [Semantic Versioning](https://semver.org). Think of this version as EF 4.1 patch 1 (i.e. 4.1.1).
+You’ll notice that the strange version number 4.1.10715 of the package.
+We used to use date based patch versions before we decided to adopt [Semantic Versioning](https://semver.org).
+Think of this version as EF 4.1 patch 1 (i.e. 4.1.1).
 
 Here is a list of content we put together for the 4.1.1 release:
 
 -   [EF 4.1.1 Release Post](http://blogs.msdn.com/b/adonet/archive/2011/07/25/ef-4-1-update-1-released.aspx)
 
 ### EF 4.1
-The EF 4.1.10331 runtime was the first to be published on NuGet, in April of 2011. This release included the simplified DbContext API and the Code First workflow.
+The EF 4.1.10331 runtime was the first to be published on NuGet, in April of 2011.
+This release included the simplified DbContext API and the Code First workflow.
 
-You will notice the strange version number, 4.1.10331, which should really have been 4.1. In addition there is a 4.1.10311 version which should have been 4.1.0-rc (the ‘rc’ stands for ‘release candidate’). We used to use date based patch versions before we decided to adopt [Semantic Versioning](https://semver.org).
+You will notice the strange version number, 4.1.10331, which should really have been 4.1. In addition there is a 4.1.10311 version which should have been 4.1.0-rc (the ‘rc’ stands for ‘release candidate’).
+We used to use date based patch versions before we decided to adopt [Semantic Versioning](https://semver.org).
 
 Here is a list of content we put together for the 4.1 release. Much of it still applies to later releases of Entity Framework:
 
@@ -256,11 +274,15 @@ Here is a list of content we put together for the 4.1 release. Much of it still 
 -   [SQL Azure Federations and the Entity Framework](http://blogs.msdn.com/b/adonet/archive/2012/01/10/sql-azure-federations-and-the-entity-framework.aspx)
 
 ### EF 4.0
-This release was included in .NET Framework 4 and Visual Studio 2010, in April of 2010. Important new features in this release included POCO support, lazy loading, testability improvements, customizable code generation and the Model First workflow.
+This release was included in .NET Framework 4 and Visual Studio 2010, in April of 2010.
+Important new features in this release included POCO support, foreign key mapping, lazy loading, testability improvements, customizable code generation and the Model First workflow.
 
-Although it was the second release of Entity Framework, it was named EF 4 to align with the .NET Framework version that it shipped with. After this release, we started making Entity Framework available on NuGet and adopted semantic versioning since we were no longer tied to the .NET Framework Version.
+Although it was the second release of Entity Framework, it was named EF 4 to align with the .NET Framework version that it shipped with.
+After this release, we started making Entity Framework available on NuGet and adopted semantic versioning since we were no longer tied to the .NET Framework Version.
 
-Note that some subsequent versions of .NET Framework have shipped with significant updates to the included EF bits. In fact, many of the new features of EF 5.0 were implemented as improvements on these bits. However, in order to rationalize the versioning story for EF, we continue to refer to the EF bits that are part of the .NET Framework as the EF 4.0 runtime, while all newer versions consist of the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/).         
+Note that some subsequent versions of .NET Framework have shipped with significant updates to the included EF bits.
+In fact, many of the new features of EF 5.0 were implemented as improvements on these bits.
+However, in order to rationalize the versioning story for EF, we continue to refer to the EF bits that are part of the .NET Framework as the EF 4.0 runtime, while all newer versions consist of the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/).         
 
 Here are some links to content we created for this release:
 
@@ -268,7 +290,8 @@ Here are some links to content we created for this release:
 -   [Entity Framework 4.0 Sample Applications](https://msdn.microsoft.com/library/bb738547.aspx)
 
 ### EF 3.5
-The initial version of Entity Framework was included in .NET 3.5 SP1 and Visual Studio 2008 SP1, released in August of 2008. This release provided basic O/RM support using the Database First workflow.
+The initial version of Entity Framework was included in .NET 3.5 Service Pack 1 and Visual Studio 2008 SP1, released in August of 2008.
+This release provided basic O/RM support using the Database First workflow.
 
 Here are some links to get you started:
 

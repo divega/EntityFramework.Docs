@@ -1,5 +1,5 @@
 ---
-title: "Blogs - EF6"
+title: "Entity Framework Blogs - EF6"
 author: divega
 ms.date: "2016-10-23"
 ms.prod: "entity-framework"
@@ -10,7 +10,7 @@ ms.topic: "article"
 ms.assetid: f8fcfb34-35de-4e82-b419-8f99fd2eb92a
 caps.latest.revision: 4
 ---
-# Blogs
+# Entity Framework Blogs
 
 Besides the product documentation, these blogs can be a source of useful information on Entity Framework:
 

@@ -11,19 +11,10 @@ ms.assetid: 7BFB7763-CD6C-4520-93A2-7B265F5FA586
 caps.latest.revision: 3
 ---
 
-# Entity Framework Providers
+# Entity Framework 6 Providers
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
 The Entity Framework is now being developed under an open-source license and EF6 and above will not be shipped as part of the .NET Framework. This has many advantages but also requires that EF providers be rebuilt against the EF6 assemblies. This means that EF providers for EF5 and below will not work with EF6 until they have been rebuilt.
-
-The following topics are covered on this page:
-
-*   [Which providers are available for EF6?](#providers)
-*   [Registering EF providers](#register)
-    *   [Config file registration](#config)
-    *   [Code-based registration](#code)
-*   [What if the provider I need isn't available?](#noProvider)
-*   [Can I write a provider myself?](#write)
 
 ## Which providers are available for EF6?
 

@@ -228,7 +228,7 @@ namespace TestingDemo
 }
 ```  
 
-### Testing with async queries  
+### Testing with async queries
 
 Entity Framework 6 introduced a set of extension methods that can be used to asynchronously execute a query. Examples of these methods include ToListAsync, FirstAsync, ForEachAsync, etc.  
 

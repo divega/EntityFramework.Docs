@@ -13,11 +13,16 @@ uid: ef6/index
 ---
 # Entity Framework 6 Quick Overview
 
-Entity Framework 6 (EF6) is a tried and tested Object/Relational Mapper (O/RM) with many years of features and stabilization. EF6 enables developers to work with relational data using strongly-typed .NET objects, taking advantage of Language INtegrated Query (LINQ) and services such as automatic change tracking, identity resolution and lazy loading. EF6 eliminates the need for most of the data access "plumbing" code that they usually need to write, and allows them to focus on their application's business logic.
+Entity Framework 6 (EF6) is a tried and tested Object/Relational Mapper (O/RM) with many years of features and stabilization.
+EF6 enables developers to work with relational data using strongly-typed .NET objects, taking advantage of Language INtegrated Query (LINQ) and services such as automatic change tracking, identity resolution and lazy loading.
+EF6 eliminates the need for most of the data access "plumbing" code that they usually need to write, and allows them to focus on their application's business logic.
 
 ## Should I use EF6 or EF Core?
 
-EF Core is a more modern, lightweight and extensible version of Entity Framework. EF Core is a complete rewrite and contains many new features not available in EF6, although it also still lacks some of the most advanced mapping capabilities of EF6. We recommend using EF Core in new applications as long as the feature set matches your requirements. See the section [Compare EF Core & EF6](xref:efcore-and-ef6/index) for a detailed explanation of this choice.
+EF Core is a more modern, lightweight and extensible version of Entity Framework.
+EF Core is a complete rewrite and contains many new features not available in EF6, although it also still lacks some of the most advanced mapping capabilities of EF6.
+We recommend using EF Core in new applications as long as the feature set matches your requirements.
+See the section [Compare EF Core & EF6](xref:efcore-and-ef6/index) for a detailed explanation of this choice.
 
 The following sections are not intended as a comparison between EF6 and EF Core, but as an explanation of general capabilities and benefits of using EF6.
 
@@ -42,8 +47,10 @@ Using Entity Framework to write data-oriented applications provides the followin
 
 ## About past versions of EF
 
-The first version of Entity Framework was released in 2008, as part of .NET Framework 3.5 SP1 and Visual Studio 2008 SP1. Starting with the EF4.1 release it has shipped as the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) - currently one of the most popular packages on NuGet.org.
+The first version of Entity Framework was released in 2008, as part of .NET Framework 3.5 SP1 and Visual Studio 2008 SP1.
+Starting with the EF4.1 release it has shipped as the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) - currently one of the most popular packages on NuGet.org.
 
-This documentation provides information on Entity Framework 6 (EF6), the latest major version of EF. Although much of it should also apply to past versions, namespaces are different and capabilities may have evolved.
+This documentation provides information on Entity Framework 6 (EF6), the latest major version of EF. 
+Although much of it should also apply to past versions, namespaces are different and capabilities may have evolved.
 
 For more information, see [Entity Framework Version History](~/ef6/versions/version-history.md).
