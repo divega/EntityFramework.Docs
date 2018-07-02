@@ -32,7 +32,7 @@ Use **Code First** to create a code based model that maps to an existing databas
 
 [I am creating a new database](../ef6/entity-framework-model-first.md)  
 Use **Model First** to define your model using boxes and lines and then generate a database.
- 	 
+
 [I need to access an existing database](../ef6/entity-framework-database-first.md)  
 Use **Database First** to create a boxes and lines model that maps to an existing database.
 
