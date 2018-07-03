@@ -34,7 +34,7 @@ It is also the code generation template you get by default if you are using rece
 When you create a new model this template is used by default and the T4 files (.tt) are nested under your .edmx file.
 
 #### Older versions of Visual Studio
-- **Visual Studio 2012:** To get the **EF 6.x DbContextGenerator** templates you will need to install the latest **Entity Framework Tools for Visual Studio** - see the [Get Entity Framework](~/ef6/get-entity-framework.md) page for more information.
+- **Visual Studio 2012:** To get the **EF 6.x DbContextGenerator** templates you will need to install the latest **Entity Framework Tools for Visual Studio** - see the [Get Entity Framework](~/ef6/get-started/get-entity-framework.md) page for more information.
 - **Visual Studio 2010:** The **EF 6.x DbContextGenerator** templates are not available for Visual Studio 2010.
 
 #### DbContext Generator for EF 5.x
@@ -87,18 +87,18 @@ If you are using Visual Studio 2012 or 2013 you will need to select the **Online
 - [EF 5.x EntityObject Generator for VB.NET](http://visualstudiogallery.msdn.microsoft.com/92c0129e-40dc-488c-a836-7e30846dfb30)
 - [EF 5.x EntityObject Generator for VB.NET Web Sites](http://visualstudiogallery.msdn.microsoft.com/5dd7f75c-8c98-4eb7-b4bc-06f0d0b03b41)
 
-If you just want ObjectContext code generation without needing to edit the template you can [revert to EntityObject code generation](~/ef6/reverting-to-objectcontext-in-entity-framework-designer.md).
+If you just want ObjectContext code generation without needing to edit the template you can [revert to EntityObject code generation](~/ef6/advanced/codegen/legacy-objectcontext.md).
 
 If you are using Visual Studio 2010 this template is already installed. If you create a new model in Visual Studio 2010 this template is used by default but the .tt files are not included in your project. If you want to customize the template you will need to add it to your project.
 
 ### Self-Tracking Entities (STE) Generator
 
-This template will generate Self-Tracking Entity classes and a context that derives from ObjectContext. In an EF application, a context is responsible for tracking changes in the entities. However, in N-Tier scenarios, the context might not be available on the tier that modifies the entities. Self-tracking entities help you track changes in any tier. For more information, see [Self-Tracking Entities](~/ef6/self-tracking-entities.md).
+This template will generate Self-Tracking Entity classes and a context that derives from ObjectContext. In an EF application, a context is responsible for tracking changes in the entities. However, in N-Tier scenarios, the context might not be available on the tier that modifies the entities. Self-tracking entities help you track changes in any tier. For more information, see [Self-Tracking Entities](~/ef6/advanced/disconnected-entities/self-tracking-entities/index.md).
 
 > [!NOTE]
 > STE Template Not Recommended
 
-We no longer recommend using the STE template in new applications, it continues to be available to support existing applications. Visit the [disconnected entities article](~/ef6/advance/disconnected-entities/index.md) for other options we recommend for N-Tier scenarios.
+We no longer recommend using the STE template in new applications, it continues to be available to support existing applications. Visit the [disconnected entities article](~/ef6/advanced/disconnected-entities/index.md) for other options we recommend for N-Tier scenarios.
 
 > [!NOTE]
 > There is no EF 6.x version of the STE template.

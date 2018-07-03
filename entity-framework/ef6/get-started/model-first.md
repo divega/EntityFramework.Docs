@@ -16,7 +16,7 @@ This video and step-by-step walkthrough provide an introduction to Model First d
 ## Watch the video
 This video and step-by-step walkthrough provide an introduction to Model First development using Entity Framework. Model First allows you to create a new model using the Entity Framework Designer and then generate a database schema from the model. The model is stored in an EDMX file (.edmx extension) and can be viewed and edited in the Entity Framework Designer. The classes that you interact with in your application are automatically generated from the EDMX file.
 
-[See the step-by-step walkthrough that accompanies this video.](~/ef6/model-first.md)
+[See the step-by-step walkthrough that accompanies this video.](~/ef6/get-started/model-first.md)
 
 **Presented By**: [Rowan Miller](http://romiller.com/)
 

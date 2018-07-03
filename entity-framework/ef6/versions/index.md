@@ -100,11 +100,11 @@ This version contains fixes for issues that a number of people have encountered.
 The EF 6.1.0 runtime was released to NuGet in March of 2014.
 This minor update includes a significant number of new features:
 
-- **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](~/ef6/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
+- **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](~/ef6/get-started/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
 - **[Handling of transaction commit failures](~/ef6/handling-of-transaction-commit-failures-ef6-1-onwards.md)** provides the CommitFailureHandler which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction.
 - **[IndexAttribute](~/ef6/code-first-data-annotations.md)** allows indexes to be specified by placing an `[Index]` attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database.
 - **The public mapping API** provides access to the information EF has on how properties and types are mapped to columns and tables in the database. In past releases this API was internal.
-- **[Ability to configure interceptors via the App/Web.config file](~/ef6/config-file-settings.md)** allows interceptors to be added without recompiling the application.
+- **[Ability to configure interceptors via the App/Web.config file](~/ef6/advanced/configuration/config-file.md)** allows interceptors to be added without recompiling the application.
 - **System.Data.Entity.Infrastructure.Interception.DatabaseLogger**is a new interceptor that makes it easy to log all database operations to a file. In combination with the previous feature, this allows you to easily [switch on logging of database operations for a deployed application](~/ef6/config-file-settings.md), without the need to recompile.
 - **Migrations model change detection** has been improved so that scaffolded migrations are more accurate; performance of the change detection process has also been enhanced.
 - **Performance improvements** including reduced database operations during initialization, optimizations for null equality comparison in LINQ queries, faster view generation (model creation) in more scenarios, and more efficient materialization of tracked entities with multiple associations.
@@ -169,10 +169,10 @@ Here is a list of content we put together specifically for the EF 5 release.
 -   [EF 5 Release Post](http://blogs.msdn.com/b/adonet/archive/2012/08/15/ef5-released.aspx)
 -   Getting Started
     -   [Which workflow should I use?](~/ef6/development-workflows-video.md)
-    -   [Code First to a new database (walkthrough and video)](~/ef6/code-first-to-a-new-database.md)
-    -   [Code First to an existing database (walkthrough and video)](~/ef6/code-first-to-an-existing-database.md)
-    -   [Model First (walkthrough and video)](~/ef6/model-first.md)
-    -   [Database First (walkthrough and video)](~/ef6/database-first.md)
+    -   [Code First to a new database (walkthrough and video)](~/ef6/get-started/code-first-to-a-new-database.md)
+    -   [Code First to an existing database (walkthrough and video)](~/ef6/get-started/code-first-to-an-existing-database.md)
+    -   [Model First (walkthrough and video)](~/ef6/get-started/model-first.md)
+    -   [Database First (walkthrough and video)](~/ef6/get-started/database-first.md)
 -   New Features in EF5
     -   [Enum Support in Code First](~/ef6/enum-support-code-first-ef5-onwards.md)
     -   [Enum Support in EF Designer](~/ef6/enum-support-ef-designer-ef5-onwards.md)
@@ -182,16 +182,15 @@ Here is a list of content we put together specifically for the EF 5 release.
     -   [Table-Valued Functions](~/ef6/table-valued-functions-tvfs-ef5-onwards.md)
     -   [Multiple Diagrams per Model](~/ef6/multiple-diagrams-per-model-ef5-onwards.md)
 -   Setting up your model
-    -   [Which Workflow Should I Use](~/ef6/development-workflows-video.md)
+    -   [Which Workflow Should I Use](~/ef6/get-started/index.md#decide-what-ef-workflow-you-want-to-use)
     -   [Connections and Models](~/ef6/connections-and-models.md)
     -   [Performance Considerations](~/ef6/performance-considerations-for-ef-4-5-and-6.md)
-    -   [Working with Microsoft SQL Azure](~/ef6/windows-sql-azure.md)
-    -   [Entity Framework Power Tools](~/ef6/power-tools.md)
-    -   [Configuration File Settings](~/ef6/config-file-settings.md)
-    -   [Glossary](~/ef6/glossary.md)
+    -   [Working with Microsoft SQL Azure](~/ef6/advanced/connection-resiliency/retry-logic.md)
+    -   [Configuration File Settings](~/ef6/advanced/configuration/config-file.md)
+    -   [Glossary](~/ef6/resources/glossary.md)
     -   Code First
-        -   [Code First to a new database (walkthrough and video)](~/ef6/code-first-to-a-new-database.md)
-        -   [Code First to an existing database (walkthrough and video)](~/ef6/code-first-to-an-existing-database.md)
+        -   [Code First to a new database (walkthrough and video)](~/ef6/get-started/code-first-to-a-new-database.md)
+        -   [Code First to an existing database (walkthrough and video)](~/ef6/get-started/code-first-to-an-existing-database.md)
         -   [Conventions](~/ef6/code-first-conventions.md)
         -   [Data Annotations](~/ef6/code-first-data-annotations.md)
         -   [Fluent API - Configuring/Mapping Properties & Types](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)
@@ -202,8 +201,8 @@ Here is a list of content we put together specifically for the EF 5 release.
         -   [Migrate.exe](~/ef6/migrate-exe.md)
         -   [Defining DbSets](~/ef6/defining-dbsets.md)
     -   EF Designer
-        -   [Model First (walkthrough and video)](~/ef6/model-first.md)
-        -   [Database First (walkthrough and video)](~/ef6/database-first.md)
+        -   [Model First (walkthrough and video)](~/ef6/get-started/model-first.md)
+        -   [Database First (walkthrough and video)](~/ef6/get-started/database-first.md)
         -   [Complex Types](~/ef6/complex-types-ef-designer.md)
         -   [Associations/Relationships](~/ef6/relationships-ef-designer.md)
         -   [TPT Inheritance Pattern](~/ef6/designer-tpt-inheritance.md)
@@ -215,7 +214,7 @@ Here is a list of content we put together specifically for the EF 5 release.
         -   [Map Multiple Entities to One Table (Table Splitting)](~/ef6/designer-table-splitting.md)
         -   [Defining Queries](~/ef6/defining-query-ef-designer.md)
         -   [Code Generation Templates](~/ef6/designer-code-generation-templates.md)
-        -   [Reverting to ObjectContext](~/ef6/reverting-to-objectcontext-in-entity-framework-designer.md)
+        -   [Reverting to ObjectContext](~/ef6/advanced/codegen/legacy-objectcontext.md)
 -   Using Your Model
     -   [Working with DbContext](~/ef6/working-with-dbcontext.md)
     -   [Querying/Finding Entities](~/ef6/querying-and-finding-entities.md)

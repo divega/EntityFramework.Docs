@@ -47,7 +47,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: A string containing the ADO.NET provider invariant name specifying the type of database for which SQL will be generated. For example, the SQL Server SQL generator is returned for the key "System.Data.SqlClient".  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### System.Data.Entity.Core.Common.DbProviderServices  
 
@@ -58,7 +58,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: A string containing the ADO.NET provider invariant name specifying the type of database for which a provider is needed. For example, the SQL Server provider is returned for the key "System.Data.SqlClient".  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### System.Data.Entity.Infrastructure.IDbConnectionFactory  
 
@@ -69,7 +69,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: Not used; will be null  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### System.Data.Entity.Infrastructure.IManifestTokenService  
 
@@ -106,7 +106,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: DbSptialServices is asked for in two ways. First, provider-specific spatial services are requested using a DbProviderInfo object (which contains invariant name and manifest token) as the key. Second, DbSpatialServices can be asked for with no key. This is used to resolve the "global spatial provider" which is used when creating stand-alone DbGeography or DbGeometry types.  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### Func<System.Data.Entity.Infrastructure.IDbExecutionStrategy\>  
 
@@ -117,7 +117,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: An ExecutionStrategyKey object that contains the provider invariant name and optionally a server name for which the execution strategy will be used.  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### Func<DbConnection, string, System.Data.Entity.Migrations.History.HistoryContext\>  
 
@@ -128,7 +128,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: Not used; will be null  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### System.Data.Common.DbProviderFactory  
 
@@ -139,7 +139,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: A string containing the ADO.NET provider invariant name  
 
 >[!NOTE]
-> This service is not usually changed directly since the default implementation uses the normal ADO.NET provider registration. For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> This service is not usually changed directly since the default implementation uses the normal ADO.NET provider registration. For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### System.Data.Entity.Infrastructure.IProviderInvariantName  
 
@@ -150,7 +150,7 @@ Unless otherwise stated any object returned must be thread-safe since it can be 
 **Key**: The DbProviderFactory instance for which an invariant name is required.  
 
 >[!NOTE]
-> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/provider-model.md) section.  
+> For more details on provider-related services in EF6 see the [EF6 provider model](~/ef6/advanced/providers/provider-model.md) section.  
 
 ### System.Data.Entity.Core.Mapping.ViewGeneration.IViewAssemblyCache  
 

@@ -15,7 +15,7 @@ caps.latest.revision: 3
 
 The video and step-by-step walkthrough shows how to map spatial types with Entity Framework Code First. It also demonstrates how to use a LINQ query to find a distance between two locations.
 
-This walkthrough will use Code First to create a new database, but you can also use [Code First to an existing database](~/ef6/code-first-to-an-existing-database.md).
+This walkthrough will use Code First to create a new database, but you can also use [Code First to an existing database](~/ef6/get-started/code-first-to-an-existing-database.md).
 
 Spatial type support was introduced in Entity Framework 5. Note that to use the new features like spatial type, enums, and Table-valued functions, you must target .NET Framework 4.5. Visual Studio 2012 targets .NET 4.5 by default.
 
@@ -139,7 +139,7 @@ The closest University to you is: School of Fine Art.
 
 When you run the application the first time, the Entity Framework creates a database for you. Because we have Visual Studio 2012 installed, the database will be created on the LocalDB instance. By default, the Entity Framework names the database after the fully qualified name of the derived context (in this example that is **SpatialCodeFirst.UniversityContext**). The subsequent times the existing database will be used.  
 
-Note, that if you make any changes to your model after the database has been created, you should use Code First Migrations to update the database schema. See [Code First to a New Database](~/ef6/code-first-to-a-new-database.md) for an example of using Migrations.
+Note, that if you make any changes to your model after the database has been created, you should use Code First Migrations to update the database schema. See [Code First to a New Database](~/ef6/get-started/code-first-to-a-new-database.md) for an example of using Migrations.
 
 To view the database and data, do the following:
 

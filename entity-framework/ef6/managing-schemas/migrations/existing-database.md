@@ -16,7 +16,7 @@ caps.latest.revision: 3
 This article covers using Code First Migrations with an existing database, one that wasn’t created by Entity Framework.
 
 > [!NOTE]
-> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/migrations/index.md) before continuing.
 
 ## Screencasts
 
@@ -32,7 +32,7 @@ Building on the concepts from the previous video, [this screencast](http://chann
 
 ## Step 1: Create a model
 
-Your first step will be to create a Code First model that targets your existing database. The [Code First to an Existing Database](~/ef6/code-first-to-an-existing-database.md) topic provides detailed guidance on how to do this.
+Your first step will be to create a Code First model that targets your existing database. The [Code First to an Existing Database](~/ef6/get-started/code-first-to-an-existing-database.md) topic provides detailed guidance on how to do this.
 
 >[!NOTE]
 > It is important to follow the rest of the steps in this topic before making any changes to your model that would require changes to the database schema. The following steps require the model to be in-sync with the database schema.

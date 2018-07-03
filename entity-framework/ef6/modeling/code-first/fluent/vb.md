@@ -15,8 +15,8 @@ Code First allows you to define your model using C\# or VB.NET classes. Addition
 
 This page assumes you have a basic understanding of Code First. Check out the following walkthroughs for more information on Code First:
 
--   [Code First to a New Database](~/ef6/code-first-to-a-new-database.md)
--   [Code First to an Existing Database](~/ef6/code-first-to-an-existing-database.md)
+-   [Code First to a New Database](~/ef6/get-started/code-first-to-a-new-database.md)
+-   [Code First to an Existing Database](~/ef6/get-started/code-first-to-an-existing-database.md)
 
 ## Pre-Requisites
 

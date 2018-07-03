@@ -247,7 +247,7 @@ This convention configures every type in our model to map to the table name that
 
 One thing to note about this is that when you call ToTable EF will take the string that you provide as the exact table name, without any of the pluralization that it would normally do when determining table names. This is why the table name from our convention is product\_category instead of product\_categories. We can resolve that in our convention by making a call to the pluralization service ourselves.
 
-In the following code we will use the [Dependency Resolution](~ef6/advanced/configuring/dependency-resolution.md) feature added in EF6 to retrieve the pluralization service that EF would have used and pluralize our table name.
+In the following code we will use the [Dependency Resolution](~/ef6/advanced/configuring/dependency-resolution.md) feature added in EF6 to retrieve the pluralization service that EF would have used and pluralize our table name.
 
 ``` csharp
     private string GetTableName(Type type)

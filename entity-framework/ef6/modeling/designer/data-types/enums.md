@@ -15,7 +15,7 @@ caps.latest.revision: 3
 
 This video and step-by-step walkthrough shows how to use enum types with the Entity Framework Designer. It also demonstrates how to use enums in a LINQ query.
 
-This walkthrough will use Model First to create a new database, but the EF Designer can also be used with the [Database First](~/ef6/database-first.md) workflow to map to an existing database.
+This walkthrough will use Model First to create a new database, but the EF Designer can also be used with the [Database First](~/ef6/get-started/database-first.md) workflow to map to an existing database.
 
 Enum support was introduced in Entity Framework 5. To use the new features like enums, spatial data types, and table-valued functions, you must target .NET Framework 4.5. Visual Studio 2012 targets .NET 4.5 by default.
 

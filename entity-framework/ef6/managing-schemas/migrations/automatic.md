@@ -14,7 +14,7 @@ caps.latest.revision: 3
 Automatic Migrations allows you to use Code First Migrations without having a code file in your project for each change you make. Not all changes can be applied automatically - for example column renames require the use of a code-based migration.
 
 > [!NOTE]
-> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/migrations/index.md) before continuing.
 
 ## Recommendation for Team Environments
 

@@ -20,7 +20,7 @@ This video is [now available on Channel 9](http://channel9.msdn.com/blogs/ef/cod
 
 You will need to have **Visual Studio 2012** or **Visual Studio 2013** installed to complete this walkthrough.
 
-You will also need version **6.1** (or later) of the **Entity Framework Tools for Visual Studio** installed. See [Get Entity Framework](~/ef6/get-entity-framework.md) for information on installing the latest version of the Entity Framework Tools.
+You will also need version **6.1** (or later) of the **Entity Framework Tools for Visual Studio** installed. See [Get Entity Framework](~/ef6/get-started/get-entity-framework.md) for information on installing the latest version of the Entity Framework Tools.
 
 ## 1. Create an Existing Database
 

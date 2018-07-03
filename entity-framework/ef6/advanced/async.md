@@ -33,7 +33,7 @@ Here are some more resources to learn about async:
 
 ## Create the model
 
-We’ll be using the [Code First workflow](~/ef6/code-first-to-a-new-database.md) to create our model and generate the database, however the asynchronous functionality will work with all EF models including those created with the EF Designer.
+We’ll be using the [Code First workflow](~/ef6/get-started/code-first-to-a-new-database.md) to create our model and generate the database, however the asynchronous functionality will work with all EF models including those created with the EF Designer.
 
 -   Create a Console Application and call it **AsyncDemo**
 -   Add the EntityFramework NuGet package

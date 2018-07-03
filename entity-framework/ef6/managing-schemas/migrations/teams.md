@@ -12,7 +12,7 @@ caps.latest.revision: 3
 ---
 # Code First Migrations in Team Environments
 > [!NOTE]
-> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/migrations/index.md) before continuing.
 
 ## Grab a coffee, you need to read this whole article
 

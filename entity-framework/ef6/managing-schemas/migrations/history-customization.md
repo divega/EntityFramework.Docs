@@ -14,7 +14,7 @@ caps.latest.revision: 3
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
 > [!NOTE]
-> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/code-first-migrations.md) before continuing.
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/migrations/index.md) before continuing.
 
 ## What is Migrations History Table?
 

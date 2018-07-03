@@ -232,7 +232,7 @@
 ##### [Entity State](ef6/advanced/change-tracking/entity-state.md)
 ##### [Property Values](ef6/advanced/change-tracking/property-values.md)
 #### [Code Generation](ef6/advanced/codegen/index.md)
-##### [Legacy ObjectContext ](ef6/advanced/codegen/objectcontext-codegen.md)
+##### [Legacy ObjectContext ](ef6/advanced/codegen/legacy-objectcontext.md)
 #### Configuration
 ##### [Code-Based](ef6/advanced/configuration/code-based.md)
 ##### [Config File](ef6/advanced/configuration/config-file.md)

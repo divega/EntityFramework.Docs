@@ -30,7 +30,7 @@ At run time, entity type instances at one end of an association can be accessed 
 > [!NOTE]
 > In many-to-many (\*:\*) you cannot add foreign keys to the entities. In a \*:\* relationship, the association information is managed with an independent object.
 
-For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](~/ef6/csdl-specification.md).
+For information about CSDL elements (**ReferentialConstraint**, **Association**, etc.) see the [CSDL specification](~/ef6/advaced/edmx-file-format/csdl-specification.m).
 
 ## Create and Delete Associations
 

@@ -79,7 +79,7 @@ Here is a list of content we put together specifically for the EF 5 release.
         -   [Map Multiple Entities to One Table (Table Splitting)](~/ef6/entity-framework-designer-table-splitting.md)
         -   [Defining Queries](~/ef6/entity-framework-defining-query-ef-designer.md)
         -   [Code Generation Templates](~/ef6/entity-framework-designer-code-generation-templates.md)
-        -   [Reverting to ObjectContext](~/ef6/reverting-to-objectcontext-in-entity-framework-designer.md)
+        -   [Reverting to ObjectContext](~/ef6/advanced/codegen/legacy-objectcontext.md)
         -   [EDMX Files](~/ef6/entity-framework-edmx.md)
 -   Using Your Model
     -   [Working with DbContext](~/ef6/entity-framework-working-with-dbcontext.md)
