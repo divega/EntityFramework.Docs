@@ -85,7 +85,7 @@ Before we start using migrations we need a project and a Code First model to wor
 
 -   Run your application and you will see that a **MigrationsAutomaticCodeDemo.BlogContext** database is created for you.
 
-    ![DatabaseLocalDB](../../ef6/media/databaselocaldb.png)
+    ![DatabaseLocalDB](~/ef6/media/databaselocaldb.png)
 
 ## Enabling Migrations
 

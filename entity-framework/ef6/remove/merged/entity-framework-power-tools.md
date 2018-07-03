@@ -44,7 +44,7 @@ To complete this walkthrough, you need to have the following installed:  
 
 -   Visual Studio 2012 or Visual Studio 2010
 -   The latest version of [EF Power Tools](http://visualstudiogallery.msdn.microsoft.com/72a60b14-1581-4b9b-89f2-846072eff19d/) from Visual Studio Gallery
--   The [School Database](../ef6/entity-framework-school-database.md)
+-   The [School Database](~/ef6/entity-framework-school-database.md)
 
  
 
@@ -68,7 +68,7 @@ The **Reverse Engineer Code First** command is used to generate the POCO, mappin
 -   Enter the information about an existing database based on which you want to reverse engineer Code First
     **Note**: This will reverse engineer all the tables in the database, so if you do not want all of them, you will have to manually delete them from the model  
 
-    ![Connection](../ef6/media/connection.png)
+    ![Connection](~/ef6/media/connection.png)
 
 You can see the progress of the reverse engineer process in the status bar of Visual Studio. The following updates are made to your project when the process completes.
 
@@ -76,7 +76,7 @@ You can see the progress of the reverse engineer process in the status bar of Vi
 -   A reference to the **EntityFramework** NuGet package is added to the project
 -   A DbContext derived class and a set of POCO classes are generated under the **Models** folder. Also, the mapping classes are generated under the **Mapping** folder that is nested under the **Models** folder. 
 
-    ![ModelMappingClasses](../ef6/media/modelmappingclasses.png)
+    ![ModelMappingClasses](~/ef6/media/modelmappingclasses.png)
 
 Re-running this command after the initial code generation overwrites the generated files.
 
@@ -88,14 +88,14 @@ If you are not completely satisfied with the way the classes were generated  yo
 
 In some cases, you might want to change the way the code is being generated. For example, the generated code uses Fluent API to configure your model (as shown below), but you might want to use Data Annotations instead.
 
-![FluentAPI](../ef6/media/fluentapi.png)
+![FluentAPI](~/ef6/media/fluentapi.png)
 
 The rest of this section demonstrates how to modify code generation so that the table\\column mappings are configured to use Data Annotations instead of Fluent API (as shown below).
 
 -   Right click the project and select **Entity Framework** –&gt; **CustomizeReverse Engineer Templates**
     *Selecting **CustomizeReverse Engineer Templates** adds the T4 templates to your project. The EF Power Tools then uses these templates to generate the code for your context, entities, and mapping classes.*  
 
-    ![CodeTemplates](../ef6/media/codetemplates.png)
+    ![CodeTemplates](~/ef6/media/codetemplates.png)
 
     **Note**: You might see the following error caused by the fact that Visual Studio is trying to validate the templates. Because the templates are never run from your project, you can ignore it.*
     Compiling transformation: The type or namespace name ‘EfTextTemplateHost’ could not be found (are you missing a using directive or an assembly reference?)
@@ -213,7 +213,7 @@ using System.ComponentModel.DataAnnotations;
 
 When you right-click on a file that contains a derived DbContext class definition, you will see the three EDM viewing options described in this section.
 
-![ViewEDMwithDesigner](../ef6/media/viewedmwithdesigner.png)
+![ViewEDMwithDesigner](~/ef6/media/viewedmwithdesigner.png)
 
 ### View Entity Data Model (Read-only)
 
@@ -231,7 +231,7 @@ This option allows you to view the DDL SQL script that corresponds to the SSDL i
 
 ## Generating Pre-compiled Views
 
-You can use **Generate Views** option to generate pre-compiled views that are used by the Entity Framework runtime to improve start-up performance. The generated views file is added to the project. You can read more about view compilation in the following article: [Performance Considerations](../ef6/performance-considerations-for-ef-4-5-and-6.md).
+You can use **Generate Views** option to generate pre-compiled views that are used by the Entity Framework runtime to improve start-up performance. The generated views file is added to the project. You can read more about view compilation in the following article: [Performance Considerations](~/ef6/performance-considerations-for-ef-4-5-and-6.md).
 
 The **Generate Views** option is available when working with Code First and also when working with the EF Designer.
 

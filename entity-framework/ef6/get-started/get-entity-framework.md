@@ -27,7 +27,7 @@ The latest version of Entity Framework is available as the [EntityFramework NuGe
 
 You can install the EntityFramework package by right-clicking on the **References** folder of your project and selecting **Manage NuGet Packages…**
 
-![ManageNuGetPackages](../../ef6/media/managenugetpackages.png)
+![ManageNuGetPackages](~/ef6/media/managenugetpackages.png)
 
 ### Installing from Package Manager Console
 
@@ -55,7 +55,7 @@ The above methods will give you the latest fully supported release of Entity Fra
 
 To install the latest preview of EntityFramework you can select **Include Prerelease** in the Manage NuGet Packages window. If no prerelease versions are available you will automatically get the latest fully supported version of Entity Framework.
 
-![IncludePreRelease](../../ef6/media/includeprerelease.png)
+![IncludePreRelease](~/ef6/media/includeprerelease.png)
 
 Alternatively, you can run the following command in the [Package Manager Console](http://docs.nuget.org/docs/start-here/using-the-package-manager-console).
 
