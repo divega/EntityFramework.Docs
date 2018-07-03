@@ -130,5 +130,148 @@
 ### [⤤ API Reference](https://docs.microsoft.com/dotnet/api/?view=efcore-2.1)
 
 ## [Entity Framework 6](ef6/index.md)
-### [⤤ Documentation](http://msdn.com/data/ef)
+### [Get Started](ef6/get-started/index.md)
+#### [Using Model-First](ef6/get-started/model-first.md)
+#### [Using Database-First](ef6/get-started/database-first.md)
+#### [Using Code-First to a new Database](ef6/get-started/code-first-to-a-new-database.md)
+#### [Using Code First to an existing Database](ef6/get-started/code-first-to-an-existing-database.md)
+#### [Getting EF6](ef6/get-started/get-entity-framework.md)
+#### [Working with DbContext](ef6/get-started/working-with-dbcontext.md)
+#### [Understanding EF6](ef6/get-started/understanding-ef.md)
+### Managing Schemas
+#### [Migrations](ef6/managing-schemas/migrations/index.md)
+##### [Automatic Migrations](ef6/managing-schemas/migrations/automatic.md)
+##### [Working with Existing Databases](ef6/managing-schemas/migrations/existing-database.md)
+##### [Customizing Migrations History](ef6/managing-schemas/migrations/history-customization.md)
+##### [Using Migrate.exe](ef6/managing-schemas/migrations/migrate-exe.md)
+##### [Migrations in Team Environments](ef6/managing-schemas/migrations/teams.md)
+### Modeling
+#### [Understanding Relationships](ef6/modeling/relationships.md)
+#### Using Code First
+##### [Data Annotations](ef6/modeling/code-first/annotations.md)
+##### [DbSets](ef6/modeling/code-first/dbsets.md)
+##### Data Types
+###### [Enums](ef6/modeling/code-first/data-types/enums.md)
+###### [Spatial](ef6/modeling/code-first/data-types/spatial.md)
+##### Conventions
+###### [Built-In Conventions](ef6/modeling/code-first/conventions/built-in.md)
+###### [Custom Conventions](ef6/modeling/code-first/conventions/custom.md)
+###### [Model Conventions](ef6/modeling/code-first/conventions/model.md)
+##### Fluent Configuration
+###### [Relationships ](ef6/modeling/code-first/fluent/relationships.md)
+###### [Types and Properties](ef6/modeling/code-first/fluent/types-and-properties.md)
+###### [Using in Visual Basic](ef6/modeling/code-first/fluent/with-vb-net.md)
+###### [Stored Procedure Mapping](ef6/modeling/code-first/fluent/cud-stored-procedures.md)
+#### Using EF Designer
+##### Data types
+###### [Complex Types](ef6/modeling/designer/data-types/complex-types.md)
+###### [Enums](ef6/modeling/designer/data-types/enums.md)
+###### [Spatial](ef6/modeling/designer/data-types/spatial.md)
+##### Split Mappings
+###### [Entity Splitting](ef6/modeling/designer/splitting/entity-splitting.md)
+###### [Table Splitting](ef6/modeling/designer/splitting/table-splitting.md)
+##### Inheritance Mappings
+###### [Table per Hierarchy ](ef6/modeling/designer/inheritance/tph.md)
+###### [Table per Type](ef6/modeling/designer/inheritance/tpt.md)
+##### Mapping Stored Procedures
+###### [Query](ef6/modeling/designer/stored-procedures/query.md)
+###### [Update](ef6/modeling/designer/stored-procedures/cud.md)
+##### [Mapping Relationships](ef6/modeling/designer/relationships.md)
+### [Finding and Querying Entities](ef6/querying/index.md)
+#### [Load Method](ef6/querying/load-method.md)
+#### [Local Data](ef6/querying/local-data.md)
+#### [Tracking and No Tracking Queries](ef6/querying/no-tracking.md)
+#### [Using Raw SQL Queries](ef6/querying/raw-sql.md)
+#### [Querying Related Data](ef6/querying/related-data.md)
+### [Additional Resources](ef6/resources/index.md)
+#### [Blogs](ef6/resources/blogs.md)
+#### [Case Studies](ef6/resources/case-studies.md)
+#### [Getting Help](ef6/resources/get-help.md)
+#### [Glossary](ef6/resources/glossary.md)
+#### [Providers](ef6/resources/providers.md)
+#### [School Sample Database](ef6/resources/school-database.md)
+#### [Tools & Extensions](ef6/resources/tools.md)
+### Saving Entities
+#### [Handling Concurrency Conflicts](ef6/saving/concurrency.md)
+#### [Using Transactions](ef6/saving/transactions.md)
+#### [Data Validation](ef6/saving/validation.md)
+### [Versions](ef6/versions/index.md)
+#### [Roadmap](ef6/versions/roadmap.md)
+#### [Upgrading To EF6](ef6/versions/upgrading-to-ef6.md)
+#### [Using Different Visual Studio Versions](ef6/versions/visual-studio.md)
+#### Licenses
+##### EF5
+###### [Chinese Simplified](ef6/versions/licenses/ef5/chs.md)
+###### [Chinese Traditional](ef6/versions/licenses/ef5/cht.md)
+###### [German](ef6/versions/licenses/ef5/deu.md)
+###### [English](ef6/versions/licenses/ef5/enu.md)
+###### [Spanish](ef6/versions/licenses/ef5/esn.md)
+###### [French](ef6/versions/licenses/ef5/fra.md)
+###### [Italian](ef6/versions/licenses/ef5/ita.md)
+###### [Japanese](ef6/versions/licenses/ef5/jpn.md)
+###### [Korean](ef6/versions/licenses/ef5/kor.md)
+###### [Russian](ef6/versions/licenses/ef5/rus.md)
+##### EF6
+###### Prerelease
+####### [Alpha](ef6/versions/licenses/ef6/prerelease/alpha.md)
+####### [Beta - Release Candidate](ef6/versions/licenses/ef6/prerelease/beta-rc.md)
+###### [Chinese Simplified](ef6/versions/licenses/ef6/chs.md)
+###### [Chinese Traditional](ef6/versions/licenses/ef6/cht.md)
+###### [German](ef6/versions/licenses/ef6/deu.md)
+###### [English](ef6/versions/licenses/ef6/enu.md)
+###### [Spanish](ef6/versions/licenses/ef6/esn.md)
+###### [French](ef6/versions/licenses/ef6/fra.md)
+###### [Italian](ef6/versions/licenses/ef6/ita.md)
+###### [Japanese](ef6/versions/licenses/ef6/jpn.md)
+###### [Korean](ef6/versions/licenses/ef6/kor.md)
+###### [Russian](ef6/versions/licenses/ef6/rus.md)
+### Advanced Topics
+#### [Async Query & Save](ef6/advanced/async.md)
+#### Change Tracking
+##### [Auto Detect Changes](ef6/advanced/change-tracking/auto-detect-changes.md)
+##### [Entity State](ef6/advanced/change-tracking/entity-state.md)
+##### [Property Values](ef6/advanced/change-tracking/property-values.md)
+#### [Code Generation](ef6/advanced/codegen/index.md)
+##### [Legacy ObjectContext ](ef6/advanced/codegen/objectcontext-codegen.md)
+#### Configuration
+##### [Code-Based](ef6/advanced/configuration/code-based.md)
+##### [Config File](ef6/advanced/configuration/config-file.md)
+##### [Connection Strings](ef6/advanced/configuration/connection-strings.md)
+##### [Dependency Resolution](ef6/advanced/configuration/dependency-resolution.md)
+#### [Connection Management](ef6/advanced/connection-management.md)
+#### Connection Resiliency
+##### [Retry Logic](ef6/advanced/connection-resiliency/retry-logic.md)
+##### [Transaction Commit Failures](ef6/advanced/connection-resiliency/transaction-commit-failures.md)
+#### Databinding
+##### [WinForms](ef6/advanced/databinding/winforms.md)
+##### [WPF](ef6/advanced/databinding/wpf.md)
+#### EF Designer
+##### [Multiple Diagrams](ef6/advanced/designer/multiple-diagrams.md)
+##### [Keyboard Shortcuts](ef6/advanced/designer/keyboard-shortcuts.md)
+##### [Selecting Runtime Version](ef6/advanced/designer/select-runtime-version.md)
+#### [Disconnected Entities](ef6/advanced/disconnected-entities/index.md)
+##### [Self Tracking Entities](ef6/advanced/disconnected-entities/self-tracking-entities/index.md)
+###### [Walkthrough](ef6/advanced/disconnected-entities/self-tracking-entities/walkthrough.md)
+#### EDMX File Format
+##### [CSDL Specification](ef6/advanced/edmx-file-format/csdl-spec.md)
+##### [MSL Specification](ef6/advanced/edmx-file-format/msl-spec.md)
+##### [SSDL Specification](ef6/advanced/edmx-file-format/ssdl-spec.md)
+#### [Logging & Interception](ef6/advanced/logging-and-interception.md)
+#### Modeling
+##### [Defining Query](ef6/advanced/modeling/defining-query.md)
+##### [Multiple Result Sets](ef6/advanced/modeling/multiple-result-sets.md)
+##### [Table-Valued Functions](ef6/advanced/modeling/tvfs.md)
+#### Performance
+##### [Using NGEN](ef6/advanced/performance/ngen.md)
+##### [Performance Considerations (Whitepaper)](ef6/advanced/performance/perf-whitepaper.md)
+##### [Using Pre-Generated Views](ef6/advanced/performance/pre-generated-views.md)
+#### Providers
+##### [EF6 Provider Model](ef6/advanced/providers/provider-model.md)
+##### [Spatial Support in Providers](ef6/advanced/providers/spatial-support.md)
+#### [Using Proxies](ef6/advanced/proxies.md)
+#### Testing with EF6
+##### [Using Mocking](ef6/advanced/testing/mocking.md)
+##### [Writing Your Own Test Doubles](ef6/advanced/testing/writing-test-doubles.md)
+##### [Testability with EF4 (Article)](ef6/advanced/testing/testability-article.md)
+
 ### [⤤ API Reference](https://msdn.microsoft.com/library/dn223258.aspx)
