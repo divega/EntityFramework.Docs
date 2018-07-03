@@ -17,7 +17,12 @@ This video and page shows how to split a model into multiple diagrams using the 
 
 In earlier versions of the EF Designer you could only have one diagram per the EDMX file. Starting with Visual Studio 2012, you can use the EF Designer to split your EDMX file into multiple diagrams.
 
-[See the video that accompanies this step-by-step walkthrough.](~/ef6/multiple-diagrams-per-model-ef5-onwards-video.md)
+## Watch the video
+This video shows how to split a model into multiple diagrams using the Entity Framework Designer (EF Designer). You might want to use this feature when your model becomes too large to view or edit.
+
+**Presented By**: Julia Kornich
+
+**Video**: [WMV](http://download.microsoft.com/download/5/C/2/5C2B52AB-5532-426F-B078-1E253341B5FA/HDI-ITPro-MSDN-winvideo-multiplediagrams.wmv) | [MP4](http://download.microsoft.com/download/5/C/2/5C2B52AB-5532-426F-B078-1E253341B5FA/HDI-ITPro-MSDN-mp4video-multiplediagrams.m4v) | [WMV (ZIP)](http://download.microsoft.com/download/5/C/2/5C2B52AB-5532-426F-B078-1E253341B5FA/HDI-ITPro-MSDN-winvideo-multiplediagrams.zip)
 
 ## EF Designer Overview
 

@@ -21,7 +21,12 @@ Enum support was introduced in Entity Framework 5. To use the new features like 
 
 In Entity Framework, an enumeration can have the following underlying types: **Byte**, **Int16**, **Int32**, **Int64** , or **SByte**.
 
-[See the video that accompanies this step-by-step walkthrough.](~/ef6/enum-support-ef-designer-ef5-onwards-video.md)
+## Watch the Video
+This video shows how to use enum types with the Entity Framework Designer. It also demonstrates how to use enums in a LINQ query.
+
+**Presented By**: Julia Kornich
+
+**Video**: [WMV](http://download.microsoft.com/download/0/7/A/07ADECC9-7893-415D-9F20-8B97D46A37EC/HDI-ITPro-MSDN-winvideo-enumwithdesiger.wmv) | [MP4](http://download.microsoft.com/download/0/7/A/07ADECC9-7893-415D-9F20-8B97D46A37EC/HDI-ITPro-MSDN-mp4video-enumwithdesiger.m4v) | [WMV (ZIP)](http://download.microsoft.com/download/0/7/A/07ADECC9-7893-415D-9F20-8B97D46A37EC/HDI-ITPro-MSDN-winvideo-enumwithdesiger.zip)
 
 ## Pre-Requisites
 

@@ -15,13 +15,13 @@ Entity Framework is made up of the EF Tools for Visual Studio and the EF Runtime
 
 ## EF Tools for Visual Studio
 
-The Entity Framework Tools are included in current versions of Visual Studio. For some past versions of Visual Studio, tooling is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762).
+The Entity Framework Tools for Visual Studio include the EF Designer and the EF Model Wizard and are required for the database first and model first workflows. EF Tools are included in all recent versions of Visual Studio. If you perform a custom install of Visual Studio you will need to ensure that the item "Entity Framework 6 Tools" is selected by either choosing a workload that includes it or by selecting it as an individual component.
 
-If you perform a custom install of Visual Studio you will need to ensure that the item "Entity Framework 6 Tools" is selected by either choosing a workload that includes it or by selecting it as an individual component.
+For some past versions of Visual Studio, updated EF Tools are available as a download. See [Visual Studio Versions](~/ef6/versions/visual-studio.md) for guidance on how to get the latest version of EF Tools available for your version of Visual Studio.
 
 ## EF Runtime
 
-The latest version of Entity Framework is available as the [EntityFramework NuGet package](http://nuget.org/packages/EntityFramework/). If you are not familiar with the NuGet Package Manager, we encourage you to read the [NuGet Overview](http://docs.nuget.org/docs/start-here/overview).
+The latest version of Entity Framework is available as the [EntityFramework NuGet package](http://nuget.org/packages/EntityFramework/). If you are not familiar with the NuGet Package Manager, we encourage you to read the [NuGet Overview](https://docs.microsoft.com/nuget/consume-packages/overview-and-workflow).
 
 ### Installing the EF NuGet Package
 

@@ -8,6 +8,7 @@ ms.manager: avickers
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: b22efeca-7243-408b-989b-6494c493713c
+new.ms.assetid: c6ae6d8f-1ace-47db-ad47-b1718f1ba082
 caps.latest.revision: 3
 ---
 # Enum Support - EF Designer Video

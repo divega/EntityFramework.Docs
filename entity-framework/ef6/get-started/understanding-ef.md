@@ -11,10 +11,10 @@ ms.assetid: 4ab0958b-e440-494e-8a09-83ee7f400a7a
 caps.latest.revision: 3
 ---
 # Understanding Entity Framework
-Entity Framework is an object-relational mapper (O/RM) that enables developers to interact with data stored in a relational database by manimulating the application's domain objects.
+Entity Framework is an object-relational mapper (O/RM) that enables developers to interact with data stored in a relational database by manipulating the application's domain objects.
 For example, using Entity Framework you can work with data in the form of domain objects and properties, such as _customers_ and _customer addresses_ , using familiar object-oriented techniques and without having to concern yourself with the underlying database tables and columns where this data is stored.
 
-EF reduces the impedance mismatch between the object-oriented world of .NET Framework developers and the world of relational databases. 
+EF reduces the impedance mismatch between the object-oriented world of .NET Framework developers and the world of relational databases.
 Developers can work at a higher level of abstraction when they deal with data, and can create and maintain data-oriented applications with less code than in traditional applications.
 A large portion of the data access "plumbing" code that developers usually need to write is eliminated.
 
@@ -44,7 +44,7 @@ From Entity Framework 4, it also supports Persistence Ignorance through Plain Ol
 
 # Entity Data Model
 
-The Entity Framework uses the Entity Data Model (EDM) to describe the application-specific object or �conceptual� model against which the developer programs.
+The Entity Framework uses the Entity Data Model (EDM) to describe the application-specific object or "conceptual" model against which the developer programs.
 The EDM builds on the widely known Entity Relationship model (introduced by Dr. Peter Chen) to raise the abstraction level above logical database schemas.
 The EDM was developed with the primary goal of becoming the common data model across a suite of developer and server technologies from Microsoft.
 EDM was also used as part of the OData protocol.
@@ -65,9 +65,10 @@ The modeling layer contains three components:
 
 *   A mapping between the conceptual model and the database schema  
 
-Entity Framework uses the mapping component to transform operations against entity objects�such as create, read, update, and delete�into equivalent operations in the database.
+Entity Framework uses the mapping component to transform operations against entity objects - such as create, read, update, and delete - into equivalent operations in the database.
 
-The Entity Framework object layer contains typed common language runtime (CLR) objects that reflect the entities and relationships defined in the conceptual model. These objects can be consumed by programming languages. The exact format of the types is controlled by options you provide to Entity Framework.
+The Entity Framework object layer contains typed common language runtime (CLR) objects that reflect the entities and relationships defined in the conceptual model. These objects can be consumed by programming languages.
+The exact format of the types is controlled by options you provide to Entity Framework.
 
 ## Mapping and Modeling
 
@@ -89,4 +90,4 @@ Entity Framework object layer enables you to do the following:
 
 *   Propagate object changes back to the data source.  
 
-*   Bind objects to controls.  
+*   Bind objects to controls.

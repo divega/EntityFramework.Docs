@@ -8,6 +8,7 @@ ms.manager: avickers
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 78c79d1a-8210-49ee-9578-7b5005655f1f
+new.ms.assetid: 2df6cb0a-7d8b-4e28-9d05-e2b9a90125af
 caps.latest.revision: 4
 ---
 # Code First to a New Database Video

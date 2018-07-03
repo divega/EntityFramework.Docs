@@ -12,9 +12,9 @@ caps.latest.revision: 3
 ---
 # Get started with Entity Framework 6
 
-If your learning style is to learn by doing, follow the three simple steps: [Decide what EF workflow you want to use](#decide-what-EF workflow-you-want-to-use), [Get Entity Framework](#get-entity-framework), and read [Working with DbContext](#learn-how-to-work-with-dbcontext).
+You can follow these three simple steps: [Decide what EF workflow you want to use](#decide-what-EF-workflow-you-want-to-use), [Get Entity Framework](#get-entity-framework), and read [Working with DbContext](#learn-how-to-work-with-dbcontext).
 
-You can then jump to the [Understanding Entity Framework](#understanding-entity-framework) section to build a better understanding of what is happening under the hood.
+You can then jump to [Understanding Entity Framework](#understanding-entity-framework) to build a better understanding of what is happening under the hood.
 
 ## Decide what EF workflow you want to use
 
@@ -29,21 +29,20 @@ Find out about the EF Designer and Code First and which one is best for you:
 
 ### Watch the video
 
-This short video explains the differences and how to find the one that is right for you.
+This short video explains the differences, and how to find the one that is right for you.
 
 **Presented By**: [Rowan Miller](http://romiller.com/)
 
 ![WhichWorkflow_Thumb](../media/whichworkflow-thumb.png)
  [WMV](http://download.microsoft.com/download/8/F/8/8F81F4CD-3678-4229-8D79-0C63FFA3C595/HDI_ITPro_Technet_winvideo_ChoseYourWorkflow.wmv) | [MP4](http://download.microsoft.com/download/8/F/8/8F81F4CD-3678-4229-8D79-0C63FFA3C595/HDI_ITPro_Technet_mp4video_ChoseYourWorkflow.m4v) | [WMV (ZIP)](http://download.microsoft.com/download/8/F/8/8F81F4CD-3678-4229-8D79-0C63FFA3C595/HDI_ITPro_Technet_winvideo_ChoseYourWorkflow.zip)
 
-If you still don't feel comfortable deciding, learn a bit of both.
+If you still don't feel comfortable deciding, learn both!
 
-## Get Entity Framework
-In [Get Entity Framework](get-entity-framework.md) section you will learn how to add Entity Framework to your applications.
+## [Get Entity Framework](get-entity-framework.md)
+Here you will learn how to add Entity Framework to your applications and, if you want to use the EF Designer, how to get it in Visual Studio.
 
-## Working with DbContext
- In the [Working with DbContext](working-with-dbcontext.md) section you will learn the basics of how to use Entity Framework.
+## [Working with DbContext](working-with-dbcontext.md)
+Here you will learn the basics of how to use Entity Framework.
 
-## Understanding Entity Framework
-
-In [Understanding Entity Framework](understanding-ef.md) find a more detailed explanation of the basic capabilities and architecture of EF.
+## [Understanding Entity Framework](understanding-ef.md)
+Here we will explore more detailed explanations of the basic capabilities, benefits and architecture of EF.

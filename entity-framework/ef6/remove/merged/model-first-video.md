@@ -10,6 +10,7 @@ ms.manager: avickers
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 26480e9f-144a-43ee-b1d0-967a1ad6f725
+new.ms.assetid: e1b9c319-bb8a-4417-ac94-7890f257e7f6
 caps.latest.revision: 3
 ---
 # Model First Video

@@ -28,12 +28,12 @@ See the section [Compare EF Core & EF6](xref:efcore-and-ef6/index) for a detaile
 Add the EntityFramework NuGet package to your project or install the Entity Framework Tools for Visual Studio. Then watch videos, read tutorials, and advanced documentation to help you make the most of Entity Framework 6.
 
 ## [Ask a Question](~/ef6/resources/get-help.md)
-Find out how to get help from the experts and contribute to the data community on Stack Overflow.
+Find out how to get help from the experts and contribute your own answers to the community.
 
 ## [Contribute](http://github.com/aspnet/EntityFramework6/)
 Entity Framework 6 uses an open development model. Find out how you can help make EF even better by visiting our GitHub repository.
 
 ## Past Entity Framework Versions
 
-This page provides information on the latest version of Entity Framework, although much of it also applies to past versions. 
+This is the documentation for the latest version of Entity Framework 6, although much of it also applies to past versions of EF.
 Check out the [Version History](~/ef6/versions/index.md) for a complete list of versions and the features they introduced.

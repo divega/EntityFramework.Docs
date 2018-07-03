@@ -10,6 +10,7 @@ ms.manager: avickers
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 6fbad643-69f6-4867-ae7d-4287e185edf5
+new.ms.assetid: f019c97b-87b0-4e93-98f4-2c539f77b2dc
 caps.latest.revision: 3
 ---
 # Entity Framework Table-Valued Functions (TVFs) (EF5 onwards) Video
