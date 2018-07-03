@@ -5,31 +5,312 @@ ms.date: "2016-10-23"
 ms.prod: "entity-framework"
 ms.author: divega
 ms.manager: avickers
-
-
 ms.technology: entity-framework-6
 ms.topic: "article"
 ms.assetid: 41d1f86b-ce66-4bf2-8963-48514406fb4c
 caps.latest.revision: 3
 ---
 # Entity Framework Version History
-The first two versions of Entity Framework shipped with the .NET Framework and had versions numbers that aligned with the version of the framework that they were included in (3.5 and 4). After this EF started shipping independently and adopted the \<http://semver.org> standard for semantic versioning.
 
-Here is a summary of the Entity Framework releases and the features they added. This table includes all the fully supported releases of Entity Framework and the latest pre-release version.
+We highly recommend that you use the latest released version of Entity Framework to ensure you get the latest features and the highest stability.
+However, we realize that you may need to use a previous version, or that you may want to experiment with new improvements in the latest pre-release.
 
-| Release | Summary |
-|---------|---------|
-| **EF 6.1.2** | EF6.1.2 is mostly about bug fixes, [you can see a list of the fixes included in EF6.1.2 on our CodePlex site](https://entityframework.codeplex.com/workitem/list/advanced?keyword=&amp;status=Closed&amp;type=All&amp;priority=All&amp;release=EF%206.1.2&amp;assignedTo=All&amp;component=All&amp;sortField=AssignedTo&amp;sortDirection=Ascending&amp;page=0&amp;reasonClosed=Fixed). <br/> <br/> We also accepted a couple of noteworthy changes from members of the community: <br/> <br/> - **Query cache parameters can be configured from the app/web.configuration file** <br/> `<entityFramework>` <br/> `  <queryCache size='1000' cleaningIntervalInSeconds='-1'/>` <br/> `</entityFramework>` <br/> - **SqlFile and SqlResource methods on DbMigration** allow you to run a SQL script stored as a file or embedded resource. <br/> <br/> **The runtime** is [available on NuGet](https://nuget.org/packages/EntityFramework/). Follow the [instructions on our Get It page](../ef6/get-entity-framework.md) for installing the latest version of Entity Framework runtime. <br/> <br/> **The tooling** for Visual Studio 2012 and Visual Studio 2013 is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762). You only need to install the tooling if you want to create models using the EF Designer, or generate a Code First model from an existing database. |
-| **EF 6.1.1** | You can see a [list of the fixes/changes included in EF6.1.1 on our CodePlex site](https://entityframework.codeplex.com/workitem/list/advanced?keyword=&amp;status=All&amp;type=All&amp;priority=All&amp;release=EF+6.1.1&amp;assignedTo=All&amp;component=All&amp;reasonClosed=All&amp;sortField=AssignedTo&amp;sortDirection=Ascending&amp;page=0). In particular, we’d like to call out the following two fixes to issues that a number of people have encountered: <br/> <br/> - [Designer: Error opening EF5 edmx with decimal precision in EF6 designer](https://entityframework.codeplex.com/workitem/1653) <br/> - [Default instance detection logic for LocalDB doesn't work with SQL Server 2014](https://entityframework.codeplex.com/workitem/2246) <br/> <br/> **The runtime** is [available on NuGet](https://nuget.org/packages/EntityFramework/). Follow the [instructions on our Get It page](../ef6/get-entity-framework.md) for installing the latest version of Entity Framework runtime. <br/> <br/> **The tooling** for Visual Studio 2012 and Visual Studio 2013 is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762). You only need to install the tooling if you want to create models using the EF Designer, or generate a Code First model from an existing database. |
-| **EF 6.1** | This minor release adds the following features to EF6: <br/> <br/> - **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](../ef6/entity-framework-code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools. <br/> - **[Handling of transaction commit failures](../ef6/entity-framework-handling-of-transaction-commit-failures-ef6-1-onwards.md)** provides the [CommitFailureHandler](https://msdn.microsoft.com/library/system.data.entity.infrastructure.commitfailurehandler.aspx) which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction. <br/> - **[IndexAttribute](../ef6/entity-framework-code-first-data-annotations.md)** allows indexes to be specified by placing an [Index] attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database. <br/> - **[The public mapping API](https://entityframework.codeplex.com/wikipage?title=Public%20Mapping%20API)** provides access to the information EF has on how properties and types are mapped to columns and tables in the database. In past releases this API was internal. <br/> - **[Ability to configure interceptors via the App/Web.config file](../ef6/entity-framework-config-file-settings.md)** allows interceptors to be added without recompiling the application. <br/> - **System.Data.Entity.Infrastructure.Interception.DatabaseLogger**is a new interceptor that makes it easy to log all database operations to a file. In combination with the previous feature, this allows you to easily [switch on logging of database operations for a deployed application](../ef6/entity-framework-config-file-settings.md), without the need to recompile. <br/> - **Migrations model change detection** has been improved so that scaffolded migrations are more accurate; performance of the change detection process has also been enhanced. <br/> - **Performance improvements** including reduced database operations during initialization, optimizations for null equality comparison in LINQ queries, faster view generation (model creation) in more scenarios, and more efficient materialization of tracked entities with multiple associations. <br/> <br/> **The runtime** is [available on NuGet](https://nuget.org/packages/EntityFramework/). If you are using Code First then there is no need to install the tooling. Follow the [instructions on our Get It page](../ef6/get-entity-framework.md) for installing the latest version of Entity Framework runtime. <br/> <br/> **The tooling** for Visual Studio 2012 and Visual Studio 2013 is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762). You only need to install the tooling if you want to use Model First or Database First. |
-| **EF 6.0.2** | The 6.0.2 patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5). <br/> <br/> The 6.0.2 patch includes fixes to some performance and functional issues that were introduced in the 6.0.0 and 6.0.1 releases. You can view [a full list of the issues on our CodePlex site](https://entityframework.codeplex.com/workitem/list/advanced?status=Closed&amp;release=EF%206.0.2&amp;reasonClosed=Fixed). <br/> <br/> **The runtime** is [available on NuGet](https://nuget.org/packages/EntityFramework/). If you are using Code First then there is no need to install the tooling. Follow the [instructions on our Get It page](../ef6/get-entity-framework.md) for installing the latest version of Entity Framework runtime. <br/> <br/> **The tooling** for Visual Studio 2012 and Visual Studio 2013 is [available on the Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=40762). You only need to install the tooling if you want to use Model First or Database First. |
-| **EF 6.0.1** | The 6.0.1 patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5). This is a runtime only release ([available on NuGet](https://nuget.org/packages/EntityFramework/), there was no update to the tooling. <br/> <br/> The most notable changes were to fix some performance issues during warm-up for EF models. This was important as warm-up performance was an area of focus in EF6 and these issues were negating some of the performance gains made in EF6. <br/> <br/> You can see a [complete list of the individual fixes in this patch on the EF CodePlex site](https://entityframework.codeplex.com/workitem/list/advanced?keyword=&amp;status=Closed&amp;type=All&amp;priority=All&amp;release=EF%206.0.1&amp;assignedTo=All&amp;component=All&amp;sortField=Id&amp;sortDirection=Descending&amp;page=0&amp;reasonClosed=All). |
-| **EF 6** | This release can be used in Visual Studio 2013, Visual Studio 2012 and Visual Studio 2010 (runtime only) to write applications that target .NET 4.0 and .NET 4.5. <br/> <br/> **Tooling** <br/> <br/> The EF6 Tooling is included in Visual Studio 2013 and available for download for Visual Studio 2012. See the [Get Entity Framework](../ef6/get-entity-framework.md) page for more information. <br/> <br/> The focus for the tooling in EF6 was to add support for the EF6 runtime and to enable shipping out-of-band between releases of Visual Studio. <br/> <br/> The tooling itself does not include any new features, but most of the new runtime features can be used with models created in the EF Designer. <br/> <br/> **Runtime** <br/> <br/> The EF6 runtime can be installed from NuGet. See the [Get Entity Framework](../ef6/get-entity-framework.md) page for more information. <br/> <br/> The following features work for models created with Code First or the EF Designer: <br/> <br/> - **[Async Query and Save](../ef6/entity-framework-async-query-and-save-ef6-onwards.md)** adds support for the task-based asynchronous patterns that were introduced in .NET 4.5. <br/> - **[Connection Resiliency](../ef6/entity-framework-connection-resiliency-and-retry-logic-ef6-onwards.md)** enables automatic recovery from transient connection failures. <br/> - **[Code-Based Configuration](../ef6/entity-framework-code-based-configuration-ef6-onwards.md)** gives you the option of performing configuration – that was traditionally performed in a config file – in code. <br/> - **[Dependency Resolution](../ef6/entity-framework-idbdependencyresolver-services-ef6-onwards.md)** introduces support for the Service Locator pattern and we've factored out some pieces of functionality that can be replaced with custom implementations. <br/> - **[Interception/SQL logging](../ef6/entity-framework-logging-and-intercepting-database-operations-ef6-onwards.md)** provides low-level building blocks for interception of EF operations with simple SQL logging built on top. <br/> - **Testability improvements** make it easier to create test doubles for DbContext and DbSet when [using a mocking framework](http://msdn.com/data/dn314429) or [writing your own test doubles](http://msdn.com/data/dn314431). <br/> - **[DbContext can now be created with a DbConnection that is already opened](../ef6/entity-framework-connection-management.md)** which enables scenarios where it would be helpful if the connection could be open when creating the context (such as sharing a connection between components where you can not guarantee the state of the connection). <br/> - **[Improved Transaction Support](../ef6/entity-framework-working-with-transactions-ef6-onwards.md)** provides support for a transaction external to the framework as well as improved ways of creating a transaction within the Framework. <br/> - **Enums, Spatial and Better Performance on .NET 4.0** - By moving the core components that used to be in the .NET Framework into the EF NuGet package we are now able to offer enum support, spatial data types and the performance improvements from EF5 on .NET 4.0. <br/> - **Improved performance of Enumerable.Contains in LINQ queries**. <br/> - **Improved warm up time (view generation)**, especially for large models. <br/> - **Pluggable Pluralization &amp; Singularization Service**. <br/> - **Custom implementations of Equals or GetHashCode** on entity classes are now supported. <br/> - **DbSet.AddRange/RemoveRange** provides an optimized way to add or remove multiple entities from a set. <br/> - **DbChangeTracker.HasChanges** provides an easy and efficient way to see if there are any pending changes to be saved to the database. <br/> - **SqlCeFunctions** provides a SQL Compact equivalent to the [SqlFunctions](https://msdn.microsoft.com/library/system.data.objects.sqlclient.sqlfunctions.aspx). <br/> <br/> The following features apply to Code First only: <br/> <br/> - **[Custom Code First Conventions](../ef6/entity-framework-custom-code-first-conventions-ef6-onwards.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions. <br/> - **[Code First Mapping to Insert/Update/Delete Stored Procedures](../ef6/entity-framework-code-first-insert-update-and-delete-stored-procedures.md)** is now supported. <br/> - **[Idempotent migrations scripts](../ef6/entity-framework-code-first-migrations.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version. <br/> - **[Configurable Migrations History Table](../ef6/entity-framework-customizing-the-migrations-history-table-ef6-onwards.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly. <br/> - **Multiple Contexts per Database** removes the previous limitation of one Code First model per database when using Migrations or when Code First automatically created the database for you. <br/> - **[DbModelBuilder.HasDefaultSchema](../ef6/entity-framework-fluent-api-configuring-and-mapping-properties-and-types.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API. <br/> - **DbModelBuilder.Configurations.AddFromAssembly method** allows you to easily add all configuration classes defined in an assembly when you are using configuration classes with the Code First Fluent API. <br/> - **[Custom Migrations Operations](http://romiller.com/2013/02/27/ef6-writing-your-own-code-first-migration-operations/)** enabled you to add additional operations to be used in your code-based migrations. <br/> - **Default transaction isolation level is changed to READ_COMMITTED_SNAPSHOT** for databases created using Code First, allowing for more scalability and fewer deadlocks. <br/> - **Entity and complex types can now be nestedinside classes**. |
-| **EF 5** | This release can be used in Visual Studio 2010 and Visual Studio 2012 to write applications that target .NET 4.0 and .NET 4.5. When targeting .NET 4.5 this release introduces some new features including enum support, table-valued functions, spatial data types and various performance improvements. <br/> <br/> If you create a new model using the Entity Framework Designer in Visual Studio 2012, the EF5 NuGet package will be installed to your project and the generated code will make use of EF5. New ASP.NET projects created in Visual Studio 2012 (including MVC projects) also have the EF5 NuGet package installed by default. <br/> <br/> The Entity Framework Designer in Visual Studio 2012 also introduces support for multiple-diagrams per model, coloring of shapes on the design surface and batch import of stored procedures. |
-| **EF 4.3.1** | This patch release included some bug fixes to the EF 4.3 release and introduced better LocalDb support for folks using EF 4.3 with Visual Studio 2012. |
-| **EF 4.3** | The EF 4.3 release included the new Code First Migrations feature that allows a database created by Code First to be incrementally changed as your Code First model evolves. |
-| **EF 4.2** | This release includes bug fixes to the EF 4.1.1 release. <br/> <br/> Because this release only included bug fixes it could have been the EF 4.1.2 patch release but we opted to move to 4.2 to allow us to move away from the date based patch version numbers we used in the 4.1.x releases and adopt the [http://semver.org](http://semver.org) standard for semantic versioning. |
-| **EF 4.1.1** | In addition to bug fixes this patch release introduced some components to make it easier for design time tooling to work with a Code First model. These components are used by Code First Migrations (included in EF 4.3) and the EF Power Tools. <br/> <br/> Note the NuGet package for this release has the version number 4.1.10715. We used to use date based patch versions before we decided to adopt the [http://semver.org](http://semver.org) standard for semantic versioning. |
-| **EF 4.1** | The EF 4.1 release was the first to be published on NuGet. This release included the simplified DbContext API and the Code First workflow. <br/> <br/> Note the NuGet package for this release has the version number 4.1.10331. We used to use date based patch versions before we decided to adopt the [http://semver.org](http://semver.org) standard for semantic versioning. |
-| **EF 4** | This release was included in .NET Framework 4 and Visual Studio 2010. New features in this release included POCO support, lazy loading, testability improvements, customizable code generation and the Model First workflow. <br/> <br/> Although it was the second release of Entity Framework it was named EF 4 to align with the .NET Framework version that it shipped with. After this release we started making Entity Framework available on NuGet and adopted semantic versioning since we were no longer tied to the .NET Framework Version. |
-| **EF (or EF 3.5)** | The initial release of Entity Framework was included in .NET 3.5 SP1 and Visual Studio 2008 SP1. This release provided basic O/RM support using the Database First workflow. |
+This page documents the version history of EF.
+It contains links to content on features that are new on each release, most of which are still relevant to the latest release.
+
+To install specific versions of EF, see [Get Entity Framework](~/ef6/get-started/get-entity-Framework.md).
+
+## Brief history
+
+The first version of Entity Framework was released in 2008, as part of .NET Framework 3.5 SP1 and Visual Studio 2008 SP1.
+
+Starting with the EF4.1 release it has shipped as the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) - currently one of the most popular packages on NuGet.org.
+
+Between versions 4.1 and 5.0, the EntityFramework NuGet package extended the EF libraries that shipped as part of .NET Framework.   
+
+Starting with version 6, EF became an open source project and also moved completely out of band form the .NET Framework.
+This means that when you add the EntityFramework version 6 NuGet package to an application, you are getting a complete copy of the EF library that does not depend on the EF bits that ship as part of .NET Framework.
+This helped somewhat accelerate the pace of development and delivery of new features.
+
+In June 2016, we released EF Core 1.0. EF Core is based on a new codebase and is designed as a more lightweight and extensible version of EF.
+Currently EF Core is the main focus of development for the Entity Framework Team at Microsoft.
+This means there are no new major features planned for EF6. However EF6 is still maintained as an open source project and a supported Microsoft product.
+
+## Recent releases
+
+### EF 6.2 Tools
+
+We release an updated version of the EF6 Tools in Visual Studio 2017 15.7.
+It includes improvements on some common pain areas:
+
+- An overhaul to the accessibility of the user interface
+- Workaround for SQL Server performance regression on reverse engineering [#4](https://github.com/aspnet/entityframework6/issues/4)
+- Update model from database support for larger models on SQL Server [#185](https://github.com/aspnet/EntityFramework6/issues/185)
+
+With older versions of Visual Studio, it is possible to use the EF 6.2 runtime (as well as any past version of EF) with existing versions of the EF6 Tools.
+
+### EF 6.2 Runtime
+
+The EF 6.2 runtime was released to NuGet in October of 2017.
+To a great extent, thanks to the efforts our community of open source contributors, EF 6.2 includes numerous [bugs fixes](https://github.com/aspnet/entityframework6/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A6.2.0%20is%3Aclosed%20label%3Aclosed-fixed%20-label%3Aarea-tools%20label%3Atype-bug) and [product enhancements](https://github.com/aspnet/entityframework6/issues?utf8=%E2%9C%93&q=is%3Aissue%20milestone%3A6.2.0%20is%3Aclosed%20label%3Aclosed-fixed%20-label%3Aarea-tools%20label%3Atype-enhancement%20).
+
+Here is a brief list of the most important changes affecting the EF 6.2 runtime:
+
+- Reduce start up time by loading finished code first models from a persistent cache [#275](https://github.com/aspnet/EntityFramework6/issues/275)
+- Fluent API to define indexes [#274](https://github.com/aspnet/EntityFramework6/issues/274)
+- DbFunctions.Like() to enable writing LINQ queries that translate to LIKE in SQL [#241](https://github.com/aspnet/EntityFramework6/issues/241)
+- Migrate.exe now supports -script option [#240](https://github.com/aspnet/EntityFramework6/issues/240)
+- EF6 can now work with key values generated by a sequence in SQL Server [#165](https://github.com/aspnet/EntityFramework6/issues/165)
+- Update list of transient errors for SQL Azure Execution Strategy [#83](https://github.com/aspnet/EntityFramework6/issues/83)
+- Bug: Retrying queries or SQL commands fails with "The SqlParameter is already contained by another SqlParameterCollection" [#81](https://github.com/aspnet/EntityFramework6/issues/81)
+- Bug: Evaluation of DbQuery.ToString() frequently times out in the debugger [#73](https://github.com/aspnet/EntityFramework6/issues/73)
+
+## Past releases
+
+### EF 6.1.3
+The EF 6.1.3 runtime was released to NuGet in October of 2015.
+This release contains only fixes to high-priority defects and regressions reported on the 6.1.2 release.
+The fixes include:
+
+- Query: Regression in EF 6.1.2: OUTER APPLY introduced and more complex queries for 1:1 relationships and “let” clause
+- TPT problem with hiding base class property in inherited class
+- DbMigration.Sql fails when the word ‘go’ is contained in the text
+- Create compatibility flag for UnionAll and Intersect flattening support
+- Query with multiple Includes does not work in 6.1.2 (working in 6.1.1)
+- “You have an error in your SQL syntax” exception after upgrading from EF 6.1.1 to 6.1.2
+
+### EF 6.1.2
+The EF 6.1.2 runtime was released to NuGet in December of 2014.
+This version is mostly about bug fixes. We also accepted a couple of noteworthy changes from members of the community:
+- **Query cache parameters can be configured from the app/web.configuration file**
+    ``` xml
+    <entityFramework>
+      <queryCache size='1000' cleaningIntervalInSeconds='-1'/>
+    </entityFramework>
+    ```
+- **SqlFile and SqlResource methods on DbMigration** allow you to run a SQL script stored as a file or embedded resource.
+
+### EF 6.1.1
+The EF 6.1.1 runtime was released to NuGet in June of 2014.
+This version contains fixes for issues that a number of people have encountered. Among others:
+- Designer: Error opening EF5 edmx with decimal precision in EF6 designer
+- Default instance detection logic for LocalDB doesn't work with SQL Server 2014
+
+### EF 6.1
+The EF 6.1.0 runtime was released to NuGet in March of 2014.
+This minor update includes a significant number of new features:
+
+- **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](~/ef6/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
+- **[Handling of transaction commit failures](~/ef6/handling-of-transaction-commit-failures-ef6-1-onwards.md)** provides the CommitFailureHandler which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction.
+- **[IndexAttribute](~/ef6/code-first-data-annotations.md)** allows indexes to be specified by placing an `[Index]` attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database.
+- **The public mapping API** provides access to the information EF has on how properties and types are mapped to columns and tables in the database. In past releases this API was internal.
+- **[Ability to configure interceptors via the App/Web.config file](~/ef6/config-file-settings.md)** allows interceptors to be added without recompiling the application.
+- **System.Data.Entity.Infrastructure.Interception.DatabaseLogger**is a new interceptor that makes it easy to log all database operations to a file. In combination with the previous feature, this allows you to easily [switch on logging of database operations for a deployed application](~/ef6/config-file-settings.md), without the need to recompile.
+- **Migrations model change detection** has been improved so that scaffolded migrations are more accurate; performance of the change detection process has also been enhanced.
+- **Performance improvements** including reduced database operations during initialization, optimizations for null equality comparison in LINQ queries, faster view generation (model creation) in more scenarios, and more efficient materialization of tracked entities with multiple associations.
+
+### EF 6.0.2
+The EF 6.0.2 runtime was released to NuGet in December of 2013.
+This patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5).
+
+### EF 6.0.1
+The EF 6.0.1 runtime was released to NuGet in October of 2013 simultaneously with EF 6.0.0, because the latter was embedded in a version of Visual Studio that had locked down a few months before.
+This patch release is limited to fixing issues that were introduced in the EF6 release (regressions in performance/behavior since EF5).
+The most notable changes were to fix some performance issues during warm-up for EF models.
+This was important as warm-up performance was an area of focus in EF6 and these issues were negating some of the other performance gains made in EF6.
+
+### EF 6.0
+The EF 6.0.0 runtime was released to NuGet in October of 2013.
+This is the first version in which a complete EF runtime is included in the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) which does not depend on the EF bits that are part of the .NET Framework.
+Moving the remaining parts of the runtime to the NuGet package required a number of breaking change for existing code.
+See the section on [Upgrading to Entity Framework 6](upgrading-to-entity-framework-6.md) for more details on the manual steps required to upgrade.
+
+This release includes numerous new features.
+The following features work for models created with Code First or the EF Designer:
+
+- **[Async Query and Save](~/ef6/async-query-and-save-ef6-onwards.md)** adds support for the task-based asynchronous patterns that were introduced in .NET 4.5.
+- **[Connection Resiliency](~/ef6/connection-resiliency-and-retry-logic-ef6-onwards.md)** enables automatic recovery from transient connection failures.
+- **[Code-Based Configuration](~/ef6/code-based-configuration-ef6-onwards.md)** gives you the option of performing configuration – that was traditionally performed in a config file – in code.
+- **[Dependency Resolution](~/ef6/idbdependencyresolver-services-ef6-onwards.md)** introduces support for the Service Locator pattern and we've factored out some pieces of functionality that can be replaced with custom implementations.
+- **[Interception/SQL logging](~/ef6/logging-and-intercepting-database-operations-ef6-onwards.md)** provides low-level building blocks for interception of EF operations with simple SQL logging built on top.
+- **Testability improvements** make it easier to create test doubles for DbContext and DbSet when [using a mocking framework](http://msdn.com/data/dn314429) or [writing your own test doubles](http://msdn.com/data/dn314431).
+- **[DbContext can now be created with a DbConnection that is already opened](~/ef6/connection-management.md)** which enables scenarios where it would be helpful if the connection could be open when creating the context (such as sharing a connection between components where you can not guarantee the state of the connection).
+- **[Improved Transaction Support](~/ef6/working-with-transactions-ef6-onwards.md)** provides support for a transaction external to the framework as well as improved ways of creating a transaction within the Framework.
+- **Enums, Spatial and Better Performance on .NET 4.0** - By moving the core components that used to be in the .NET Framework into the EF NuGet package we are now able to offer enum support, spatial data types and the performance improvements from EF5 on .NET 4.0.
+- **Improved performance of Enumerable.Contains in LINQ queries**.
+- **Improved warm up time (view generation)**, especially for large models.
+- **Pluggable Pluralization &amp; Singularization Service**.
+- **Custom implementations of Equals or GetHashCode** on entity classes are now supported.
+- **DbSet.AddRange/RemoveRange** provides an optimized way to add or remove multiple entities from a set.
+- **DbChangeTracker.HasChanges** provides an easy and efficient way to see if there are any pending changes to be saved to the database.
+- **SqlCeFunctions** provides a SQL Compact equivalent to the [SqlFunctions](https://msdn.microsoft.com/library/system.data.objects.sqlclient.sqlfunctions.aspx).
+
+The following features apply to Code First only:
+
+- **[Custom Code First Conventions](~/ef6/custom-code-first-conventions-ef6-onwards.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions.
+- **[Code First Mapping to Insert/Update/Delete Stored Procedures](~/ef6/code-first-insert-update-and-delete-stored-procedures.md)** is now supported.
+- **[Idempotent migrations scripts](~/ef6/code-first-migrations.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
+- **[Configurable Migrations History Table](~/ef6/customizing-the-migrations-history-table-ef6-onwards.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
+- **Multiple Contexts per Database** removes the previous limitation of one Code First model per database when using Migrations or when Code First automatically created the database for you.
+- **[DbModelBuilder.HasDefaultSchema](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API.
+- **DbModelBuilder.Configurations.AddFromAssembly method** allows you to easily add all configuration classes defined in an assembly when you are using configuration classes with the Code First Fluent API.
+- **[Custom Migrations Operations](http://romiller.com/2013/02/27/ef6-writing-your-own-code-first-migration-operations/)** enabled you to add additional operations to be used in your code-based migrations.
+- **Default transaction isolation level is changed to READ_COMMITTED_SNAPSHOT** for databases created using Code First, allowing for more scalability and fewer deadlocks.
+- **Entity and complex types can now be nestedinside classes**. |
+
+### EF 5.0
+The EF 5.0.0 runtime was released to NuGet in August of 2012.
+This release introduces some new features including enum support, table-valued functions, spatial data types and various performance improvements.
+
+The Entity Framework Designer in Visual Studio 2012 also introduces support for multiple-diagrams per model, coloring of shapes on the design surface and batch import of stored procedures.
+
+Here is a list of content we put together specifically for the EF 5 release.
+
+-   [EF 5 Release Post](http://blogs.msdn.com/b/adonet/archive/2012/08/15/ef5-released.aspx)
+-   Getting Started
+    -   [Which workflow should I use?](~/ef6/development-workflows-video.md)
+    -   [Code First to a new database (walkthrough and video)](~/ef6/code-first-to-a-new-database.md)
+    -   [Code First to an existing database (walkthrough and video)](~/ef6/code-first-to-an-existing-database.md)
+    -   [Model First (walkthrough and video)](~/ef6/model-first.md)
+    -   [Database First (walkthrough and video)](~/ef6/database-first.md)
+-   New Features in EF5
+    -   [Enum Support in Code First](~/ef6/enum-support-code-first-ef5-onwards.md)
+    -   [Enum Support in EF Designer](~/ef6/enum-support-ef-designer-ef5-onwards.md)
+    -   [Spatial Data Types in Code First](~/ef6/spatial-code-first-ef5-onwards.md)
+    -   [Spatial Data Types in EF Designer](~/ef6/spatial-ef-designer-ef5-onwards.md)
+    -   [Provider Support for Spatial Types](~/ef6/provider-support-for-spatial-types.md)
+    -   [Table-Valued Functions](~/ef6/table-valued-functions-tvfs-ef5-onwards.md)
+    -   [Multiple Diagrams per Model](~/ef6/multiple-diagrams-per-model-ef5-onwards.md)
+-   Setting up your model
+    -   [Which Workflow Should I Use](~/ef6/development-workflows-video.md)
+    -   [Connections and Models](~/ef6/connections-and-models.md)
+    -   [Performance Considerations](~/ef6/performance-considerations-for-ef-4-5-and-6.md)
+    -   [Working with Microsoft SQL Azure](~/ef6/windows-sql-azure.md)
+    -   [Entity Framework Power Tools](~/ef6/power-tools.md)
+    -   [Configuration File Settings](~/ef6/config-file-settings.md)
+    -   [Glossary](~/ef6/glossary.md)
+    -   Code First
+        -   [Code First to a new database (walkthrough and video)](~/ef6/code-first-to-a-new-database.md)
+        -   [Code First to an existing database (walkthrough and video)](~/ef6/code-first-to-an-existing-database.md)
+        -   [Conventions](~/ef6/code-first-conventions.md)
+        -   [Data Annotations](~/ef6/code-first-data-annotations.md)
+        -   [Fluent API - Configuring/Mapping Properties & Types](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)
+        -   [Fluent API - Configuring Relationships](~/ef6/fluent-api-relationships.md)
+        -   [Fluent API with VB.NET](~/ef6/fluent-api-with-vb-net.md)
+        -   [Code First Migrations](~/ef6/code-first-migrations.md)
+        -   [Automatic Code First Migrations](~/ef6/automatic-code-first-migrations.md)
+        -   [Migrate.exe](~/ef6/migrate-exe.md)
+        -   [Defining DbSets](~/ef6/defining-dbsets.md)
+    -   EF Designer
+        -   [Model First (walkthrough and video)](~/ef6/model-first.md)
+        -   [Database First (walkthrough and video)](~/ef6/database-first.md)
+        -   [Complex Types](~/ef6/complex-types-ef-designer.md)
+        -   [Associations/Relationships](~/ef6/relationships-ef-designer.md)
+        -   [TPT Inheritance Pattern](~/ef6/designer-tpt-inheritance.md)
+        -   [TPH Inheritance Pattern](~/ef6/designer-tph-inheritance.md)
+        -   [Query with Stored Procedures](~/ef6/designer-query-sprocs.md)
+        -   [Stored Procedures with Multiple Result Sets](~/ef6/sprocs-with-multiple-result-sets.md)
+        -   [Insert, Update & Delete with Stored Procedures](~/ef6/designer-cud-sprocs.md)
+        -   [Map an Entity to Multiple Tables (Entity Splitting)](~/ef6/designer-entity-splitting.md)
+        -   [Map Multiple Entities to One Table (Table Splitting)](~/ef6/designer-table-splitting.md)
+        -   [Defining Queries](~/ef6/defining-query-ef-designer.md)
+        -   [Code Generation Templates](~/ef6/designer-code-generation-templates.md)
+        -   [Reverting to ObjectContext](~/ef6/reverting-to-objectcontext-in-entity-framework-designer.md)
+-   Using Your Model
+    -   [Working with DbContext](~/ef6/working-with-dbcontext.md)
+    -   [Querying/Finding Entities](~/ef6/querying-and-finding-entities.md)
+    -   [Working with Relationships](~/ef6/relationships-and-navigation-properties.md)
+    -   [Loading Related Entities](~/ef6/loading-related-entities.md)
+    -   [Working with Local Data](~/ef6/local-data.md)
+    -   [N-Tier Applications](~/ef6/n-tier.md)
+    -   [Raw SQL Queries](~/ef6/raw-sql-queries.md)
+    -   [Optimistic Concurrency Patterns](~/ef6/optimistic-concurrency-patterns.md)
+    -   [Working with Proxies](~/ef6/working-with-proxies.md)
+    -   [Automatic Detect Changes](~/ef6/automatic-detect-changes.md)
+    -   [No-Tracking Queries](~/ef6/no-tracking-queries.md)
+    -   [The Load Method](~/ef6/the-load-method.md)
+    -   [Add/Attach and Entity States](~/ef6/add-and-attach-and-entity-states.md)
+    -   [Working with Property Values](~/ef6/working-with-property-values.md)
+    -   [API Documentation](https://msdn.microsoft.com/library/hh289362)
+    -   [Data Binding with WPF (Windows Presentation Foundation)](~/ef6/databinding-with-wpf.md)
+    -   [Data Binding with WinForms (Windows Forms)](~/ef6/databinding-with-winforms.md)
+
+### EF 4.3.1
+The EF 4.3.1 runtime was released to NuGet in February 2012 shortly after EF 4.3.0.
+This patch release included some bug fixes to the EF 4.3 release and introduced better LocalDB support for customers using EF 4.3 with Visual Studio 2012.
+
+Here is a list of content we put together specifically for the EF 4.3.1 release, most of the content provided for EF 4.1 still applies to EF 4.3 as well.
+
+-   [EF 4.3.1 Release Blog  Post](http://blogs.msdn.com/b/adonet/archive/2012/02/29/ef4-3-1-and-ef5-beta-1-available-on-nuget.aspx)
+
+### EF 4.3
+The EF 4.3.0 runtime was released to NuGet in February of 2012.
+This release included the new Code First Migrations feature that allows a database created by Code First to be incrementally changed as your Code First model evolves.
+
+Here is a list of content we put together specifically for the EF 4.3 release, most of the content provided for EF 4.1 still applies to EF 4.3 as well:
+-   [EF 4.3 Release Post](http://blogs.msdn.com/b/adonet/archive/2012/02/09/ef-4-3-released.aspx)
+-   [EF 4.3 Code-Based Migrations Walkthrough](http://blogs.msdn.com/b/adonet/archive/2012/02/09/ef-4-3-code-based-migrations-walkthrough.aspx)
+-   [EF 4.3 Automatic Migrations Walkthrough](http://blogs.msdn.com/b/adonet/archive/2012/02/09/ef-4-3-automatic-migrations-walkthrough.aspx)
+
+### EF 4.2
+The EF 4.2.0 runtime was released to NuGet in November of 2011.
+This release includes bug fixes to the EF 4.1.1 release.
+Because this release only included bug fixes it could have been the EF 4.1.2 patch release but we opted to move to 4.2 to allow us to move away from the date based patch version numbers we used in the 4.1.x releases and adopt the [Semantic Versionsing](https://semver.org) standard for semantic versioning.
+
+Here is a list of content we put together specifically for the EF 4.2 release, the content provided for EF 4.1 still applies to EF 4.2 as well.
+
+-   [EF 4.2 Release Post](http://blogs.msdn.com/b/adonet/archive/2011/11/01/ef-4-2-released.aspx)
+-   [Code First Walkthrough](http://blogs.msdn.com/b/adonet/archive/2011/09/28/ef-4-2-code-first-walkthrough.aspx)
+-   [Model & Database First Walkthrough](http://blogs.msdn.com/b/adonet/archive/2011/09/28/ef-4-2-model-amp-database-first-walkthrough.aspx)
+
+### EF 4.1.1
+The EF 4.1.10715 runtime was released to NuGet in July of 2011.
+In addition to bug fixes this patch release introduced some components to make it easier for design time tooling to work with a Code First model.
+These components are used by Code First Migrations (included in EF 4.3) and the EF Power Tools.
+
+You’ll notice that the strange version number 4.1.10715 of the package.
+We used to use date based patch versions before we decided to adopt [Semantic Versioning](https://semver.org).
+Think of this version as EF 4.1 patch 1 (i.e. 4.1.1).
+
+Here is a list of content we put together for the 4.1.1 release:
+
+-   [EF 4.1.1 Release Post](http://blogs.msdn.com/b/adonet/archive/2011/07/25/ef-4-1-update-1-released.aspx)
+
+### EF 4.1
+The EF 4.1.10331 runtime was the first to be published on NuGet, in April of 2011.
+This release included the simplified DbContext API and the Code First workflow.
+
+You will notice the strange version number, 4.1.10331, which should really have been 4.1. In addition there is a 4.1.10311 version which should have been 4.1.0-rc (the ‘rc’ stands for ‘release candidate’).
+We used to use date based patch versions before we decided to adopt [Semantic Versioning](https://semver.org).
+
+Here is a list of content we put together for the 4.1 release. Much of it still applies to later releases of Entity Framework:
+
+-   [EF 4.1 Release Post](http://blogs.msdn.com/b/adonet/archive/2011/04/11/ef-4-1-released.aspx)
+-   [Code First Walkthrough](http://blogs.msdn.com/b/adonet/archive/2011/03/15/ef-4-1-code-first-walkthrough.aspx)
+-   [Model & Database First Walkthrough](http://blogs.msdn.com/b/adonet/archive/2011/03/15/ef-4-1-model-amp-database-first-walkthrough.aspx)
+-   [SQL Azure Federations and the Entity Framework](http://blogs.msdn.com/b/adonet/archive/2012/01/10/sql-azure-federations-and-the-entity-framework.aspx)
+
+### EF 4.0
+This release was included in .NET Framework 4 and Visual Studio 2010, in April of 2010.
+Important new features in this release included POCO support, foreign key mapping, lazy loading, testability improvements, customizable code generation and the Model First workflow.
+
+Although it was the second release of Entity Framework, it was named EF 4 to align with the .NET Framework version that it shipped with.
+After this release, we started making Entity Framework available on NuGet and adopted semantic versioning since we were no longer tied to the .NET Framework Version.
+
+Note that some subsequent versions of .NET Framework have shipped with significant updates to the included EF bits.
+In fact, many of the new features of EF 5.0 were implemented as improvements on these bits.
+However, in order to rationalize the versioning story for EF, we continue to refer to the EF bits that are part of the .NET Framework as the EF 4.0 runtime, while all newer versions consist of the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/).         
+
+Here are some links to content we created for this release:
+
+-   [Entity Framework 4.0 MSDN Content](https://msdn.microsoft.com/library/bb399572(v=vs.100).aspx)
+-   [Entity Framework 4.0 Sample Applications](https://msdn.microsoft.com/library/bb738547.aspx)
+
+### EF 3.5
+The initial version of Entity Framework was included in .NET 3.5 Service Pack 1 and Visual Studio 2008 SP1, released in August of 2008.
+This release provided basic O/RM support using the Database First workflow.
+
+Here are some links to get you started:
+
+-   [Entity Framework 3.5 MSDN Content](https://msdn.microsoft.com/library/bb399572(v=vs.90).aspx)
+-   [Introducing Entity Framework](https://msdn.microsoft.com/data/bb399567)
