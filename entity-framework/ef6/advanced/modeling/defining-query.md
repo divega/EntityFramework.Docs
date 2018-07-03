@@ -11,11 +11,11 @@ ms.assetid: e52a297e-85aa-42f6-a922-ba960f8a4b22
 caps.latest.revision: 3
 ---
 # Defining Query - EF Designer
-This walkthrough demonstrates how to add a defining query and a corresponding entity type to a model using the EF Designer. A defining query is commonly used to provide functionality similar to that provided by a database view, but the view is defined in the model, not the database. A defining query allows you to execute a SQL statement that is specified in the **DefiningQuery** element of an .edmx file. For more information, see **DefiningQuery** in the [SSDL Specification](~/ef6/ssdl-specification.md).
+This walkthrough demonstrates how to add a defining query and a corresponding entity type to a model using the EF Designer. A defining query is commonly used to provide functionality similar to that provided by a database view, but the view is defined in the model, not the database. A defining query allows you to execute a SQL statement that is specified in the **DefiningQuery** element of an .edmx file. For more information, see **DefiningQuery** in the [SSDL Specification](~/ef6/advanced/edmx-file-format/ssdl-spec.md).
 
 When using defining queries, you also have to define an entity type in your model. The entity type is used to surface data exposed by the defining query. Note that data surfaced through this entity type is read-only.
 
-Parameterized queries cannot be executed as defining queries. However, the data can be updated by mapping the insert, update, and delete functions of the entity type that surfaces the data to stored procedures. For more information, see [Insert, Update, and Delete with Stored Procedures](~/ef6/designer-cud-sprocs.md).
+Parameterized queries cannot be executed as defining queries. However, the data can be updated by mapping the insert, update, and delete functions of the entity type that surfaces the data to stored procedures. For more information, see [Insert, Update, and Delete with Stored Procedures](~/ef6/modeling/designer/stored-procedures/cud.md).
 
 This topic shows how to perform the following tasks.
 
@@ -28,9 +28,7 @@ This topic shows how to perform the following tasks.
 To complete this walkthrough, you will need:
 
 - A recent version of Visual Studio.
-- The School sample Database
-
-See the section on [Walkthrough Prerequisites](~/ef6/get-started/school-database.md) for more details.
+- The [School sample database](~/ef6/resources/school-database.md).
 
 ## Set up the Project
 

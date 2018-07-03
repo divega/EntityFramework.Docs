@@ -23,9 +23,7 @@ var query = context.Products.SqlQuery("EXECUTE [dbo].[GetAllProducts]")`;
 To complete this walkthrough, you will need:
 
 - A recent version of Visual Studio.
-- The School sample Database
-
-See the section on [Walkthrough Prerequisites](~/ef6/get-started/school-database.md) for more details.
+- The [School sample database](~/ef6/resources/school-database.md).
 
 ## Set up the Project
 
