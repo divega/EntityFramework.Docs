@@ -19,6 +19,23 @@ This page documents the version history of EF.
 It contains links to content on features that are new on each release, most of which are still relevant to the latest release.
 
 To install specific versions of EF, see [Get Entity Framework](~/ef6/get-started/get-entity-Framework.md).
+
+## Brief history
+
+The first version of Entity Framework was released in 2008, as part of .NET Framework 3.5 SP1 and Visual Studio 2008 SP1.
+
+Starting with the EF4.1 release it has shipped as the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) - currently one of the most popular packages on NuGet.org.
+
+Between versions 4.1 and 5.0, the EntityFramework NuGet package extended the EF libraries that shipped as part of .NET Framework.   
+
+Starting with version 6, EF became an open source project and also moved completely out of band form the .NET Framework.
+This means that when you add the EntityFramework version 6 NuGet package to an application, you are getting a complete copy of the EF library that does not depend on the EF bits that ship as part of .NET Framework.
+This helped somewhat accelerate the pace of development and delivery of new features.
+
+In June 2016, we released EF Core 1.0. EF Core is based on a new codebase and is designed as a more lightweight and extensible version of EF.
+Currently EF Core is the main focus of development for the Entity Framework Team at Microsoft.
+This means there are no new major features planned for EF6. However EF6 is still maintained as an open source project and a supported Microsoft product.
+
 ## Recent releases
 
 ### EF 6.2 Tools
@@ -219,7 +236,7 @@ Here is a list of content we put together specifically for the EF 5 release.
     -   [Data Binding with WinForms (Windows Forms)](~/ef6/databinding-with-winforms.md)
 
 ### EF 4.3.1
-The EF 4.3.1 runtime was released to NuGet in February 2012 shortly after EF 4.3.0. 
+The EF 4.3.1 runtime was released to NuGet in February 2012 shortly after EF 4.3.0.
 This patch release included some bug fixes to the EF 4.3 release and introduced better LocalDB support for customers using EF 4.3 with Visual Studio 2012.
 
 Here is a list of content we put together specifically for the EF 4.3.1 release, most of the content provided for EF 4.1 still applies to EF 4.3 as well.
@@ -227,7 +244,7 @@ Here is a list of content we put together specifically for the EF 4.3.1 release,
 -   [EF 4.3.1 Release Blog  Post](http://blogs.msdn.com/b/adonet/archive/2012/02/29/ef4-3-1-and-ef5-beta-1-available-on-nuget.aspx)
 
 ### EF 4.3
-The EF 4.3.0 runtime was released to NuGet in February of 2012. 
+The EF 4.3.0 runtime was released to NuGet in February of 2012.
 This release included the new Code First Migrations feature that allows a database created by Code First to be incrementally changed as your Code First model evolves.
 
 Here is a list of content we put together specifically for the EF 4.3 release, most of the content provided for EF 4.1 still applies to EF 4.3 as well:
