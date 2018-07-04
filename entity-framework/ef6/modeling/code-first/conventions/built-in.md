@@ -155,7 +155,7 @@ public class Details
 
 ## Connection String Convention  
 
-To learn about the conventions that DbContext uses to discover the connection to use see [Connections and Models](~/ef6/avanced/configuring/connection-strings.md).  
+To learn about the conventions that DbContext uses to discover the connection to use see [Connections and Models](~/ef6/advanced/configuring/connection-strings.md).  
 
 ## Removing Conventions  
 
