@@ -67,7 +67,7 @@ public class DepartmentID
 The rest of this page covers how to access and manipulate data using relationships. For information on setting up relationships in your model, see the following pages.
 
 -   To configure relationships in Code First, see [Data Annotations](~/ef6/modeling/code-first/data-annotations.md) and [Fluent API – Relationships](~/ef6/modeling/code-first/fluent/relationships.md).
--   To configure relationships using the Entity Framework Designer, see [Relationships with the EF Designer](~/ef6/relationships-ef-designer.md).
+-   To configure relationships using the Entity Framework Designer, see [Relationships with the EF Designer](~/ef6/modeling/designer/relationships.md).
 
 ## Creating and modifying relationships
 
@@ -127,7 +127,7 @@ In the following example, there is a many-to-many relationship between Instructo
 
 ## Synchronizing the changes between the foreign keys and navigation properties
 
-When you change the relationship of the objects attached to the context by using one of the methods described above, Entity Framework needs to keep foreign keys, references, and collections in sync. Entity Framework automatically manages this synchronization (also known as relationship fix-up) for the POCO entities with proxies. For more information, see [Working with Proxies](~/ef6/working-with-proxies.md).
+When you change the relationship of the objects attached to the context by using one of the methods described above, Entity Framework needs to keep foreign keys, references, and collections in sync. Entity Framework automatically manages this synchronization (also known as relationship fix-up) for the POCO entities with proxies. For more information, see [Working with Proxies](~/ef6/advanced/proxies.md).
 
 If you are using POCO entities without proxies, you must make sure that the **DetectChanges** method is called to synchronize the related objects in the context. Note, that the following APIs automatically trigger a **DetectChanges** call.
 

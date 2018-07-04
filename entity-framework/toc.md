@@ -148,7 +148,7 @@
 ### Modeling
 #### [Understanding Relationships](ef6/modeling/relationships.md)
 #### Using Code First
-##### [Data Annotations](ef6/modeling/code-first/annotations.md)
+##### [Data Annotations](ef6/modeling/code-first/data-annotations.md)
 ##### [DbSets](ef6/modeling/code-first/dbsets.md)
 ##### Data Types
 ###### [Enums](ef6/modeling/code-first/data-types/enums.md)
@@ -160,7 +160,7 @@
 ##### Fluent Configuration
 ###### [Relationships ](ef6/modeling/code-first/fluent/relationships.md)
 ###### [Types and Properties](ef6/modeling/code-first/fluent/types-and-properties.md)
-###### [Using in Visual Basic](ef6/modeling/code-first/fluent/with-vb.md)
+###### [Using in Visual Basic](ef6/modeling/code-first/fluent/vb.md)
 ###### [Stored Procedure Mapping](ef6/modeling/code-first/fluent/cud-stored-procedures.md)
 #### Using EF Designer
 ##### Data types
@@ -241,7 +241,7 @@
 #### [Connection Management](ef6/advanced/connection-management.md)
 #### Connection Resiliency
 ##### [Retry Logic](ef6/advanced/connection-resiliency/retry-logic.md)
-##### [Transaction Commit Failures](ef6/advanced/connection-resiliency/transaction-commit-failures.md)
+##### [Transaction Commit Failures](ef6/advanced/connection-resiliency/commit-failures.md)
 #### Databinding
 ##### [WinForms](ef6/advanced/databinding/winforms.md)
 ##### [WPF](ef6/advanced/databinding/wpf.md)

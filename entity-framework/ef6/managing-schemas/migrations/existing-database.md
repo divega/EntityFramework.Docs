@@ -52,7 +52,7 @@ Once migrations have been created and applied to the local database you may also
 
 ### Option One: Use existing schema as a starting point
 
-Code First Migrations uses a snapshot of the model stored in the most recent migration to detect changes to the model (you can find detailed information about this in [Code First Migrations in Team Environments](~/ef6/modeling/code-first/migrations-in-team-environments.md)). Since we are going to assume that databases already have the schema of the current model, we will generate an empty (no-op) migration that has the current model as a snapshot.
+Code First Migrations uses a snapshot of the model stored in the most recent migration to detect changes to the model (you can find detailed information about this in [Code First Migrations in Team Environments](~/ef6/managing-schemas/migrations/teams.md)). Since we are going to assume that databases already have the schema of the current model, we will generate an empty (no-op) migration that has the current model as a snapshot.
 
 1.  Run the **Add-Migration InitialCreate –IgnoreChanges** command in Package Manager Console. This creates an empty migration with the current model as a snapshot.
 2.  Run the **Update-Database** command in Package Manager Console. This will apply the InitialCreate migration to the database. Since the actual migration doesn’t contain any changes, it will simply add a row to the \_\_MigrationsHistory table indicating that this migration has already been applied.

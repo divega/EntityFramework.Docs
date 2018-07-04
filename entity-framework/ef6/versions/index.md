@@ -225,7 +225,7 @@ Here is a list of content we put together specifically for the EF 5 release.
     -   [Raw SQL Queries](~/ef6/querying/raw-sql.md)
     -   [Optimistic Concurrency Patterns](~/ef6/saving/concurrency.md)
     -   [Working with Proxies](~/ef6/advanced/proxies.md)
-    -   [Automatic Detect Changes](~/ef6/advanced/change-tracking/automatic-detect-changes.md)
+    -   [Automatic Detect Changes](~/ef6/advanced/change-tracking/auto-detect-changes.md)
     -   [No-Tracking Queries](~/ef6/querying/no-tracking.md)
     -   [The Load Method](~/ef6/querying/load-method.md)
     -   [Add/Attach and Entity States](~/ef6/advanced/change-tracking/entity-state.md)

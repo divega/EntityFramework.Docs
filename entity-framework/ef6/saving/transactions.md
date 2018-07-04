@@ -34,7 +34,7 @@ However some users require greater control over their transactions – this is c
 Prior to EF6 Entity Framework insisted on opening the database connection itself (it threw an exception if it was passed a connection that was already open). Since a transaction can only be started on an open connection, this meant that the only way a user could wrap several operations into one transaction was either to use a [TransactionScope](https://msdn.microsoft.com/library/system.transactions.transactionscope.aspx) or use the **ObjectContext.Connection** property and start calling **Open()** and **BeginTransaction()** directly on the returned **EntityConnection** object. In addition, API calls which contacted the database would fail if you had started a transaction on the underlying database connection on your own.  
 
 > [!NOTE]
-> The limitation of only accepting closed connections was removed in Entity Framework 6. For details, see [Connection Management (EF6 Onwards)](~/ef6/connection-management.md).  
+> The limitation of only accepting closed connections was removed in Entity Framework 6. For details, see [Connection Management (EF6 Onwards)](~/ef6/advanced/connection-management.md).  
 
 Starting with EF6 the framework now provides:  
 
@@ -305,7 +305,7 @@ There are still some limitations to the TransactionScope approach:
 - Requires .NET 4.5.1 or greater to work with asynchronous methods.  
 - It cannot be used in cloud scenarios unless you are sure you have one and only one connection (cloud scenarios do not support distributed transactions).  
 - It cannot be combined with the Database.UseTransaction() approach of the previous sections.  
-- It will throw exceptions if you issue any DDL (e.g. because of a [Database Initializer](~/ef6/database-initializers.md)) and have not enabled distributed transactions through the MSDTC Service.  
+- It will throw exceptions if you issue any DDL and have not enabled distributed transactions through the MSDTC Service.  
 
 Advantages of the TransactionScope approach:  
 
