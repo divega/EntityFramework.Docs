@@ -168,8 +168,8 @@
 ###### [Enums](ef6/modeling/designer/data-types/enums.md)
 ###### [Spatial](ef6/modeling/designer/data-types/spatial.md)
 ##### Split Mappings
-###### [Entity Splitting](ef6/modeling/designer/splitting/entity-splitting.md)
-###### [Table Splitting](ef6/modeling/designer/splitting/table-splitting.md)
+###### [Entity Splitting](ef6/modeling/designer/entity-splitting.md)
+###### [Table Splitting](ef6/modeling/designer/table-splitting.md)
 ##### Inheritance Mappings
 ###### [Table per Hierarchy ](ef6/modeling/designer/inheritance/tph.md)
 ###### [Table per Type](ef6/modeling/designer/inheritance/tpt.md)

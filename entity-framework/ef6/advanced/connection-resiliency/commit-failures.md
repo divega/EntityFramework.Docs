@@ -22,7 +22,7 @@ When the first situation happens the application or the user can retry the opera
 
 ## Using the feature  
 
-In order to enable the feature you need include a call to [SetTransactionHandler](https://msdn.microsoft.com/library/system.data.entity.dbconfiguration.setdefaulttransactionhandler.aspx) in the constructor of your **DbConfiguration**. If you are unfamiliar with **DbConfiguration**, see [Code Based Configuration](~/ef6/advanced/configuration/code-based.md). This feature can be used in combination with the automatic retries we introduced in EF6, which help in the situation in which the transaction actually failed to commit on the server due to a transient failure:  
+In order to enable the feature you need include a call to [SetTransactionHandler](https://msdn.microsoft.com/library/system.data.entity.dbconfiguration.setdefaulttransactionhandler.aspx) in the constructor of your **DbConfiguration**. If you are unfamiliar with **DbConfiguration**, see [Code Based Configuration](~/ef6/advanced/configuring/code-based.md). This feature can be used in combination with the automatic retries we introduced in EF6, which help in the situation in which the transaction actually failed to commit on the server due to a transient failure:  
 
 ``` csharp
 using System.Data.Entity;
