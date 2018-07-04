@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Microsoft Case Studies for Entity Framework
 The case studies on this page highlight a few real-world production projects that have employed Entity Framework.
 > [!NOTE]
-> The detailed case studies originally linked when thi page as first published are no longer available at microsoft.com. Links have been removed.
+> The detailed case studies originally linked when this page as first published are no longer available on the Microsoft website. Therefore the links have been removed.
 
 ## Epicor
 Epicor is a large global software company (with over 400 developers) that develops Enterprise Resource Planning (ERP) solutions for companies in more than 150 countries.
@@ -41,7 +41,7 @@ The sites were built using ASP.NET, Silverlight 3, AJAX and WCF, along with the 
 
 > “With SQL Server, we felt we could get the throughput we needed to serve advertisers and networks with information in real time and the reliability to help ensure that the information in our mission-critical applications would always be available”- Mike Corcoran, Director of IT
 
-## Darwin Dimensions 
+## Darwin Dimensions
 Using a wide range of Microsoft technologies, the team at Darwin set out to create Evolver - an online avatar portal that consumers could use to create stunning, lifelike avatars for use in games, animations, and social networking pages.
 With the productivity benefits of the Entity Framework, and pulling in components like Windows Workflow Foundation (WF) and Windows Server AppFabric (a highly-scalable in-memory application cache), the team was able to deliver an amazing product in 35% less development time.
 Despite having team members split across multiple countries, the team following an agile development process with weekly releases.

@@ -14,7 +14,7 @@ caps.latest.revision: 3
 Code First Migrations can be used to update a database from inside visual studio, but can also be executed via the command line tool migrate.exe. This page will give a quick overview on how to use migrate.exe to execute migrations against a database.
 
 > [!NOTE]
-> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/managing-schemas/migrations/index.md) before continuing.
+> This article assumes you know how to use Code First Migrations in basic scenarios. If you don’t, then you’ll need to read [Code First Migrations](~/ef6/modeling/code-first/migrations/index.md) before continuing.
 
 ## Copy migrate.exe
 

@@ -149,8 +149,8 @@ The following features apply to Code First only:
 
 - **[Custom Code First Conventions](~/ef6/modeling/code-first/conventions/custom.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions.
 - **[Code First Mapping to Insert/Update/Delete Stored Procedures](~/ef6/modeling/code-first/fluent/cud-stored-procedures.md)** is now supported.
-- **[Idempotent migrations scripts](~/ef6/managing-schemas/migrations/index.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
-- **[Configurable Migrations History Table](~/ef6/managing-schemas/migrations/history-customization.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
+- **[Idempotent migrations scripts](~/ef6/modeling/code-first/migrations/index.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
+- **[Configurable Migrations History Table](~/ef6/modeling/code-first/migrations/history-customization.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
 - **Multiple Contexts per Database** removes the previous limitation of one Code First model per database when using Migrations or when Code First automatically created the database for you.
 - **[DbModelBuilder.HasDefaultSchema](~/ef6/modeling/code-first/fluent/types-and-properties.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API.
 - **DbModelBuilder.Configurations.AddFromAssembly method** allows you to easily add all configuration classes defined in an assembly when you are using configuration classes with the Code First Fluent API.
@@ -196,9 +196,9 @@ Here is a list of content we put together specifically for the EF 5 release.
         -   [Fluent API - Configuring/Mapping Properties & Types](~/ef6/modeling/code-first/fluent/types-and-properties.md)
         -   [Fluent API - Configuring Relationships](~/ef6/modeling/code-first/fluent/relationships.md)
         -   [Fluent API with VB.NET](~/ef6/modeling/code-first/fluent/vb.md)
-        -   [Code First Migrations](~/ef6/managing-schemas/migrations/index.md)
-        -   [Automatic Code First Migrations](~/ef6/managing-schemas/migrations/automatic.md)
-        -   [Migrate.exe](~/ef6/managing-schemas/migrations/migrate-exe.md)
+        -   [Code First Migrations](~/ef6/modeling/code-first/migrations/index.md)
+        -   [Automatic Code First Migrations](~/ef6/modeling/code-first/migrations/automatic.md)
+        -   [Migrate.exe](~/ef6/modeling/code-first/migrations/migrate-exe.md)
         -   [Defining DbSets](~/ef6/modeling/code-first/dbsets.md)
     -   EF Designer
         -   [Model First (walkthrough and video)](~/ef6/get-started/model-first.md)
