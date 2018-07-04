@@ -102,7 +102,7 @@ This minor update includes a significant number of new features:
 
 - **Tooling consolidation** provides a consistent way to create a new EF model. This feature [extends the ADO.NET Entity Data Model wizard to support creating Code First models](~/ef6/get-started/code-first-to-an-existing-database.md), including reverse engineering from an existing database. These features were previously available in Beta quality in the EF Power Tools.
 - **[Handling of transaction commit failures](~/ef6/advanced/connection-resiliency/commit-failures.md)** provides the CommitFailureHandler which makes use of the newly introduced ability to intercept transaction operations. The CommitFailureHandler allows automatic recovery from connection failures whilst committing a transaction.
-- **[IndexAttribute](~/ef6/modeling/code-first/annotations.md)** allows indexes to be specified by placing an `[Index]` attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database.
+- **[IndexAttribute](~/ef6/modeling/code-first/data-annotations.md)** allows indexes to be specified by placing an `[Index]` attribute on a property (or properties) in your Code First model. Code First will then create a corresponding index in the database.
 - **The public mapping API** provides access to the information EF has on how properties and types are mapped to columns and tables in the database. In past releases this API was internal.
 - **[Ability to configure interceptors via the App/Web.config file](~/ef6/advanced/configuring/config-file.md)** allows interceptors to be added without recompiling the application.
 - **System.Data.Entity.Infrastructure.Interception.DatabaseLogger**is a new interceptor that makes it easy to log all database operations to a file. In combination with the previous feature, this allows you to easily [switch on logging of database operations for a deployed application](~/ef6/advanced/configuring/config-file.md), without the need to recompile.
@@ -192,7 +192,7 @@ Here is a list of content we put together specifically for the EF 5 release.
         -   [Code First to a new database (walkthrough and video)](~/ef6/get-started/code-first-to-a-new-database.md)
         -   [Code First to an existing database (walkthrough and video)](~/ef6/get-started/code-first-to-an-existing-database.md)
         -   [Conventions](~/ef6/modeling/code-first/conventions/built-in.md)
-        -   [Data Annotations](~/ef6/modeling/code-first/annotations.md)
+        -   [Data Annotations](~/ef6/modeling/code-first/data-annotations.md)
         -   [Fluent API - Configuring/Mapping Properties & Types](~/ef6/modeling/code-first/fluent/types-and-properties.md)
         -   [Fluent API - Configuring Relationships](~/ef6/modeling/code-first/fluent/relationships.md)
         -   [Fluent API with VB.NET](~/ef6/modeling/code-first/fluent/vb.md)

@@ -392,7 +392,7 @@ Indexes that span multiple columns are specified by using the same name in multi
 ## Relationship Attributes: InverseProperty and ForeignKey
 
 > [!NOTE]
-> This page provides information about setting up relationships in your Code First model using Data Annotations. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/relationships-and-navigation-properties.md).*
+> This page provides information about setting up relationships in your Code First model using Data Annotations. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/modeling/relationships.md).*
 
 Code first convention will take care of the most common relationships in your model, but there are some cases where it needs help.
 

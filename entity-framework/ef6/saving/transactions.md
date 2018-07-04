@@ -201,7 +201,8 @@ The new Connection Resiliency feature does not work with user-initiated transact
 
 ### Asynchronous Programming  
 
-The approach outlined in the previous sections needs no further options or settings to work with the [asynchronous query and save methods](~/ef6/async-query-and-save-ef6-onwards.md). But be aware that, depending on what you do within the asynchronous methods, this may result in long-running transactions – which can in turn cause deadlocks or blocking which is bad for the performance of the overall application.  
+The approach outlined in the previous sections needs no further options or settings to work with the [asynchronous query and save methods](~/ef6/advanced/async.md
+). But be aware that, depending on what you do within the asynchronous methods, this may result in long-running transactions – which can in turn cause deadlocks or blocking which is bad for the performance of the overall application.  
 
 ### TransactionScope Transactions  
 

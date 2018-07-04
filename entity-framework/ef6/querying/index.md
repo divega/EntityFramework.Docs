@@ -41,7 +41,7 @@ Note that DbSet and IDbSet always create queries against the database and will a
 
 When results are returned from the database, objects that do not exist in the context are attached to the context. If an object is already in the context, the existing object is returned (the current and original values of the object's properties in the entry are **not** overwritten with database values).  
 
-When you perform a query, entities that have been added to the context but have not yet been saved to the database are not returned as part of the result set. To get the data that is in the context, see [Local Data](~/ef6/local-data.md).  
+When you perform a query, entities that have been added to the context but have not yet been saved to the database are not returned as part of the result set. To get the data that is in the context, see [Local Data](~/ef6/querying/local-data.md).  
 
 If a query returns no rows from the database, the result will be an empty collection, rather than **null**.  
 

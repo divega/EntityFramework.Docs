@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Fluent API - Configuring and Mapping Properties and Types
 When working with Entity Framework Code First the default behavior is to map your POCO classes to tables using a set of conventions baked into EF. Sometimes, however, you cannot or do not want to follow those conventions and need to map entities to something other than what the conventions dictate.  
 
-There are two main ways you can configure EF to use something other than conventions, namely [annotations](~/ef6/code-first-data-annotations.md) or EFs fluent API. The annotations only cover a subset of the fluent API functionality, so there are mapping scenarios that cannot be achieved using annotations. This article is designed to demonstrate how to use the fluent API to configure properties.  
+There are two main ways you can configure EF to use something other than conventions, namely [annotations](~/ef6/modeling/code-first/data-annotations.md) or EFs fluent API. The annotations only cover a subset of the fluent API functionality, so there are mapping scenarios that cannot be achieved using annotations. This article is designed to demonstrate how to use the fluent API to configure properties.  
 
 The code first fluent API is most commonly accessed by overriding the [OnModelCreating](https://msdn.microsoft.com/library/system.data.entity.dbcontext.onmodelcreating.aspx) method on your derived [DbContext](https://msdn.microsoft.com/library/system.data.entity.dbcontext.aspx). The following samples are designed to show how to do various tasks with the fluent api and allow you to copy the code out and customize it to suit your model, if you wish to see the model that they can be used with as-is then it is provided at the end of this article.  
 
@@ -29,7 +29,7 @@ modelBuilder.HasDefaultSchema(“sales”);
 
 ### Custom Conventions (EF6 onwards)  
 
-Starting with EF6 you can create your own conventions to supplement the ones included in Code First. For more details, see [Custom Code First Conventions](~/ef6/custom-code-first-conventions-ef6-onwards.md).  
+Starting with EF6 you can create your own conventions to supplement the ones included in Code First. For more details, see [Custom Code First Conventions](~/ef6/modeling/code-first/conventions/custom.md).  
 
 ## Property Mapping  
 
@@ -99,7 +99,7 @@ modelBuilder
     .HasColumnAnnotation("Index", new IndexAnnotation(new IndexAttribute()));
 ```  
 
-For a complete list of the settings available in **IndexAttribute**, see the *Index* section of [Code First Data Annotations](~/ef6/code-first-data-annotations.md). This includes customizing the index name, creating unique indexes, and creating multi-column indexes.  
+For a complete list of the settings available in **IndexAttribute**, see the *Index* section of [Code First Data Annotations](~/ef6/modeling/code-first/data-annotations.md). This includes customizing the index name, creating unique indexes, and creating multi-column indexes.  
 
 You can specify multiple index annotations on a single property by passing an array of **IndexAttribute** to the constructor of **IndexAnnotation**.  
 

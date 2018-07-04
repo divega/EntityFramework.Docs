@@ -66,7 +66,7 @@ public class DepartmentID
 
 The rest of this page covers how to access and manipulate data using relationships. For information on setting up relationships in your model, see the following pages.
 
--   To configure relationships in Code First, see [Data Annotations](~/ef6/code-first-data-annotations.md) and [Fluent API – Relationships](~/ef6/fluent-api-relationships.md).
+-   To configure relationships in Code First, see [Data Annotations](~/ef6/modeling/code-first/data-annotations.md) and [Fluent API – Relationships](~/ef6/modeling/code-first/fluent/relationships.md).
 -   To configure relationships using the Entity Framework Designer, see [Relationships with the EF Designer](~/ef6/relationships-ef-designer.md).
 
 ## Creating and modifying relationships

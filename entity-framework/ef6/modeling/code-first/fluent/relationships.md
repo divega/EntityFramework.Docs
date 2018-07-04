@@ -12,7 +12,7 @@ caps.latest.revision: 3
 ---
 # Fluent API - Relationships
 > [!NOTE]
-> This page provides information about setting up relationships in your Code First model using the fluent API. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/relationships-and-navigation-properties.md).  
+> This page provides information about setting up relationships in your Code First model using the fluent API. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/modeling/relationships.md).  
 
 When working with Code First, you define your model by defining your domain CLR classes. By default, Entity Framework uses the Code First conventions to map your classes to the database schema. If you use the Code First naming conventions, in most cases you can rely on Code First to set up relationships between your tables based on the foreign keys and navigation properties that you define on the classes. If you do not follow the conventions when defining your classes, or if you want to change the way the conventions work, you can use the fluent API or data annotations to configure your classes so Code First can map the relationships between your tables.  
 

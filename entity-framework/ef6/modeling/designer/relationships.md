@@ -12,7 +12,7 @@ caps.latest.revision: 3
 ---
 # Relationships - EF Designer
 > [!NOTE]
-> This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/relationships-and-navigation-properties.md).
+> This page provides information about setting up relationships in your model using the EF Designer. For general information about relationships in EF and how to access and manipulate data using relationships, see [Relationships & Navigation Properties](~/ef6/modeling/relationships.md).
 
 Associations define relationships between entity types in a model. This topic shows how to map associations with the Entity Framework Designer (EF Designer). The following image shows the main windows that are used when working with the EF Designer.
 
