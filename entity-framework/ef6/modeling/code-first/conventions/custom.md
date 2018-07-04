@@ -20,7 +20,7 @@ Sometimes these default conventions are not ideal for your model, and you have t
 
 ## Model-Based Conventions
 
-This page covers the DbModelBuilder API for custom conventions. This API should be sufficient for authoring most custom conventions. However, there is also the ability to author model-based conventions - conventions that manipulate the final model once it is created - to handle advanced scenarios. For more information, see [Model-Based Conventions (EF6 onwards)](~/ef6/model-based-conventions-ef6-onwards.md).
+This page covers the DbModelBuilder API for custom conventions. This API should be sufficient for authoring most custom conventions. However, there is also the ability to author model-based conventions - conventions that manipulate the final model once it is created - to handle advanced scenarios. For more information, see [Model-Based Conventions (EF6 onwards)](~/ef6/modeling/code-first/conventions/model.md).
 
  
 

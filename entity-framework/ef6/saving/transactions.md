@@ -197,7 +197,7 @@ This section details how the above transactions interact with:
 
 ### Connection Resiliency  
 
-The new Connection Resiliency feature does not work with user-initiated transactions. For details, see [Limitations with Retrying Execution Strategies](~/ef6/limitations-with-retrying-execution-strategies-ef6-onwards.md).  
+The new Connection Resiliency feature does not work with user-initiated transactions. For details, see [Limitations with Retrying Execution Strategies](~/ef6/advanced/connection-resiliency/retry-logic.md#limitations).  
 
 ### Asynchronous Programming  
 

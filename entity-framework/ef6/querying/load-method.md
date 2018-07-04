@@ -29,7 +29,7 @@ protected override void OnLoad(EventArgs e)
 }
 ```  
 
-The second example shows using Load to load a filtered collection of related entities, as described in [Loading Related Entities](~/ef6/loading-related-entities.md):  
+The second example shows using Load to load a filtered collection of related entities, as described in [Loading Related Entities](~/ef6/querying/related-data.md):  
 
 ``` csharp
 using (var context = new BloggingContext())
