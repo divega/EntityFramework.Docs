@@ -12,7 +12,7 @@ caps.latest.revision: 3
 ---
 # Get started with Entity Framework 6
 
-You can follow these three simple steps: [Decide what EF workflow you want to use](#decide-what-EF-workflow-you-want-to-use), [Get Entity Framework](#get-entity-framework), and read [Working with DbContext](#learn-how-to-work-with-dbcontext).
+You can follow these three simple steps: [Decide what EF workflow you want to use](#decide-what-ef-workflow-you-want-to-use), [Get Entity Framework](#get-entity-framework), and read [Working with DbContext](#learn-how-to-work-with-dbcontext).
 
 You can then jump to [Understanding Entity Framework](#understanding-entity-framework) to build a better understanding of what is happening under the hood.
 
@@ -22,8 +22,8 @@ Entity Framework allows you to create a model by writing code or using boxes and
 
 Find out about the EF Designer and Code First and which one is best for you:  
 
-|                                           | I just want to write code...                                                                                                      | I want to use a designer...                                                                                            |
-|:------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+|                                           | I just want to write code...                                                                                                                  | I want to use a designer...                                                                                                        |
+|:------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
 | **I am creating a new database**          | [Use **Code First** to define your model in code and then generate a database.](~/ef6/get-started/code-first-to-a-new-database.md)            | [Use **Model First** to define your model using boxes and lines and then generate a database.](~/ef6/get-started/model-first.md)   |
 | **I need to access an existing database** | [Use **Code First** to create a code based model that maps to an existing database.](~/ef6/get-started/code-first-to-an-existing-database.md) | [Use **Database First** to create a boxes and lines model that maps to an existing database.](~/ef6/get-started/database-first.md) |
 
