@@ -320,7 +320,7 @@ modelBuilder.Entity<OfficeAssignment>().ToTable("Instructor");
 
 ### Mapping an Entity Type to Insert/Update/Delete Stored Procedures (EF6 onwards)  
 
-Starting with EF6 you can map an entity to use stored procedures for insert update and delete. For more details see, [Code First Insert/Update/Delete Stored Procedures](~/ef6/code-first-insert-update-and-delete-stored-procedures.md).  
+Starting with EF6 you can map an entity to use stored procedures for insert update and delete. For more details see, [Code First Insert/Update/Delete Stored Procedures](~/ef6/modeling/code-first/insert-update-and-delete-stored-procedures.md).  
 
 ## Model Used in Samples  
 

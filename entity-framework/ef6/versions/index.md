@@ -123,7 +123,7 @@ This was important as warm-up performance was an area of focus in EF6 and these 
 The EF 6.0.0 runtime was released to NuGet in October of 2013.
 This is the first version in which a complete EF runtime is included in the [EntityFramework NuGet Package](https://www.nuget.org/packages/EntityFramework/) which does not depend on the EF bits that are part of the .NET Framework.
 Moving the remaining parts of the runtime to the NuGet package required a number of breaking change for existing code.
-See the section on [Upgrading to Entity Framework 6](upgrading-to-entity-framework-6.md) for more details on the manual steps required to upgrade.
+See the section on [Upgrading to Entity Framework 6](upgrading-to-ef6.md) for more details on the manual steps required to upgrade.
 
 This release includes numerous new features.
 The following features work for models created with Code First or the EF Designer:
@@ -148,8 +148,8 @@ The following features work for models created with Code First or the EF Designe
 The following features apply to Code First only:
 
 - **[Custom Code First Conventions](~/ef6/modeling/code-first/conventions/custom.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions.
-- **[Code First Mapping to Insert/Update/Delete Stored Procedures](~/ef6/modeling/code-first/fluent/cude-stored-procedures.md)** is now supported.
-- **[Idempotent migrations scripts](~/ef6/managing-shemas/migrations/index.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
+- **[Code First Mapping to Insert/Update/Delete Stored Procedures](~/ef6/modeling/code-first/fluent/cud-stored-procedures.md)** is now supported.
+- **[Idempotent migrations scripts](~/ef6/managing-schemas/migrations/index.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
 - **[Configurable Migrations History Table](~/ef6/managing-schemas/migrations/history-customization.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
 - **Multiple Contexts per Database** removes the previous limitation of one Code First model per database when using Migrations or when Code First automatically created the database for you.
 - **[DbModelBuilder.HasDefaultSchema](~/ef6/modeling/code-first/fluent/types-and-properties.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API.
@@ -178,12 +178,12 @@ Here is a list of content we put together specifically for the EF 5 release.
     -   [Enum Support in EF Designer](~/ef6/modeling/designer/data-types/enums.md)
     -   [Spatial Data Types in Code First](~/ef6/modeling/code-first/data-types/spatial.md)
     -   [Spatial Data Types in EF Designer](~/ef6/modeling/designer/data-types/spatial.md)
-    -   [Provider Support for Spatial Types](~/ef6/advance/providers/spatial-support.md)
+    -   [Provider Support for Spatial Types](~/ef6/advanced/providers/spatial-support.md)
     -   [Table-Valued Functions](~/ef6/advanced/modeling/tvfs.md)
     -   [Multiple Diagrams per Model](~/ef6/advanced/designer/multiple-diagrams.md)
 -   Setting up your model
     -   [Which Workflow Should I Use](~/ef6/get-started/index.md#decide-what-ef-workflow-you-want-to-use)
-    -   [Connections and Models](~/ef6/advanced/configuring/connections-strings.md)
+    -   [Connections and Models](~/ef6/advanced/configuring/connection-strings.md)
     -   [Performance Considerations](~/ef6/advanced/performance/perf-whitepaper.md)
     -   [Working with Microsoft SQL Azure](~/ef6/advanced/connection-resiliency/retry-logic.md)
     -   [Configuration File Settings](~/ef6/advanced/configuring/config-file.md)
@@ -225,10 +225,10 @@ Here is a list of content we put together specifically for the EF 5 release.
     -   [Raw SQL Queries](~/ef6/querying/raw-sql.md)
     -   [Optimistic Concurrency Patterns](~/ef6/saving/concurrency.md)
     -   [Working with Proxies](~/ef6/advanced/proxies.md)
-    -   [Automatic Detect Changes](~/ef6/change-tracking/automatic-detect-changes.md)
+    -   [Automatic Detect Changes](~/ef6/advanced/change-tracking/automatic-detect-changes.md)
     -   [No-Tracking Queries](~/ef6/querying/no-tracking.md)
     -   [The Load Method](~/ef6/querying/load-method.md)
-    -   [Add/Attach and Entity States](~/ef6/advanced/change-tracking/entity-states.md)
+    -   [Add/Attach and Entity States](~/ef6/advanced/change-tracking/entity-state.md)
     -   [Working with Property Values](~/ef6/advanced/change-tracking/property-values.md)
     -   [Data Binding with WPF (Windows Presentation Foundation)](~/ef6/advanced/databinding/wpf.md)
     -   [Data Binding with WinForms (Windows Forms)](~/ef6/advanced/databinding/winforms.md)

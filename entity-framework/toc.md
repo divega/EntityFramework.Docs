@@ -234,10 +234,10 @@
 #### [Code Generation](ef6/advanced/codegen/index.md)
 ##### [Legacy ObjectContext ](ef6/advanced/codegen/legacy-objectcontext.md)
 #### Configuration
-##### [Code-Based](ef6/advanced/configuration/code-based.md)
-##### [Config File](ef6/advanced/configuration/config-file.md)
-##### [Connection Strings](ef6/advanced/configuration/connection-strings.md)
-##### [Dependency Resolution](ef6/advanced/configuration/dependency-resolution.md)
+##### [Code-Based](ef6/advanced/configuring/code-based.md)
+##### [Config File](ef6/advanced/configuring/config-file.md)
+##### [Connection Strings](ef6/advanced/configuring/connection-strings.md)
+##### [Dependency Resolution](ef6/advanced/configuring/dependency-resolution.md)
 #### [Connection Management](ef6/advanced/connection-management.md)
 #### Connection Resiliency
 ##### [Retry Logic](ef6/advanced/connection-resiliency/retry-logic.md)
