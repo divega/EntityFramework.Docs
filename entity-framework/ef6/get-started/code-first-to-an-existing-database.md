@@ -215,18 +215,13 @@ The Visual Studio Blog
 Press any key to exit...
 ```
  
-
 ## What if My Database Changes?
 
 The Code First to Database wizard is designed to generate a starting point set of classes that you can then tweak and modify. If your database schema changes you can either manually edit the classes or perform another reverse engineer to overwrite the classes.
 
- 
+## Using Code First Migrations to a New Database
 
-## Using Code First Migrations with an Existing Database
-
-If you want to use Code First Migrations with your existing database, see [Code First Migrations with an existing database](~/ef6/code-first-migrations-with-an-existing-database.md).
-
- 
+If you want to use Code First Migrations with a new database, see [Code First Migrations to a new database](code-first-migrations-to-a-new-database.md).
 
 ## Summary
 

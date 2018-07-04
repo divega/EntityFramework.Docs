@@ -21,7 +21,7 @@ Historically, there have been several other Web services technologies that offer
 
 ## Low-level EF APIs
 
-If you don't want to use an existing n-tier solution, or if you want to customize what happens inside a controller action in a Web API services, Entity Framework provides APIs that allow you to apply changes made on a disconnected tier. For more information, see [Add, Attach, and entity state](~/ef6/advanced/change-tracking/add-attach-and-entity-states.md).  
+If you don't want to use an existing n-tier solution, or if you want to customize what happens inside a controller action in a Web API services, Entity Framework provides APIs that allow you to apply changes made on a disconnected tier. For more information, see [Add, Attach, and entity state](~/ef6/advanced/change-tracking/entity-state.md).  
 
 ## Self-Tracking Entities  
 

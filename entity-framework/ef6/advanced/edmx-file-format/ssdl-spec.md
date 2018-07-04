@@ -566,7 +566,7 @@ The **Function** element can have the following child elements (in the order lis
 
 A return type for a function must be specified with either the **ReturnType** element or the **ReturnType** attribute (see below), but not both.
 
-Stored procedures that are specified in the storage model can be imported into the conceptual model of an application. For more information, see [Querying with Stored Procedures](~/ef6/designer-query-sprocs.md). The **Function** element can also be used to define custom functions in the storage model.  
+Stored procedures that are specified in the storage model can be imported into the conceptual model of an application. For more information, see [Querying with Stored Procedures](~/ef6/modeling/designer/stored-procedures/query.md). The **Function** element can also be used to define custom functions in the storage model.  
 
 ### Applicable Attributes
 

@@ -130,12 +130,12 @@ The following features work for models created with Code First or the EF Designe
 
 - **[Async Query and Save](~/ef6/async-query-and-save-ef6-onwards.md)** adds support for the task-based asynchronous patterns that were introduced in .NET 4.5.
 - **[Connection Resiliency](~/ef6/connection-resiliency-and-retry-logic-ef6-onwards.md)** enables automatic recovery from transient connection failures.
-- **[Code-Based Configuration](~/ef6/code-based-configuration-ef6-onwards.md)** gives you the option of performing configuration – that was traditionally performed in a config file – in code.
+- **[Code-Based Configuration](~/ef6/advanced/configuration/code-based.md)** gives you the option of performing configuration – that was traditionally performed in a config file – in code.
 - **[Dependency Resolution](~/ef6/idbdependencyresolver-services-ef6-onwards.md)** introduces support for the Service Locator pattern and we've factored out some pieces of functionality that can be replaced with custom implementations.
 - **[Interception/SQL logging](~/ef6/logging-and-intercepting-database-operations-ef6-onwards.md)** provides low-level building blocks for interception of EF operations with simple SQL logging built on top.
 - **Testability improvements** make it easier to create test doubles for DbContext and DbSet when [using a mocking framework](http://msdn.com/data/dn314429) or [writing your own test doubles](http://msdn.com/data/dn314431).
 - **[DbContext can now be created with a DbConnection that is already opened](~/ef6/connection-management.md)** which enables scenarios where it would be helpful if the connection could be open when creating the context (such as sharing a connection between components where you can not guarantee the state of the connection).
-- **[Improved Transaction Support](~/ef6/working-with-transactions-ef6-onwards.md)** provides support for a transaction external to the framework as well as improved ways of creating a transaction within the Framework.
+- **[Improved Transaction Support](~/ef6/saving/transactions.md)** provides support for a transaction external to the framework as well as improved ways of creating a transaction within the Framework.
 - **Enums, Spatial and Better Performance on .NET 4.0** - By moving the core components that used to be in the .NET Framework into the EF NuGet package we are now able to offer enum support, spatial data types and the performance improvements from EF5 on .NET 4.0.
 - **Improved performance of Enumerable.Contains in LINQ queries**.
 - **Improved warm up time (view generation)**, especially for large models.
@@ -149,7 +149,7 @@ The following features apply to Code First only:
 
 - **[Custom Code First Conventions](~/ef6/custom-code-first-conventions-ef6-onwards.md)** allow write your own conventions to help avoid repetitive configuration. We provide a simple API for lightweight conventions as well as some more complex building blocks to allow you to author more complicated conventions.
 - **[Code First Mapping to Insert/Update/Delete Stored Procedures](~/ef6/code-first-insert-update-and-delete-stored-procedures.md)** is now supported.
-- **[Idempotent migrations scripts](~/ef6/code-first-migrations.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
+- **[Idempotent migrations scripts](~/ef6/managing-shemas/migrations/index.md)** allow you to generate a SQL script that can upgrade a database at any version up to the latest version.
 - **[Configurable Migrations History Table](~/ef6/customizing-the-migrations-history-table-ef6-onwards.md)** allows you to customize the definition of the migrations history table. This is particularly useful for database providers that require the appropriate data types etc. to be specified for the Migrations History table to work correctly.
 - **Multiple Contexts per Database** removes the previous limitation of one Code First model per database when using Migrations or when Code First automatically created the database for you.
 - **[DbModelBuilder.HasDefaultSchema](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)** is a new Code First API that allows the default database schema for a Code First model to be configured in one place. Previously the Code First default schema was hard-coded to &quot;dbo&quot; and the only way to configure the schema to which a table belonged was via the ToTable API.
@@ -176,27 +176,27 @@ Here is a list of content we put together specifically for the EF 5 release.
 -   New Features in EF5
     -   [Enum Support in Code First](~/ef6/enum-support-code-first-ef5-onwards.md)
     -   [Enum Support in EF Designer](~/ef6/enum-support-ef-designer-ef5-onwards.md)
-    -   [Spatial Data Types in Code First](~/ef6/spatial-code-first-ef5-onwards.md)
-    -   [Spatial Data Types in EF Designer](~/ef6/spatial-ef-designer-ef5-onwards.md)
+    -   [Spatial Data Types in Code First](~/ef6/modeling/code-first/data-types/spatial.md)
+    -   [Spatial Data Types in EF Designer](~/ef6/modeling/designer/data-types/spatial.md)
     -   [Provider Support for Spatial Types](~/ef6/provider-support-for-spatial-types.md)
     -   [Table-Valued Functions](~/ef6/table-valued-functions-tvfs-ef5-onwards.md)
     -   [Multiple Diagrams per Model](~/ef6/multiple-diagrams-per-model-ef5-onwards.md)
 -   Setting up your model
     -   [Which Workflow Should I Use](~/ef6/get-started/index.md#decide-what-ef-workflow-you-want-to-use)
     -   [Connections and Models](~/ef6/connections-and-models.md)
-    -   [Performance Considerations](~/ef6/performance-considerations-for-ef-4-5-and-6.md)
+    -   [Performance Considerations](~/ef6/advanced/performance/perf-whitepaper.md)
     -   [Working with Microsoft SQL Azure](~/ef6/advanced/connection-resiliency/retry-logic.md)
     -   [Configuration File Settings](~/ef6/advanced/configuration/config-file.md)
     -   [Glossary](~/ef6/resources/glossary.md)
     -   Code First
         -   [Code First to a new database (walkthrough and video)](~/ef6/get-started/code-first-to-a-new-database.md)
         -   [Code First to an existing database (walkthrough and video)](~/ef6/get-started/code-first-to-an-existing-database.md)
-        -   [Conventions](~/ef6/code-first-conventions.md)
+        -   [Conventions](~/ef6/modeling/code-first/conventions/built-in.md)
         -   [Data Annotations](~/ef6/code-first-data-annotations.md)
         -   [Fluent API - Configuring/Mapping Properties & Types](~/ef6/fluent-api-configuring-and-mapping-properties-and-types.md)
         -   [Fluent API - Configuring Relationships](~/ef6/fluent-api-relationships.md)
         -   [Fluent API with VB.NET](~/ef6/fluent-api-with-vb-net.md)
-        -   [Code First Migrations](~/ef6/code-first-migrations.md)
+        -   [Code First Migrations](~/ef6/managing-shemas/migrations/index.md)
         -   [Automatic Code First Migrations](~/ef6/automatic-code-first-migrations.md)
         -   [Migrate.exe](~/ef6/migrate-exe.md)
         -   [Defining DbSets](~/ef6/defining-dbsets.md)
@@ -207,7 +207,7 @@ Here is a list of content we put together specifically for the EF 5 release.
         -   [Associations/Relationships](~/ef6/relationships-ef-designer.md)
         -   [TPT Inheritance Pattern](~/ef6/designer-tpt-inheritance.md)
         -   [TPH Inheritance Pattern](~/ef6/designer-tph-inheritance.md)
-        -   [Query with Stored Procedures](~/ef6/designer-query-sprocs.md)
+        -   [Query with Stored Procedures](~/ef6/modeling/designer/stored-procedures/query.md)
         -   [Stored Procedures with Multiple Result Sets](~/ef6/sprocs-with-multiple-result-sets.md)
         -   [Insert, Update & Delete with Stored Procedures](~/ef6/designer-cud-sprocs.md)
         -   [Map an Entity to Multiple Tables (Entity Splitting)](~/ef6/designer-entity-splitting.md)

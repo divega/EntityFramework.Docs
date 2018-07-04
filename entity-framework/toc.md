@@ -160,7 +160,7 @@
 ##### Fluent Configuration
 ###### [Relationships ](ef6/modeling/code-first/fluent/relationships.md)
 ###### [Types and Properties](ef6/modeling/code-first/fluent/types-and-properties.md)
-###### [Using in Visual Basic](ef6/modeling/code-first/fluent/with-vb-net.md)
+###### [Using in Visual Basic](ef6/modeling/code-first/fluent/with-vb.md)
 ###### [Stored Procedure Mapping](ef6/modeling/code-first/fluent/cud-stored-procedures.md)
 #### Using EF Designer
 ##### Data types

@@ -41,7 +41,7 @@ Your first step will be to create a Code First model that targets your existing 
 
 The next step is to enable migrations. You can do this by running the **Enable-Migrations** command in Package Manager Console.
 
-This command will create a folder in your solution called Migrations, and put a single class inside it called Configuration. The Configuration class is where you configure migrations for your application, you can find out more about it in the [Code First Migrations](~/ef6/code-first-migrations.md) topic.
+This command will create a folder in your solution called Migrations, and put a single class inside it called Configuration. The Configuration class is where you configure migrations for your application, you can find out more about it in the [Code First Migrations](~/ef6/managing-shemas/migrations/index.md) topic.
 
 ## Step 3: Add an initial migration
 

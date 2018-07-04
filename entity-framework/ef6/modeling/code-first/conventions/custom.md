@@ -13,7 +13,7 @@ caps.latest.revision: 3
 # Custom Code First Conventions
 > **EF6 Onwards Only** - The features, APIs, etc. discussed in this page were introduced in Entity Framework 6. If you are using an earlier version, some or all of the information does not apply.
 
-When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](~/ef6/code-first-conventions.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.
+When using Code First your model is calculated from your classes using a set of conventions. The default [Code First Conventions](~/ef6/modeling/code-first/conventions/built-in.md) determine things like which property becomes the primary key of an entity, the name of the table an entity maps to, and what precision and scale a decimal column has by default.
 
 Sometimes these default conventions are not ideal for your model, and you have to work around them by configuring many individual entities using Data Annotations or the Fluent API. Custom Code First Conventions let you define your own conventions that provide configuration defaults for your model. In this walkthrough, we will explore the different types of custom conventions and how to create each of them.
 
@@ -247,7 +247,7 @@ This convention configures every type in our model to map to the table name that
 
 One thing to note about this is that when you call ToTable EF will take the string that you provide as the exact table name, without any of the pluralization that it would normally do when determining table names. This is why the table name from our convention is product\_category instead of product\_categories. We can resolve that in our convention by making a call to the pluralization service ourselves.
 
-In the following code we will use the [Dependency Resolution](~/ef6/advanced/configuring/dependency-resolution.md) feature added in EF6 to retrieve the pluralization service that EF would have used and pluralize our table name.
+In the following code we will use the [Dependency Resolution](~/ef6/advanced/configuration/dependency-resolution.md) feature added in EF6 to retrieve the pluralization service that EF would have used and pluralize our table name.
 
 ``` csharp
     private string GetTableName(Type type)

@@ -102,7 +102,7 @@ public class MyConfiguration : DbConfiguration
 
 ## Resolving additional services
 
-As mentioned above in the _Provider types overview_ section, a DbProviderServices class can also be used to resolve additional services. This is possible because DbProviderServices implements IDbDependencyResolver and each registered DbProviderServices type is added as a “default resolver”. The IDbDpendencyResolver mechanism is described in more detail in [Dependency Resolution](~/ef6/advanced/configuring/dependency-resolution.md). However, it is not necessary to understand all the concepts in this specification to resolve additional services in a provider.
+As mentioned above in the _Provider types overview_ section, a DbProviderServices class can also be used to resolve additional services. This is possible because DbProviderServices implements IDbDependencyResolver and each registered DbProviderServices type is added as a “default resolver”. The IDbDpendencyResolver mechanism is described in more detail in [Dependency Resolution](~/ef6/advanced/configuration/dependency-resolution.md). However, it is not necessary to understand all the concepts in this specification to resolve additional services in a provider.
 
 The most common way for a provider to resolve additional services is to call DbProviderServices.AddDependencyResolver for each service in the constructor of the DbProviderServices class. For example, SqlProviderServices (the EF provider for SQL Server) has code similar to this for initialization:
 
